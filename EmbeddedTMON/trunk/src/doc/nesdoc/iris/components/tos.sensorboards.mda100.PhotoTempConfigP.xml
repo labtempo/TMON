@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><component loc="14:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP">
+      <documentation loc="10:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc">
+        <short>
+ MDA100 photo and temp sensor ADC configuration.</short>
+        <long>
+ MDA100 photo and temp sensor ADC configuration.
+ @author David Gay &lt;david.e.gay@intel.com&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="17:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" name="PhotoTempAdc" provided="0" ref="0x2ace837876e0">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PhotoTempAdc" ref="0x2ace837876e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace83787a30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" name="Atm128AdcConfig" provided="1" ref="0x2ace8378abd8">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace8378abd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace83787020" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace837871a8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace83787330" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

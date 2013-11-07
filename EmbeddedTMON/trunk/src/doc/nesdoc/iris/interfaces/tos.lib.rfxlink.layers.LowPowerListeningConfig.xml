@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><interfacedef loc="35:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" nicename="tos.lib.rfxlink.layers.LowPowerListeningConfig" qname="LowPowerListeningConfig">
+      <function command="" loc="55:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" name="getListenLength" provided="0" ref="0x2ace81f28838">
+        <documentation loc="50:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc">
+          <short>
+ Returns the number of milliseconds the mote should turn on
+ its radio to check for incoming messages.</short>
+          <long>
+ Returns the number of milliseconds the mote should turn on
+ its radio to check for incoming messages. This check is 
+ performed at every localWakeInterval.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.layers.LowPowerListeningConfig" qname="LowPowerListeningConfig"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="48:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" name="ackRequested" provided="0" ref="0x2ace81f28020">
+        <documentation loc="44:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc">
+          <short>
+ Returns TRUE if an acknowledgement has been requested for 
+ this message via the PacketAcknowledgements interface.</short>
+          <long>
+ Returns TRUE if an acknowledgement has been requested for 
+ this message via the PacketAcknowledgements interface.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.layers.LowPowerListeningConfig" qname="LowPowerListeningConfig"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2ace819b29b8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:71"><nx_struct-ref name="message_t" ref="0x2ace81b67020"/>
+                <typename><typedef-ref name="message_t" ref="0x2ace81b66570"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="48:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" name="msg" ref="0x2ace81f29d68">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:71"><nx_struct-ref name="message_t" ref="0x2ace81b67020"/>
+                <typename><typedef-ref name="message_t" ref="0x2ace81b66570"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="42:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" name="needsAutoAckRequest" provided="0" ref="0x2ace81f295b8">
+        <documentation loc="37:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc">
+          <short>
+ Returns TRUE if an acknowledgement should be requested
+ for the message automatically by the LPL code (this should 
+ normally happen for all non-broadcast messages).</short>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.rfxlink.layers.LowPowerListeningConfig" qname="LowPowerListeningConfig"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2ace819b29b8"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:71"><nx_struct-ref name="message_t" ref="0x2ace81b67020"/>
+                <typename><typedef-ref name="message_t" ref="0x2ace81b66570"/></typename>
+              </type-tag>
+            </type-pointer>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="42:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/LowPowerListeningConfig.nc" name="msg" ref="0x2ace81f29348">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-tag alignment="I:1" size="I:71"><nx_struct-ref name="message_t" ref="0x2ace81b67020"/>
+                <typename><typedef-ref name="message_t" ref="0x2ace81b66570"/></typename>
+              </type-tag>
+            </type-pointer>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

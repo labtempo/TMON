@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Component: tos.chips.atm128.Atm128UartP</title>
+  </head>
+  <body>
+    <h2>Component: tos.chips.atm128.Atm128UartP
+    </h2>
+    <b>generic module Atm128UartP()</b>
+    <p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Alec Woo &lt;awoo@archrock.com&gt;
+ 
+      </dd>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dd>
+        Philip Levis &lt;pal@cs.stanford.edu&gt; (maintainer)
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.7 $ $Date: 2008-06-23 20:25:15 $
+
+ Modification @ 11/27 (pal): Folded in Alec's reimplementation
+ from the -devel branch. Fixed bug in RX interrupts, where
+ they were not enabled on start. Possibly due to alternative
+ ARC TEP113 implementation that uses UartStream?
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Provides</div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.Init.html">Init</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.StdControl.html">StdControl</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.UartByte.html">UartByte</a></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.UartStream.html">UartStream</a></div><p><div id=heading>Uses</div><div id=funcsig>interface <a href="../ihtml/tos.lib.timer.Counter.html">Counter</a>&lt;TMicro, uint32_t&gt;</div><div id=funcsig>interface <a href="../ihtml/tos.chips.atm128.HplAtm128Uart.html">HplAtm128Uart</a> as <b>HplUart</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.StdControl.html">StdControl</a> as <b>HplUartRxControl</b></div><div id=funcsig>interface <a href="../ihtml/tos.interfaces.StdControl.html">StdControl</a> as <b>HplUartTxControl</b></div>
+  </body>
+</html>

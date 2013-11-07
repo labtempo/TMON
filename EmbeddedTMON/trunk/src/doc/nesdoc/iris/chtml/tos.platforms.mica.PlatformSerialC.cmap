@@ -1,0 +1,10 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm128.Atm128Uart0C.html" title="Atm128Uart0C" alt="" coords="144,120,293,179">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="93,49 172,110 168,114 90,53">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.UartByte.html" title="UartByte" alt="" coords="147,78,204,95">
+<area shape="rect" id="node5" href="../chtml/tos.platforms.mica.CounterMicro32C.html" title="CounterMicro32C" alt="" coords="135,245,303,304">
+<area shape="poly" id="edge8" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMicro, uint32_t&gt;" alt="" coords="221,179 221,232 216,232 216,179">
+<area shape="rect" id="edge8" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMicro, uint32_t&gt;" alt="" coords="219,203,393,221">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="221,54 221,106 216,106 216,54">
+<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.UartStream.html" title="UartStream" alt="" coords="219,78,296,95">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="359,54 303,98 280,114 277,110 300,94 355,50">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.StdControl.html" title="StdControl" alt="" coords="324,78,393,95">

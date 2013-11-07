@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.Deluge.DelugeMetadata</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.Deluge.DelugeMetadata</h2>
+    <b>interface DelugeMetadata</b><p>
+  An interface for obtaining the identification data of an
+  image. The pointer returned by readDone will be destroyed by the
+  next read.
+
+  
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+  
+      </dd>
+      <dd>
+        Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#read">read</a>(uint8_t imgNum)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#readDone">readDone</a>(uint8_t imgNum, DelugeIdent *ident, error_t error)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="read"></a>
+    <h4>read
+    </h4>
+    <span id=funcnameshort>command error_t <b>read</b>(uint8_t imgNum)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="readDone"></a>
+    <h4>readDone
+    </h4>
+    <span id=funcnameshort>event void <b>readDone</b>(uint8_t imgNum, DelugeIdent *ident, error_t error)
+    </span>
+  </body>
+</html>

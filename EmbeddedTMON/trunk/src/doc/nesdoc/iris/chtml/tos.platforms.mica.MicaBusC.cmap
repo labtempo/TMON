@@ -1,0 +1,69 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm128.pins.Atm128GpioInterruptC.html" title="Atm128GpioInterruptC\n(Atm128GpioInterrupt1C)" alt="" coords="5,124,227,175">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="119,54 119,110 113,110 113,54">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="116,78,201,95">
+<area shape="rect" id="node34" href="../chtml/tos.chips.atm128.pins.HplAtm128InterruptC.html" title="HplAtm128InterruptC" alt="" coords="383,245,583,304">
+<area shape="poly" id="edge58" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="168,172 278,219 370,246 368,251 276,224 166,177">
+<area shape="rect" id="edge58" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="277,203,405,221">
+<area shape="rect" id="node4" href="../chtml/tos.platforms.mica.MicaBusP.html" title="MicaBusP" alt="" coords="1331,125,1427,173">
+<area shape="poly" id="edge4" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1011,52 1023,75 1042,94 1062,104 1090,113 1163,127 1317,143 1316,148 1162,132 1089,118 1060,109 1038,98 1019,78 1006,55">
+<area shape="rect" id="edge4" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1040,78,1117,95">
+<area shape="rect" id="node6" href="../chtml/tos.chips.atm1281.HplAtm128GeneralIOC.html" title="HplAtm128GeneralIOC" alt="" coords="2621,120,2829,179">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1890,46 1931,72 1980,93 2032,106 2100,116 2268,131 2449,140 2607,145 2607,150 2449,145 2268,136 2099,121 2031,111 1978,99 1928,76 1887,50">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1979,78,2043,95">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="1991,44 2038,71 2095,93 2193,111 2328,125 2608,142 2607,147 2328,130 2192,116 2094,99 2036,76 1988,49">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2095,78,2159,95">
+<area shape="poly" id="edge10" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1116,53 1125,75 1140,94 1170,109 1215,121 1317,139 1317,145 1214,127 1168,114 1137,98 1120,78 1111,55">
+<area shape="rect" id="edge10" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1139,78,1216,95">
+<area shape="poly" id="edge12" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1219,53 1223,75 1234,94 1252,110 1273,122 1318,138 1316,143 1271,127 1249,114 1230,98 1218,77 1214,54">
+<area shape="rect" id="edge12" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1232,78,1309,95">
+<area shape="poly" id="edge14" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2090,42 2109,51 2167,76 2227,93 2326,113 2427,127 2608,142 2607,147 2427,132 2326,118 2226,99 2165,81 2107,56 2088,47">
+<area shape="rect" id="edge14" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2227,78,2291,95">
+<area shape="poly" id="edge16" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2240,48 2290,72 2347,93 2413,110 2481,123 2608,139 2607,144 2481,128 2412,115 2346,99 2288,77 2238,53">
+<area shape="rect" id="edge16" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2347,78,2411,95">
+<area shape="poly" id="edge18" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2368,45 2409,70 2457,94 2532,116 2608,132 2607,137 2531,122 2455,98 2406,75 2365,50">
+<area shape="rect" id="edge18" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2456,78,2520,95">
+<area shape="poly" id="edge20" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2469,43 2566,94 2616,113 2614,118 2564,98 2466,48">
+<area shape="rect" id="edge20" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2565,78,2629,95">
+<area shape="rect" id="node15" href="../chtml/tos.chips.atm128.pins.Atm128GpioInterruptC.html" title="Atm128GpioInterruptC\n(Atm128GpioInterrupt3C)" alt="" coords="251,124,472,175">
+<area shape="poly" id="edge22" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="364,54 364,110 359,110 359,54">
+<area shape="rect" id="edge22" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="361,78,447,95">
+<area shape="poly" id="edge62" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="386,173 429,219 443,234 439,237 425,223 382,177">
+<area shape="rect" id="edge62" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="427,203,555,221">
+<area shape="poly" id="edge24" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1320,53 1318,74 1322,95 1335,114 1330,117 1318,97 1313,75 1315,53">
+<area shape="rect" id="edge24" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1320,78,1397,95">
+<area shape="poly" id="edge26" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2609,50 2658,94 2677,109 2673,114 2654,98 2605,54">
+<area shape="rect" id="edge26" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2656,78,2720,95">
+<area shape="poly" id="edge28" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2728,54 2728,106 2723,106 2723,54">
+<area shape="rect" id="edge28" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2725,78,2789,95">
+<area shape="rect" id="node20" href="../chtml/tos.chips.atm128.pins.Atm128GpioInterruptC.html" title="Atm128GpioInterruptC\n(Atm128GpioInterrupt0C)" alt="" coords="496,124,717,175">
+<area shape="poly" id="edge30" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="609,54 609,110 604,110 604,54">
+<area shape="rect" id="edge30" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="607,78,692,95">
+<area shape="poly" id="edge56" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="593,176 557,223 540,239 536,235 553,220 589,173">
+<area shape="rect" id="edge56" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="572,203,700,221">
+<area shape="poly" id="edge32" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1424,54 1405,97 1398,114 1393,111 1400,95 1419,52">
+<area shape="rect" id="edge32" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1411,78,1488,95">
+<area shape="poly" id="edge34" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2818,54 2809,76 2795,98 2782,113 2778,109 2791,94 2804,74 2813,52">
+<area shape="rect" id="edge34" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2804,78,2868,95">
+<area shape="poly" id="edge36" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2911,54 2896,77 2875,98 2843,118 2840,113 2872,94 2891,74 2906,51">
+<area shape="rect" id="edge36" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2889,78,2953,95">
+<area shape="poly" id="edge38" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3006,54 2986,77 2960,98 2912,116 2844,132 2842,127 2910,111 2957,94 2982,73 3002,50">
+<area shape="rect" id="edge38" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="2981,78,3045,95">
+<area shape="poly" id="edge40" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1530,54 1515,77 1495,98 1469,116 1441,130 1438,126 1466,112 1492,94 1511,73 1526,51">
+<area shape="rect" id="edge40" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1509,78,1587,95">
+<area shape="poly" id="edge42" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1636,54 1618,77 1593,98 1556,117 1516,131 1441,147 1440,142 1515,126 1554,112 1591,94 1614,74 1632,51">
+<area shape="rect" id="edge42" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1613,78,1691,95">
+<area shape="poly" id="edge44" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3102,53 3080,77 3052,98 3015,112 2963,123 2843,140 2843,135 2962,118 3013,106 3049,94 3077,74 3098,50">
+<area shape="rect" id="edge44" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3075,78,3139,95">
+<area shape="rect" id="node29" href="../chtml/tos.chips.atm128.pins.Atm128GpioInterruptC.html" title="Atm128GpioInterruptC\n(Atm128GpioInterrupt2C)" alt="" coords="741,124,963,175">
+<area shape="poly" id="edge46" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="855,54 855,110 849,110 849,54">
+<area shape="rect" id="edge46" href="../ihtml/tos.interfaces.GpioInterrupt.html" title="GpioInterrupt" alt="" coords="852,78,937,95">
+<area shape="poly" id="edge60" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="808,177 760,201 706,224 597,255 595,250 704,219 758,197 806,172">
+<area shape="rect" id="edge60" href="../ihtml/tos.chips.atm128.pins.HplAtm128Interrupt.html" title="HplAtm128Interrupt" alt="" coords="748,203,876,221">
+<area shape="poly" id="edge48" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3228,54 3190,78 3145,99 3089,112 3013,124 2844,142 2843,137 3012,119 3088,107 3143,93 3187,73 3225,49">
+<area shape="rect" id="edge48" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3183,78,3247,95">
+<area shape="poly" id="edge50" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1744,54 1724,78 1697,98 1650,115 1583,128 1441,146 1441,141 1582,123 1649,110 1695,94 1720,74 1739,50">
+<area shape="rect" id="edge50" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="1719,78,1796,95">
+<area shape="poly" id="edge52" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3371,48 3317,75 3253,99 3176,113 3069,126 2843,144 2843,139 3069,120 3175,108 3251,93 3315,70 3368,43">
+<area shape="rect" id="edge52" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3301,78,3365,95">
+<area shape="poly" id="edge54" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3471,49 3426,76 3371,99 3271,117 3131,132 2843,148 2843,143 3130,126 3270,112 3370,93 3424,71 3468,45">
+<area shape="rect" id="edge54" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="3413,78,3477,95">

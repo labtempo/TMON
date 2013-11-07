@@ -1,0 +1,239 @@
+<?xml version="1.0" ?><component loc="19:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc" nicename="tos.platforms.mica.chips.at45db.HplAt45dbC" qname="HplAt45dbC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc">
+        <short>
+ AT45DB flash chip HPL for mica family.</short>
+        <long>
+ AT45DB flash chip HPL for mica family. Each family member must provide
+ and HplAt45dbIOC component implementing the SPIByte and HplAt45dbByte
+ interfaces required by HplAt45dbByteC.
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="26:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc">
+          <from><interface-ref name="HplAt45db" ref="0x2ace83b314e8" scoped=""/></from>
+          <to><interface-ref name="HplAt45db" ref="0x2ace83b2c6f8" scoped=""/></to>
+        </wire>
+        <wire loc="28:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83b72b70" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace83bfd360" scoped=""/></to>
+        </wire>
+        <wire loc="29:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc">
+          <from><interface-ref name="FlashSpi" ref="0x2ace83b718c8" scoped=""/></from>
+          <to><interface-ref name="FlashSpi" ref="0x2ace83bfc020" scoped=""/></to>
+        </wire>
+        <wire loc="30:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc">
+          <from><interface-ref name="HplAt45dbByte" ref="0x2ace83b71e60" scoped=""/></from>
+          <to><interface-ref name="HplAt45dbByte" ref="0x2ace83bfc640" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="20:/opt/tinyos-2.1.2/tos/platforms/mica/chips/at45db/HplAt45dbC.nc" name="HplAt45db" provided="1" ref="0x2ace83b314e8">
+      <component-ref nicename="tos.platforms.mica.chips.at45db.HplAt45dbC" qname="HplAt45dbC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAt45db" ref="0x2ace83b314e8" scoped=""/></type-interface>
+      <attribute-value>
+        <attribute-ref name="atmostonce" ref="0x2ace819b9020"/>
+        <value-structured>
+          <type-tag alignment="I:1" size="I:0"><attribute-ref name="atmostonce" ref="0x2ace819b9020"/></type-tag>
+        </value-structured>
+      </attribute-value>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.HplAt45db" qname="HplAt45db"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fill" ref="0x2ace83b2e640" scoped=""/>
+        <function-ref name="waitCompare" ref="0x2ace83b319c0" scoped=""/>
+        <function-ref name="crcDone" ref="0x2ace83b31b48" scoped=""/>
+        <function-ref name="flushDone" ref="0x2ace83b31cd0" scoped=""/>
+        <function-ref name="read" ref="0x2ace83b31e58" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83b2f020" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83b2f1a8" scoped=""/>
+        <function-ref name="waitIdleDone" ref="0x2ace83b2f330" scoped=""/>
+        <function-ref name="waitCompareDone" ref="0x2ace83b2f4b8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83b2f640" scoped=""/>
+        <function-ref name="waitIdle" ref="0x2ace83b2f7c8" scoped=""/>
+        <function-ref name="flush" ref="0x2ace83b2f950" scoped=""/>
+        <function-ref name="write" ref="0x2ace83b2fad8" scoped=""/>
+        <function-ref name="compareDone" ref="0x2ace83b2fd60" scoped=""/>
+        <function-ref name="compare" ref="0x2ace83b2e020" scoped=""/>
+        <function-ref name="crc" ref="0x2ace83b2e1a8" scoped=""/>
+        <function-ref name="readBuffer" ref="0x2ace83b2e330" scoped=""/>
+        <function-ref name="fillDone" ref="0x2ace83b2e4b8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83b31838" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="56:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc" name="HplAt45dbByte" provided="1" ref="0x2ace83bfc640">
+      <component-ref nicename="tos.platforms.iris.chips.at45db.HplAt45dbIOC" qname="HplAt45dbIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAt45dbByte" ref="0x2ace83bfc640" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.HplAt45dbByte" qname="HplAt45dbByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCompareStatus" ref="0x2ace83bfc990" scoped=""/>
+        <function-ref name="waitIdle" ref="0x2ace83bfcb18" scoped=""/>
+        <function-ref name="idle" ref="0x2ace83bfcca0" scoped=""/>
+        <function-ref name="select" ref="0x2ace83bfce28" scoped=""/>
+        <function-ref name="deselect" ref="0x2ace83bfb020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc" name="FlashSpi" provided="0" ref="0x2ace83b718c8">
+      <component-ref nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbC.HplAt45dbByteC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="FlashSpi" ref="0x2ace83b718c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2ace83b71c18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="30:/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc" name="HplAt45dbByte" provided="0" ref="0x2ace83b71e60">
+      <component-ref nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbC.HplAt45dbByteC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAt45dbByte" ref="0x2ace83b71e60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.HplAt45dbByte" qname="HplAt45dbByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getCompareStatus" ref="0x2ace83c011e8" scoped=""/>
+        <function-ref name="waitIdle" ref="0x2ace83c01370" scoped=""/>
+        <function-ref name="idle" ref="0x2ace83c014f8" scoped=""/>
+        <function-ref name="select" ref="0x2ace83c01680" scoped=""/>
+        <function-ref name="deselect" ref="0x2ace83c01808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc" name="FlashSpi" provided="1" ref="0x2ace83bfc020">
+      <component-ref nicename="tos.platforms.iris.chips.at45db.HplAt45dbIOC" qname="HplAt45dbIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="FlashSpi" ref="0x2ace83bfc020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SpiByte" qname="SpiByte"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="write" ref="0x2ace83bfc370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="28:/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc" name="Resource" provided="0" ref="0x2ace83b72b70">
+      <component-ref nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbC.HplAt45dbByteC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83b72b70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83b71020" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83b711a8" scoped=""/>
+        <function-ref name="request" ref="0x2ace83b71330" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83b714b8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83b71640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc" name="HplAt45db" provided="1" ref="0x2ace83b2c6f8">
+      <component-ref nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbC.HplAt45dbByteC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAt45db" ref="0x2ace83b2c6f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.HplAt45db" qname="HplAt45db"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="readDone" ref="0x2ace83b728c8" scoped=""/>
+        <function-ref name="waitCompare" ref="0x2ace83b2cbd0" scoped=""/>
+        <function-ref name="crcDone" ref="0x2ace83b2cd58" scoped=""/>
+        <function-ref name="flushDone" ref="0x2ace83b73020" scoped=""/>
+        <function-ref name="read" ref="0x2ace83b731a8" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83b73330" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83b734b8" scoped=""/>
+        <function-ref name="waitIdleDone" ref="0x2ace83b73640" scoped=""/>
+        <function-ref name="waitCompareDone" ref="0x2ace83b737c8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83b73950" scoped=""/>
+        <function-ref name="waitIdle" ref="0x2ace83b73ad8" scoped=""/>
+        <function-ref name="flush" ref="0x2ace83b73c60" scoped=""/>
+        <function-ref name="write" ref="0x2ace83b73de8" scoped=""/>
+        <function-ref name="compareDone" ref="0x2ace83b72120" scoped=""/>
+        <function-ref name="compare" ref="0x2ace83b722a8" scoped=""/>
+        <function-ref name="crc" ref="0x2ace83b72430" scoped=""/>
+        <function-ref name="readBuffer" ref="0x2ace83b725b8" scoped=""/>
+        <function-ref name="fillDone" ref="0x2ace83b72740" scoped=""/>
+        <function-ref name="fill" ref="0x2ace83b2ca48" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc" name="Resource" provided="1" ref="0x2ace83bfd360">
+      <component-ref nicename="tos.platforms.iris.chips.at45db.HplAt45dbIOC" qname="HplAt45dbIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83bfd360" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83bfd6b0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83bfd838" scoped=""/>
+        <function-ref name="request" ref="0x2ace83bfd9c0" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83bfdb48" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83bfdcd0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="25(HplAt45dbC.HplAt45dbByteC):/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc" nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbC.HplAt45dbByteC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/chips/at45db/HplAt45dbByteC.nc">
+        <short>
+ Generic byte-at-a-time implementation of the AT45DB HPL.</short>
+        <long>
+ Generic byte-at-a-time implementation of the AT45DB HPL.
+ 
+ Each platform must provide its own HPL implementation for its AT45DB
+ flash chip. To simplify this task, this component can easily be used to
+ build an AT45DB HPL by connecting it to a byte-at-a-time SPI interface,
+ and an HplAt45dbByte interface.
+
+ @param The number of bits needed to represent a sector size, e.g., 9
+   for the AT45DB041B.
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.at45db.HplAt45dbByteC" qname="HplAt45dbByteC"/>
+        <arguments>
+          <value cst="I:9">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="52:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc" nicename="tos.platforms.iris.chips.at45db.HplAt45dbIOC" qname="HplAt45dbIOC">
+      <documentation loc="45:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+        <short>
+ Low-level access functions for the AT45DB flash on the mica2 and micaz.</short>
+        <long>
+ Low-level access functions for the AT45DB flash on the mica2 and micaz.
+
+ @author David Gay
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="HplAt45dbByte" ref="0x2ace83bfc640" scoped=""/></from>
+          <to><interface-ref name="HplAt45dbByte" ref="0x2ace83bf7a20" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83bfd360" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace83bba410" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="FlashSpi" ref="0x2ace83bfc020" scoped=""/></from>
+          <to><interface-ref name="FlashSpi" ref="0x2ace83bf7400" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="SubInit" ref="0x2ace81c899a0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ace83bfbd30" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="Select" ref="0x2ace83bf6860" scoped=""/></from>
+          <to><interface-ref name="PortA3" ref="0x2ace81ca9020" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="Clk" ref="0x2ace83bf5ad0" scoped=""/></from>
+          <to><interface-ref name="PortD5" ref="0x2ace81cb8e00" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="In" ref="0x2ace83bf3dd8" scoped=""/></from>
+          <to><interface-ref name="PortD2" ref="0x2ace81cbb968" scoped=""/></to>
+        </wire>
+        <wire loc="73:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="Out" ref="0x2ace83bf4c58" scoped=""/></from>
+          <to><interface-ref name="PortD3" ref="0x2ace81cbaaf0" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/platforms/iris/chips/at45db/HplAt45dbIOC.nc">
+          <from><interface-ref name="BusyWait" ref="0x2ace83bf11e0" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x2ace82a483c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

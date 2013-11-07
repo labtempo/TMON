@@ -1,0 +1,9 @@
+2013-03-07 16:58:59,814: root              : WARNING : Starting...
+2013-03-07 16:59:06,292: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSLS.py", line 280, in main
+    save_reading(now, samples, file_samples)
+  File "MonitorMCSLS.py", line 202, in save_reading
+    file.write("%f %d %d %f %d %f\n" % (timestamp-samples.delay, msg.source, msg.seqno, readingTemperature, msg.readingLight, voltage))
+NameError: global name 'samples' is not defined
+2013-03-07 16:59:06,292: root              : WARNING : Done...

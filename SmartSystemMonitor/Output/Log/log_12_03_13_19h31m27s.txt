@@ -1,0 +1,42 @@
+2013-03-12 19:31:28,094: root              : WARNING : Starting...
+2013-03-12 19:31:34,805: root              : WARNING : Mote 2 entered the network!
+2013-03-12 19:31:36,370: root              : WARNING : Mote 1 entered the network!
+2013-03-12 19:36:08,803: root              : WARNING : Mote 3 entered the network!
+2013-03-12 19:38:03,978: root              : WARNING : Skipping packet None
+2013-03-12 19:38:03,993: root              : WARNING : Skipping packet None
+2013-03-12 19:38:04,003: root              : WARNING : Skipping packet None
+2013-03-12 19:38:04,018: root              : WARNING : Skipping packet None
+2013-03-12 19:38:34,083: root              : WARNING : Skipping packet None
+2013-03-12 19:38:34,096: root              : WARNING : Skipping packet None
+2013-03-12 19:38:34,107: root              : WARNING : Skipping packet None
+2013-03-12 19:38:34,121: root              : WARNING : Skipping packet None
+2013-03-12 19:38:36,083: root              : WARNING : Skipping packet None
+2013-03-12 19:38:36,092: root              : WARNING : Skipping packet None
+2013-03-12 19:38:36,101: root              : WARNING : Skipping packet None
+2013-03-12 19:38:36,109: root              : WARNING : Skipping packet None
+2013-03-12 19:38:37,084: root              : WARNING : Skipping packet None
+2013-03-12 19:38:37,094: root              : WARNING : Skipping packet None
+2013-03-12 19:38:37,103: root              : WARNING : Skipping packet None
+2013-03-12 19:38:37,112: root              : WARNING : Skipping packet None
+2013-03-12 19:38:39,085: root              : WARNING : Skipping packet None
+2013-03-12 19:38:39,094: root              : WARNING : Skipping packet None
+2013-03-12 19:38:39,103: root              : WARNING : Skipping packet None
+2013-03-12 19:38:39,113: root              : WARNING : Skipping packet None
+2013-03-12 19:38:40,083: root              : WARNING : Skipping packet None
+2013-03-12 19:38:40,092: root              : WARNING : Skipping packet None
+2013-03-12 19:38:40,100: root              : WARNING : Skipping packet None
+2013-03-12 19:38:40,109: root              : WARNING : Skipping packet None
+2013-03-13 10:09:19,328: root              : WARNING : Skipping packet None
+2013-03-13 10:09:19,337: root              : WARNING : Skipping packet None
+2013-03-13 10:09:19,346: root              : WARNING : Skipping packet None
+2013-03-13 10:09:19,356: root              : WARNING : Skipping packet None
+2013-03-13 10:10:00,615: root              : WARNING : Skipping packet None
+2013-03-13 10:10:00,624: root              : WARNING : Skipping packet None
+2013-03-13 10:10:00,633: root              : WARNING : Skipping packet None
+2013-03-13 10:10:00,642: root              : WARNING : Skipping packet None
+2013-03-13 10:10:37,117: root              : WARNING : Skipping packet None
+2013-03-13 10:10:37,129: root              : WARNING : Skipping packet None
+2013-03-13 10:10:37,139: root              : WARNING : Skipping packet None
+2013-03-13 10:10:37,148: root              : WARNING : Skipping packet None
+2013-03-13 10:20:57,798: root              : WARNING : Aborting...
+2013-03-13 10:20:57,798: root              : WARNING : Done...

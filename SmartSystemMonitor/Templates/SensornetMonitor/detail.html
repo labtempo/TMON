@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block title %}Detail by Mote{% endblock %}
+{% block extrahead %}
+ <!-- Auto refresh code -->
+<meta http-equiv="refresh" content="300">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<h3>Mote ID = {{ mote.id }}</h3>
+<p>Mote Status: {% if mote.status %} Active {% else %} Inactive {% endif %} | Mote Model: {{ mote.moteModel}} | Mote Localization: {{ mote.moteLocalization }}</p>
+<p>Mote Localization Description = {{mote.localizationDescription}}</p>
+<p>Estimated lifetime in day(s): <u>{{remaining_days}}</u></p>
+<p>Number of samples showed in charts: <u>{{ samples_list|length }}</u> </p>
+<p>These charts represents the detail of data collected in last week.</p>
+<center>
+	{% if is_sensor %}
+	<div id="Chart temperature"></div>	
+	<div id="Chart light"></div>
+	{% endif %}	
+	<div id="Chart voltage"></div>
+</center>
+<p><a href="/SensornetMonitor/detailinterval/{{ mote.id }}/">Click here for detail by interval specified.</a></p>
+</div>
+{% endblock %} 
+
+{% block script %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript"> 
+	google.load('visualization', '1.0', {'packages':['corechart']});
+    google.setOnLoadCallback(function() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Temperature');
+        data.addRows({{ samples_list|length }});
+        {% for sample in samples_list %}
+        	var year = {{sample.timeStamp|date:"Y"}};
+        	var month = {{sample.timeStamp|date:"m"}}-1;
+        	var day = {{sample.timeStamp|date:"j"}};
+        	var hour = {{sample.timeStamp|date:"H"}};
+        	var minute = {{sample.timeStamp|date:"i"}};
+        	var second = {{sample.timeStamp|date:"s"}};
+        	data.setValue({{ forloop.counter0 }}, 0, new Date (year,month,day,hour,minute,second,0));
+            data.setValue({{ forloop.counter0 }}, 1, {{sample.readingTemperature}});
+        {% endfor %}
+        
+        var options = {series: { 0 :{color: 'red', visibleInLegend: false, lineWidth: 1, pointSize: 2}},
+        		animation: {duration : 5000},
+        		vAxis: {title: "°C"},
+        };
+        
+        var chart = new google.visualization.LineChart(document.getElementById('Chart temperature'));
+        chart.draw(data, options);
+    });
+</script>
+
+<script type="text/javascript">    
+	google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(function() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Voltage');
+        data.addRows({{ samples_list|length }});
+
+        {% for sample in samples_list %}  
+        	var year = {{sample.timeStamp|date:"Y"}};
+        	var month = {{sample.timeStamp|date:"m"}}-1;
+        	var day = {{sample.timeStamp|date:"j"}};
+        	var hour = {{sample.timeStamp|date:"H"}};
+        	var minute = {{sample.timeStamp|date:"i"}};
+        	var second = {{sample.timeStamp|date:"s"}};
+        	data.setValue({{ forloop.counter0 }}, 0, new Date (year,month,day,hour,minute,second,0));
+        	data.setValue({{ forloop.counter0 }}, 1, {{sample.readingVoltage}});
+    	{% endfor %}
+        var options = {series: { 0 :{color: 'blue', visibleInLegend: false, lineWidth: 1, pointSize: 2} },
+        		animation: {duration : 500},
+        		vAxis: {title: "Battery in volts"},
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('Chart voltage'));
+        chart.draw(data, options);
+    });
+</script>
+
+<script type="text/javascript">    
+	google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(function() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Light');
+        data.addRows({{ samples_list|length }});
+
+        {% for sample in samples_list %}  
+	        var year = {{sample.timeStamp|date:"Y"}};
+	    	var month = {{sample.timeStamp|date:"m"}}-1;
+	    	var day = {{sample.timeStamp|date:"j"}};
+	    	var hour = {{sample.timeStamp|date:"H"}};
+	    	var minute = {{sample.timeStamp|date:"i"}};
+	    	var second = {{sample.timeStamp|date:"s"}};
+	    	data.setValue({{ forloop.counter0 }}, 0, new Date (year,month,day,hour,minute,second,0));
+    		data.setValue({{ forloop.counter0 }}, 1, {{sample.readingLight}});
+		{% endfor %}
+        var options = {series: { 0 :{color: 'orange', visibleInLegend: false, lineWidth: 1, pointSize: 2} },
+        		animation: {duration : 1000},
+        		vAxis: {title: "Light in adc"},
+        };
+        var chart = new google.visualization.LineChart(document.getElementById('Chart light'));
+        chart.draw(data, options);
+    });
+</script>
+{% endblock %}

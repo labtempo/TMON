@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load bootstrap_toolkit %}
+{% block title%}Thermal Map Viewer{% endblock %}
+{% block extrahead %}
+<!--  Auto refresh code -->
+<meta http-equiv="refresh" content="5">
+{% endblock %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="/media/thermal_map/thermostyle.css">
+<script type="text/javascript" src="/media/thermal_map/jquery.balloon.min.js"></script>
+<script type="text/javascript" src="/media/thermal_map/thermomap.js"></script>
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2">
+		<center>
+				<h4>Configurator</h4>
+		</center>
+			<form action="" method="post">
+				{% csrf_token %} {{ form|as_bootstrap }}
+				<button type="submit" class="btn btn">Generate</button>
+			</form>
+		</div>
+		<div class="span10">
+			<center>
+				<h3>Thermal Map</h3>
+				<font color="Blue">Cold </font><img src="/media/tabela_de_cores.png"
+					width="30%" height="30%"><font color="Red"> Hot</font>
+				<p><font color="Blue">{{min_temp|floatformat:2}}°C</font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="Red">{{max_temp|floatformat:2}}°C</font></p>
+				</br></br>
+				<!-- <div id="view_graphs"></div> -->
+				<div id="board"></div>
+				<div id="border_layers"><div id="map_label">{{view_type}}</div></div>
+			</center>
+			</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script>
+	$("#map_label").offset($("#board").offset());
+
+{% ifequal view_type 'Top'%}
+$(document).ready(function(){
+	$("#view_graphs").hide();
+	var board = new ThermoMap({{room.width}}, {{room.length}}, "#board", "#border_layers", {{min_temp|floatformat:1}}, {{max_temp|floatformat:1}});
+    {% for rack in rack_list %}
+		board.addRack({{rack.localizationX}}, {{rack.localizationY}}, {{rack.localizationZ}}, {{rack.width}}, {{rack.length}}, {{rack.height}}, "{{rack.label}}");
+	{% endfor %}	
+    {% for mote in mote_list %}
+    	board.addMote({{mote.localizationX}}, {{mote.localizationY}}, {{mote.localizationZ}},{{mote.temp}} ,"{{mote.mote.id}}");
+	{% endfor %}
+})
+{% endifequal %}
+
+{% ifequal view_type 'Front'%}
+$(document).ready(function(){
+	$("#view_graphs").hide();
+	var board = new ThermoMap({{room.width}}, {{room.height}}, "#board", "#border_layers", {{min_temp|floatformat:1}}, {{max_temp|floatformat:1}});
+    {% for rack in rack_list %}
+		board.addRack({{rack.localizationX}}, {{rack.localizationZ}}, {{rack.localizationZ}}, {{rack.width}}, {{rack.height}}, {{rack.height}}, "{{rack.label}}");
+	{% endfor %}	
+    {% for mote in mote_list %}
+    	board.addMote({{mote.localizationX}}, {{mote.localizationZ}}, {{mote.localizationZ}},{{mote.temp}} ,"{{mote.mote.id}}");
+	{% endfor %}
+})
+{% endifequal %}
+
+{% ifequal view_type 'Back'%}
+$(document).ready(function(){
+	$("#view_graphs").hide();
+	var board = new ThermoMap({{room.width}}, {{room.height}}, "#board", "#border_layers", {{min_temp|floatformat:1}}, {{max_temp|floatformat:1}});
+    {% for rack in rack_list %}
+		board.addRack({{rack.localizationX}}, {{rack.localizationZ}}, {{rack.localizationZ}}, {{rack.width}}, {{rack.height}}, {{rack.height}}, "{{rack.label}}");
+	{% endfor %}	
+    {% for mote in mote_list %}
+    	board.addMote({{mote.localizationX}}, {{mote.localizationZ}}, {{mote.localizationZ}},{{mote.temp}} ,"{{mote.mote.id}}");
+	{% endfor %}
+})
+{% endifequal %}
+
+
+</script>
+{% endblock %}

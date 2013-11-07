@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block title %} Log List by Interval {% endblock %}
+
+{% block extrahead %}
+ <!-- Auto refresh code -->
+<meta http-equiv="refresh" content="600">
+{% endblock %}
+
+{% block extra_head %}
+    {{ form.media }}
+{% endblock %}
+
+{% block content %}
+<center><h3>Event List by Interval</h3></center>
+<div class="container">
+<form action="" method="post">
+{% csrf_token %}
+{{ form|as_bootstrap }}
+  <button type="submit" class="btn btn">Consult</button>
+  <p></p>
+<p><a href="alertlist/" class="btn btn-warning"> Complete Log List</a></p>
+<p>Attention! May take some time to process this query.</p> 
+</form>
+</div>
+{% endblock %}

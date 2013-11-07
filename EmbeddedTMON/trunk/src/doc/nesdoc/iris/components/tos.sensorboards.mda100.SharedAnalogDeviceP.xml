@@ -1,0 +1,139 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="startup_delay" ref="0x2ace83554920">
+          <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="39:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="SplitControl" provided="1" ref="0x2ace83554dd0">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x2ace83554dd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ace83551170" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ace835512f8" scoped=""/>
+        <function-ref name="start" ref="0x2ace83551480" scoped=""/>
+        <function-ref name="stop" ref="0x2ace83551608" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="EnablePin" provided="0" ref="0x2ace835494f8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="EnablePin" ref="0x2ace835494f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace83549848" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace835499d0" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace83549b58" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace83549ce0" scoped=""/>
+        <function-ref name="get" ref="0x2ace83549e68" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace83548020" scoped=""/>
+        <function-ref name="set" ref="0x2ace835481a8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace83548330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="AnalogDeviceResource" provided="0" ref="0x2ace8354f5a8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AnalogDeviceResource" ref="0x2ace8354f5a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace8354f8f8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace8354fa80" scoped=""/>
+        <function-ref name="request" ref="0x2ace8354fc08" scoped=""/>
+        <function-ref name="granted" ref="0x2ace8354fd90" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace8354e020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="108:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="readDoneTask" provided="0" ref="0x2ace835a93e8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="readDoneTask" ref="0x2ace835a93e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace835a9738" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace835a98c0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="Read" provided="1" ref="0x2ace83551e78">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace83551e78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace835509f0" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83550e40" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="77:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="stopDone" provided="0" ref="0x2ace835b3e28">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="stopDone" ref="0x2ace835b3e28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace835b21a8" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace835b2330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="ActualRead" provided="0" ref="0x2ace835bb850">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ActualRead" ref="0x2ace835bb850" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadNow" qname="ReadNow"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83546410" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83546898" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="Timer" provided="0" ref="0x2ace8354e3e8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x2ace8354e3e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ace8354a6c8" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8354ddb0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ace8354bad8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ace8354b688" scoped=""/>
+        <function-ref name="getdt" ref="0x2ace83549020" scoped=""/>
+        <function-ref name="gett0" ref="0x2ace8354ab18" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ace8354b238" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ace8354d020" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ace8354a0f8" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ace8354d4c0" scoped=""/>
+        <function-ref name="stop" ref="0x2ace8354d960" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

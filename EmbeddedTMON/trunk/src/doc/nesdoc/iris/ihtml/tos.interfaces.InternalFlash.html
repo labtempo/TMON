@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.interfaces.InternalFlash</title>
+  </head>
+  <body>
+    <h2>Interface: tos.interfaces.InternalFlash</h2>
+    <b>interface InternalFlash</b><p>
+ A generic interface to read from and write to the internal flash of
+ a microcontroller.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+ 
+      </dd>
+      <dd>
+        Prabal Dutta &lt;prabal@cs.berkeley.edu&gt; (Port to T2)
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#read">read</a>(void *addr, void *buf, uint16_t size)
+      </span><menu>
+ Read <code>size</code> bytes starting from <code>addr</code> and
+ return them in <code>buf</code>.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#write">write</a>(void *addr, void *buf, uint16_t size)
+      </span><menu>
+ Write <code>size</code> bytes from <code>buf</code> into internal
+ flash starting at <code>addr</code>.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="read"></a>
+    <h4>read
+    </h4>
+    <span id=funcnameshort>command error_t <b>read</b>(void *addr, void *buf, uint16_t size)
+    </span>
+    <p>
+    <menu>
+      
+ Read <code>size</code> bytes starting from <code>addr</code> and
+ return them in <code>buf</code>.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>addr</code> -  A pointer to the starting address from which to read.
+ 
+        </dd>
+        <dd>
+            'void* COUNT(size) buf'  A pointer to the buffer into which read bytes are
+               placed.
+ 
+        </dd>
+        <dd>
+          <code>size</code> -  The number of bytes to read.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+           SUCCESS if the bytes were successfully read.
+          FAIL if the call could not be completed.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="write"></a>
+    <h4>write
+    </h4>
+    <span id=funcnameshort>command error_t <b>write</b>(void *addr, void *buf, uint16_t size)
+    </span>
+    <p>
+    <menu>
+      
+ Write <code>size</code> bytes from <code>buf</code> into internal
+ flash starting at <code>addr</code>.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>addr</code> -  A pointer to the starting address to which to write.
+ 
+        </dd>
+        <dd>
+            'void* COUNT(size) buf'  A pointer to the buffer from which bytes are read.
+ 
+        </dd>
+        <dd>
+          <code>size</code> -  The number of bytes to write.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+           SUCCESS if the bytes were successfully written.
+          FAIL if the call could not be completed.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

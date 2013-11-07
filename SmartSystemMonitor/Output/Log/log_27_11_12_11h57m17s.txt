@@ -1,0 +1,38 @@
+2012-11-27 11:57:18,237: root              : WARNING : Starting...
+2012-11-27 11:59:21,970: root              : WARNING : Mote 228 entered the network!
+2012-11-27 12:02:23,765: root              : WARNING : Mote 245 entered the network!
+2012-11-27 12:02:32,922: root              : WARNING : Mote 235 entered the network!
+2012-11-27 12:02:32,939: root              : WARNING : Mote 237 entered the network!
+2012-11-27 12:02:51,719: root              : WARNING : Mote 253 entered the network!
+2012-11-27 12:02:58,887: root              : WARNING : Mote 248 entered the network!
+2012-11-27 12:03:27,307: root              : WARNING : Mote 242 entered the network!
+2012-11-27 12:04:49,787: root              : WARNING : Mote 218 entered the network!
+2012-11-27 12:05:22,236: root              : WARNING : Mote 217 entered the network!
+2012-11-27 12:05:34,765: root              : WARNING : Mote 214 entered the network!
+2012-11-27 12:06:09,904: root              : WARNING : Mote 233 entered the network!
+2012-11-27 12:06:15,064: root              : WARNING : Mote 222 entered the network!
+2012-11-27 12:06:15,180: root              : WARNING : Mote 223 entered the network!
+2012-11-27 12:07:30,876: root              : WARNING : Mote 227 entered the network!
+2012-11-27 12:07:46,901: root              : WARNING : Mote 1 entered the network!
+2012-11-27 12:07:50,139: root              : WARNING : Mote 249 entered the network!
+2012-11-27 12:07:57,248: root              : WARNING : Mote 251 entered the network!
+2012-11-27 12:08:36,682: root              : WARNING : Mote 252 entered the network!
+2012-11-27 12:11:11,669: root              : WARNING : Mote 241 entered the network!
+2012-11-27 12:14:02,007: root              : WARNING : Mote 131 entered the network!
+2012-11-27 12:14:02,040: root              : WARNING : Mote 239 entered the network!
+2012-11-27 12:14:02,090: root              : WARNING : Mote 225 entered the network!
+2012-11-27 12:14:02,106: root              : WARNING : Mote 216 entered the network!
+2012-11-27 12:14:02,140: root              : WARNING : Mote 238 entered the network!
+2012-11-27 12:16:09,681: root              : WARNING : Mote 20 entered the network!
+2012-11-27 12:17:18,625: root              : WARNING : Mote 10 entered the network!
+2012-11-27 12:17:39,586: root              : WARNING : Mote 30 entered the network!
+2012-11-27 12:20:57,162: root              : WARNING : Mote 215 entered the network!
+2012-11-27 12:26:34,674: root              : WARNING : Mote 226 entered the network!
+2012-11-27 18:14:13,391: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSL.py", line 274, in main
+    save_reading(now, samples, file_samples)
+  File "MonitorMCSL.py", line 195, in save_reading
+    logger.info("Mote %d:    Temperature: %f    Light: %d    Voltage: %f    Parent: %d    Metric: %d" % (msg.source, readingTemperature, msg.readingLight, voltage, msg.parent, msg.metric))
+TypeError: float argument required, not NoneType
+2012-11-27 18:14:13,391: root              : WARNING : Done...

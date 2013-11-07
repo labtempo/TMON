@@ -1,0 +1,73 @@
+<?xml version="1.0" ?><component abstract="" loc="43:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc" nicename="tos.lib.net.ctp.LruCtpMsgCacheP" qname="LruCtpMsgCacheP">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc">
+        <short>
+ An LRU cache that stores the signature of a CTP packet instance.</short>
+        <long>
+ An LRU cache that stores the signature of a CTP packet instance.
+ An insert operation indicates &quot;use&quot;.  Inserting an element not in
+ the cache will replace the oldest, and inserting an element already
+ in the cache will refresh its age.
+
+ @author Philip Levis 
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="43:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc" name="size" ref="0x2ace82e50bd0">
+          <component-ref nicename="tos.lib.net.ctp.LruCtpMsgCacheP" qname="LruCtpMsgCacheP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="46:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc" name="Cache" provided="1" ref="0x2ace82e4d7f0">
+      <component-ref nicename="tos.lib.net.ctp.LruCtpMsgCacheP" qname="LruCtpMsgCacheP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Cache" ref="0x2ace82e4d7f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Cache" qname="Cache"/>
+        <arguments>
+          <type-pointer alignment="I:1" size="I:2">
+            <type-tag alignment="I:1" size="I:71"><nx_struct-ref name="message_t" ref="0x2ace81b67020"/>
+              <typename><typedef-ref name="message_t" ref="0x2ace81b66570"/></typename>
+            </type-tag>
+          </type-pointer>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="insert" ref="0x2ace82e4c370" scoped=""/>
+        <function-ref name="flush" ref="0x2ace82e4ccb0" scoped=""/>
+        <function-ref name="lookup" ref="0x2ace82e4c810" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc" name="Init" provided="1" ref="0x2ace82e4d080">
+      <component-ref nicename="tos.lib.net.ctp.LruCtpMsgCacheP" qname="LruCtpMsgCacheP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x2ace82e4d080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ace82e4d3d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/net/ctp/LruCtpMsgCacheP.nc" name="CtpPacket" provided="0" ref="0x2ace82e4a1a0">
+      <component-ref nicename="tos.lib.net.ctp.LruCtpMsgCacheP" qname="LruCtpMsgCacheP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="CtpPacket" ref="0x2ace82e4a1a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.ctp.CtpPacket" qname="CtpPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSequenceNumber" ref="0x2ace82e4a4f0" scoped=""/>
+        <function-ref name="option" ref="0x2ace82e4a678" scoped=""/>
+        <function-ref name="setEtx" ref="0x2ace82e4a800" scoped=""/>
+        <function-ref name="setOrigin" ref="0x2ace82e4a988" scoped=""/>
+        <function-ref name="clearOption" ref="0x2ace82e4ab10" scoped=""/>
+        <function-ref name="getEtx" ref="0x2ace82e4ac98" scoped=""/>
+        <function-ref name="getOrigin" ref="0x2ace82e4ae20" scoped=""/>
+        <function-ref name="setType" ref="0x2ace82e49020" scoped=""/>
+        <function-ref name="setOption" ref="0x2ace82e491a8" scoped=""/>
+        <function-ref name="matchPacket" ref="0x2ace82e49330" scoped=""/>
+        <function-ref name="getThl" ref="0x2ace82e494b8" scoped=""/>
+        <function-ref name="getSequenceNumber" ref="0x2ace82e49640" scoped=""/>
+        <function-ref name="matchInstance" ref="0x2ace82e497c8" scoped=""/>
+        <function-ref name="getType" ref="0x2ace82e49a50" scoped=""/>
+        <function-ref name="setThl" ref="0x2ace82e49bd8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,30 @@
+2013-04-11 14:04:57,207: root              : WARNING : Starting...
+2013-04-11 14:06:37,688: root              : WARNING : Mote 248 entered the network!
+2013-04-11 14:06:37,717: root              : WARNING : Mote 10 entered the network!
+2013-04-11 14:06:37,946: root              : WARNING : Mote 20 entered the network!
+2013-04-11 14:06:38,513: root              : WARNING : Mote 30 entered the network!
+2013-04-11 14:06:39,029: root              : WARNING : Mote 226 entered the network!
+2013-04-11 14:06:43,707: root              : WARNING : Mote 227 entered the network!
+2013-04-11 14:06:49,104: root              : WARNING : Mote 214 entered the network!
+2013-04-11 14:06:49,472: root              : WARNING : Mote 235 entered the network!
+2013-04-11 14:06:49,494: root              : WARNING : Mote 242 entered the network!
+2013-04-11 14:06:49,642: root              : WARNING : Mote 216 entered the network!
+2013-04-11 14:06:50,188: root              : WARNING : Mote 238 entered the network!
+2013-04-11 14:06:51,955: root              : WARNING : Mote 223 entered the network!
+2013-04-11 14:06:57,108: root              : WARNING : Mote 225 entered the network!
+2013-04-11 14:06:57,189: root              : WARNING : Mote 233 entered the network!
+2013-04-11 14:06:57,205: root              : WARNING : Mote 241 entered the network!
+2013-04-11 14:06:57,277: root              : WARNING : Mote 252 entered the network!
+2013-04-11 14:06:57,325: root              : WARNING : Mote 215 entered the network!
+2013-04-11 14:06:57,359: root              : WARNING : Mote 249 entered the network!
+2013-04-11 14:06:57,379: root              : WARNING : Mote 245 entered the network!
+2013-04-11 14:06:57,394: root              : WARNING : Mote 239 entered the network!
+2013-04-11 14:06:57,410: root              : WARNING : Mote 228 entered the network!
+2013-04-11 14:07:52,371: root              : WARNING : Mote 222 entered the network!
+2013-04-11 14:07:52,904: root              : WARNING : Mote 253 entered the network!
+2013-04-11 14:07:53,004: root              : WARNING : Mote 231 entered the network!
+2013-04-11 14:07:53,121: root              : WARNING : Mote 237 entered the network!
+2013-04-11 14:07:53,270: root              : WARNING : Mote 217 entered the network!
+2013-04-11 14:07:53,587: root              : WARNING : Mote 251 entered the network!
+2013-04-12 17:28:28,898: root              : WARNING : Aborting...
+2013-04-12 17:28:28,898: root              : WARNING : Done...

@@ -1,0 +1,20 @@
+digraph "tos.lib.net.Deluge.extra.iris.NetProgC" {
+  n0x2ace83c5e020 [shape=ellipse, style=filled, label="NetProg", fontsize=12];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "InternalFlashC" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.avr.InternalFlashC.html"];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "CrcC" [fontsize=12, shape=box, URL="../chtml/tos.system.CrcC.html"];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "LedsC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.LedsC.html"];
+  "NetProgM" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.extra.iris.NetProgM.html"];
+  "ActiveMessageAddressC" [fontsize=12, shape=box, URL="../chtml/tos.system.ActiveMessageAddressC.html"];
+  "n0x2ace83c5e020" -> "NetProgM" [label="NetProg", URL="../ihtml/tos.lib.net.Deluge.extra.NetProg.html", fontsize=10];
+  "MainC" -> "NetProgM" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
+  "NetProgM" -> "InternalFlashC" [label="InternalFlash", URL="../ihtml/tos.interfaces.InternalFlash.html", fontsize=10];
+  "NetProgM" -> "CrcC" [label="Crc", URL="../ihtml/tos.interfaces.Crc.html", fontsize=10];
+  "NetProgM" -> "LedsC" [label="Leds", URL="../ihtml/tos.interfaces.Leds.html", fontsize=10];
+  "NetProgM" -> "ActiveMessageAddressC" [label="command void X(am_addr_t a)", fontsize=10];
+}

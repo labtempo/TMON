@@ -1,0 +1,27 @@
+<?xml version="1.0" ?><component loc="17:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC" safe="">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc">
+        <short>
+ HAL component providing information on the flash volumes.</short>
+        <long>
+ HAL component providing information on the flash volumes.
+
+ @author: David Gay &lt;dgay@acm.org&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="18:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" name="At45dbVolume" provided="1" ref="0x2ace83c22780">
+      <component-ref nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45dbVolume" qname="At45dbVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="volumeSize" ref="0x2ace83c22ad0" scoped=""/>
+        <function-ref name="remap" ref="0x2ace83c22c58" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

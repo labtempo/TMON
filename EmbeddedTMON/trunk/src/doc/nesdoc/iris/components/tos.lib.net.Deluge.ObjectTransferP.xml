@@ -1,0 +1,144 @@
+<?xml version="1.0" ?><component loc="45:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP">
+      <module/>
+    <specification><interface loc="50:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="Timer" provided="0" ref="0x2ace837f95e8">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x2ace837f95e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ace838788f0" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837f6020" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ace837f6d10" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ace837f68c0" scoped=""/>
+        <function-ref name="getdt" ref="0x2ace838771c0" scoped=""/>
+        <function-ref name="gett0" ref="0x2ace83878d40" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ace837f6470" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ace837f8158" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ace83878320" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ace837f85f8" scoped=""/>
+        <function-ref name="stop" ref="0x2ace837f8a98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="SendAdvMsg" provided="0" ref="0x2ace8386e828">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SendAdvMsg" ref="0x2ace8386e828" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace8386eb78" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ace8386ed00" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace8386d020" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace8386d1a8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace8386d330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="Random" provided="0" ref="0x2ace837fab90">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Random" ref="0x2ace837fab90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x2ace837f9020" scoped=""/>
+        <function-ref name="rand32" ref="0x2ace837f91a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="ReceiveAdvMsg" provided="0" ref="0x2ace8386d688">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReceiveAdvMsg" ref="0x2ace8386d688" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace8386d9d8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="BlockWrite" provided="0" ref="0x2ace8386a208">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace8386a208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace8386a558" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace8386a6e0" scoped=""/>
+        <function-ref name="erase" ref="0x2ace8386a868" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace8386a9f0" scoped=""/>
+        <function-ref name="write" ref="0x2ace8386ab78" scoped=""/>
+        <function-ref name="sync" ref="0x2ace8386ad00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="110:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="signalObjRecvDone" provided="0" ref="0x2ace8385b370">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="signalObjRecvDone" ref="0x2ace8385b370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace8385b6c0" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace8385b848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="Leds" provided="0" ref="0x2ace83868020">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x2ace83868020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ace83868370" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ace838684f8" scoped=""/>
+        <function-ref name="led1On" ref="0x2ace83868680" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ace83868808" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ace83868990" scoped=""/>
+        <function-ref name="get" ref="0x2ace83868b18" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ace83868ca0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ace83867330" scoped=""/>
+        <function-ref name="set" ref="0x2ace83868e28" scoped=""/>
+        <function-ref name="led0On" ref="0x2ace83867020" scoped=""/>
+        <function-ref name="led2On" ref="0x2ace838671a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="DelugePageTransfer" provided="0" ref="0x2ace83876080">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DelugePageTransfer" ref="0x2ace83876080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.DelugePageTransfer" qname="DelugePageTransfer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setWorkingPage" ref="0x2ace83876d00" scoped=""/>
+        <function-ref name="dataAvailable" ref="0x2ace83876558" scoped=""/>
+        <function-ref name="suppressMsgs" ref="0x2ace838766e0" scoped=""/>
+        <function-ref name="receivedPage" ref="0x2ace83876868" scoped=""/>
+        <function-ref name="setImgNum" ref="0x2ace838769f0" scoped=""/>
+        <function-ref name="isTransferring" ref="0x2ace83876b78" scoped=""/>
+        <function-ref name="stop" ref="0x2ace838763d0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="Crc" provided="0" ref="0x2ace8386e020">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Crc" ref="0x2ace8386e020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Crc" qname="Crc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="seededCrc16" ref="0x2ace8386e370" scoped=""/>
+        <function-ref name="crc16" ref="0x2ace8386e4f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransferP.nc" name="ObjectTransfer" provided="1" ref="0x2ace837fa0c0">
+      <component-ref nicename="tos.lib.net.Deluge.ObjectTransferP" qname="ObjectTransferP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ObjectTransfer" ref="0x2ace837fa0c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace837fa410" scoped=""/>
+        <function-ref name="receiveDone" ref="0x2ace837fa598" scoped=""/>
+        <function-ref name="publish" ref="0x2ace837fa720" scoped=""/>
+        <function-ref name="stop" ref="0x2ace837fa8a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

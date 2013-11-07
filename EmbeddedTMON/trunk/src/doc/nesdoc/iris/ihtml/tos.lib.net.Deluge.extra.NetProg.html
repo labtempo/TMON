@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.Deluge.extra.NetProg</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.Deluge.extra.NetProg</h2>
+    <b>interface NetProg</b><p>
+ Top level interface for network programming integration with
+ applications.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#programImageAndReboot">programImageAndReboot</a>(uint32_t imageAddr)
+      </span><menu>
+ Reboot into the image specified by <code>imageAddr</code>.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#reboot">reboot</a>()
+      </span><menu>
+ Reboot the node.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="programImageAndReboot"></a>
+    <h4>programImageAndReboot
+    </h4>
+    <span id=funcnameshort>command error_t <b>programImageAndReboot</b>(uint32_t imageAddr)
+    </span>
+    <p>
+    <menu>
+      
+ Reboot into the image specified by <code>imageAddr</code>. This
+ assumes that an image is present into the external flash
+ at the <code>imageAddr</code> address.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>imageAddr</code> -   Address in external flash
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+                 <code>FAIL</code> if the reboot command fails to 
+                complete, does not return, otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="reboot"></a>
+    <h4>reboot
+    </h4>
+    <span id=funcnameshort>command error_t <b>reboot</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Reboot the node.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+           Does not return.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

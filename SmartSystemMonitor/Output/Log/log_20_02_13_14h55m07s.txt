@@ -1,0 +1,11 @@
+2013-02-20 14:55:08,308: root              : WARNING : Starting...
+2013-02-20 14:55:26,994: root              : WARNING : Mote 245 entered the network!
+2013-02-20 14:55:29,998: root              : WARNING : Mote 252 entered the network!
+2013-02-20 14:55:36,358: root              : WARNING : Mote 235 entered the network!
+2013-02-20 14:55:39,358: root              : WARNING : Mote 20 entered the network!
+2013-02-20 14:55:42,358: root              : WARNING : Mote 10 entered the network!
+2013-02-20 14:55:45,358: root              : WARNING : Mote 233 entered the network!
+2013-02-20 14:55:55,158: root              : WARNING : Mote 228 entered the network!
+2013-02-20 14:55:58,158: root              : WARNING : Mote 227 entered the network!
+2013-02-20 14:56:15,220: root              : WARNING : Aborting...
+2013-02-20 14:56:15,220: root              : WARNING : Done...

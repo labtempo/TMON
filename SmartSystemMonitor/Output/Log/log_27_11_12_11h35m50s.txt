@@ -1,0 +1,13 @@
+2012-11-27 11:35:51,725: root              : WARNING : Starting...
+2012-11-27 11:36:24,404: root              : WARNING : Mote 10 entered the network!
+2012-11-27 11:36:27,077: root              : WARNING : Mote 248 entered the network!
+2012-11-27 11:36:28,234: root              : WARNING : Mote 222 entered the network!
+2012-11-27 11:36:32,146: root              : WARNING : Mote 242 entered the network!
+2012-11-27 11:36:33,865: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSL.py", line 271, in main
+    publish_reading(datetime.datetime.now(), samples)
+  File "MonitorMCSL.py", line 213, in publish_reading
+    publish(ALERT_INFO, timestamp, event, EXCHANGE_READINGS)
+UnboundLocalError: local variable 'event' referenced before assignment
+2012-11-27 11:36:33,865: root              : WARNING : Done...

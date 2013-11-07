@@ -1,0 +1,142 @@
+{% extends "base.html" %} {% load bootstrap_toolkit %} 
+{% block title%}TMON Home {% endblock %}
+ {% block extra_head %}{% endblock %} 
+ {%block content %}
+<center>
+	<h3>TMON</h3>
+</center>
+<div class="container">
+	<center>
+		<p>Average temperature now:
+			{{average_temperature|floatformat:"-1"}}°C</p>
+	</center>
+	<div id="Chart"></div>
+
+	<div class="row">
+		<div class="span4">
+			<center>
+				<h4>Last Info Events</h4>
+				<table class="table table-hover">
+					<tr>
+						<td><font color="green"><h5>Time</h5></font></td>
+						<td><font color="green"><h5>Description</h5></font></td>
+					</tr>
+					{% for event in alerts_info %}
+					<tr class="success">
+						<td><p>{{event.timeStamp|date:'d/m/y G:i:s'}}</p></td>
+						<td><p>{{ event.event}}</p></td>
+					</tr>
+					{% empty %}
+					<tr>
+						<td>Info event list empty</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</center>
+		</div>
+		<div class="span4">
+			<center>
+				<h4>Last Warning Events</h4>
+				<table class="table table-hover">
+					<tr>
+						<td><font color="orange"><h5>Time</h5></font></td>
+						<td><font color="orange"><h5>Description</h5></font></td>
+					</tr>
+					{% for event in alerts_warning %}
+					<tr class="warning">
+						<td><p>{{event.timeStamp|date:'d/m/y G:i:s'}}</p></td>
+						<td><p>{{ event.event}}</p></td>
+					</tr>
+					{% empty %}
+					<tr>
+						<td>Warning event list empty</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</center>
+		</div>
+		<div class="span4">
+			<center>
+				<h4>Last Critical Events</h4>
+				<table class="table table-hover">
+					<tr>
+						<td><font color="red"><h5>Time</h5></font></td>
+						<td><font color="red"><h5>Description</h5></font></td>
+					</tr>
+					{% for event in alerts_critical %}
+					<tr class="error">
+						<td><p>{{event.timeStamp|date:'d/m/y G:i:s'}}</p></td>
+						<td><p>{{ event.event}}</p></td>
+					</tr>
+					{% empty %}
+					<tr>
+						<td>Critical event list empty</td>
+					</tr>
+					{% endfor %}
+				</table>
+			</center>
+		</div>
+		<div class="row">
+			<div class="span6">
+
+				<center>
+					<h4>Motes Status</h4>
+
+					<table class="table table-hover">
+						<tr>
+							<td><font color="green"><center>
+										<h5>Motes Actives</h5>
+									</center></font></td>
+							<td><font color="red"><center>
+										<h5>Motes Inactives</h5>
+									</center></font></td>
+							<td><font color="blue"><center>
+										<h5>Total Motes</h5>
+									</center></font></td>
+						</tr>
+						<tr>
+							<td><center>
+									<p>{{motes_active}}</p>
+								</center></td>
+							<td><center>
+									<p>{{motes_inactive}}</p>
+								</center></td>
+							<td><center>
+									<p>{{total_motes}}</p>
+								</center></td>
+						</tr>
+					</table>
+				</center>
+			</div>
+		</div>
+	</div>
+
+</div>
+{% endblock %} {% block script %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript"> 
+	google.load('visualization', '1.0', {'packages':['corechart']});
+    google.setOnLoadCallback(function() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        data.addColumn('number', 'Temperature');
+        data.addRows({{ average_list|length }});
+        {% for sample in average_list %}
+        	var year = {{sample.timeStamp|date:"Y"}};
+        	var month = {{sample.timeStamp|date:"m"}}-1;
+        	var day = {{sample.timeStamp|date:"j"}};
+        	var hour = {{sample.timeStamp|date:"H"}};
+        	var minute = {{sample.timeStamp|date:"i"}};
+        	var second = {{sample.timeStamp|date:"s"}};
+        	data.setValue({{ forloop.counter0 }}, 0, new Date (year,month,day,hour,minute,second,0));
+            data.setValue({{ forloop.counter0 }}, 1, {{sample.temperature}});
+        {% endfor %}
+        var options = {series: { 0 :{color: 'red', visibleInLegend: false, lineWidth: 1, pointSize: 0}},
+        		animation: {duration : 5000},
+        		vAxis: {title: "Averarage temperature °C"},
+        };        
+        var chart = new google.visualization.LineChart(document.getElementById('Chart'));
+        chart.draw(data, options);
+    });
+</script>
+{% endblock %}

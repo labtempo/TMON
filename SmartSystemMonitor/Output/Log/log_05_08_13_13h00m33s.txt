@@ -1,0 +1,17 @@
+2013-08-05 13:00:34,887: root              : WARNING : Starting...
+2013-08-05 13:01:19,034: root              : WARNING : Mote 321 entered the network!
+2013-08-05 13:02:15,919: root              : WARNING : Mote 308 entered the network!
+2013-08-05 13:02:32,257: root              : WARNING : Mote 311 entered the network!
+2013-08-05 13:02:35,571: root              : WARNING : Mote 312 entered the network!
+2013-08-05 13:02:36,495: root              : WARNING : Mote 307 entered the network!
+2013-08-05 13:02:36,512: root              : WARNING : Mote 301 entered the network!
+2013-08-05 13:02:56,350: root              : WARNING : Mote 313 entered the network!
+2013-08-05 13:03:59,145: root              : WARNING : Mote 306 entered the network!
+2013-08-05 13:03:59,162: root              : WARNING : Mote 318 entered the network!
+2013-08-05 13:04:01,035: root              : WARNING : Mote 20 entered the network!
+2013-08-05 13:04:01,368: root              : WARNING : Mote 30 entered the network!
+2013-08-05 13:04:04,664: root              : WARNING : Mote 316 entered the network!
+2013-08-05 13:04:08,103: root              : WARNING : Mote 317 entered the network!
+2013-08-05 13:04:17,269: root              : WARNING : Mote 302 entered the network!
+2013-08-05 13:04:18,476: root              : WARNING : Mote 303 entered the network!
+2013-08-05 13:04:45,657: root              : WARNING : Mote 10 entered the network!

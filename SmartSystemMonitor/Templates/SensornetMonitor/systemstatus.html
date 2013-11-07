@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block title %} System Status {% endblock %}
+
+{% block content %}
+<div class="container">
+<form action="" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+  <button type="submit" class="btn btn">Update Status</button>
+</form>
+</div>
+{% endblock %}

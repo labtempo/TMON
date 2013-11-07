@@ -1,0 +1,9 @@
+2013-02-27 10:55:00,774: root              : WARNING : Starting...
+2013-02-27 10:55:08,841: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSLS.py", line 277, in main
+    if samples.temperature != 0:
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 597, in __getattr__
+    return self._values[self._names.index(name)]
+ValueError: 'temperature' is not in list
+2013-02-27 10:55:08,866: root              : WARNING : Done...

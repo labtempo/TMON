@@ -1,0 +1,278 @@
+<?xml version="1.0" ?><component abstract="" loc="23:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+        <short>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.</short>
+        <long>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.
+
+ @param volid Volume to use for block storage
+
+ @author David Gay
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="23:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="volid" ref="0x2ace83a48640">
+          <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83a48ad8" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83a458e8" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="25:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2ace83a48ad8">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83a48ad8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83a48e28" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83a45020" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83a451a8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83a45330" scoped=""/>
+        <function-ref name="write" ref="0x2ace83a454b8" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83a45640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2ace83a458e8">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83a458e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83a45c38" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83a45dc0" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83a44020" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83a441a8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83a44330" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="56:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc" name="BlockRead" provided="1" ref="0x2ace83a3d660">
+      <component-ref nicename="tos.chips.at45db.BlockStorageP" qname="BlockStorageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83a3d9b0" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83a3db38" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83a3dcc0" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83a3de48" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83a3c020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc" name="Resource" provided="0" ref="0x2ace83a27658">
+      <component-ref nicename="tos.chips.at45db.BlockStorageP" qname="BlockStorageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83a279a8" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83a27b30" scoped=""/>
+        <function-ref name="request" ref="0x2ace83a27cb8" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83a27e40" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83a26020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc" name="At45dbVolume" provided="0" ref="0x2ace83a3a990">
+      <component-ref nicename="tos.chips.at45db.BlockStorageP" qname="BlockStorageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45dbVolume" qname="At45dbVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="volumeSize" ref="0x2ace83a3ace0" scoped=""/>
+        <function-ref name="remap" ref="0x2ace83a3ae68" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc" name="BlockWrite" provided="1" ref="0x2ace83a3e378">
+      <component-ref nicename="tos.chips.at45db.BlockStorageP" qname="BlockStorageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83a3e6c8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83a3e850" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83a3e9d8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83a3eb60" scoped=""/>
+        <function-ref name="write" ref="0x2ace83a3ece8" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83a3ee70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" name="At45dbVolume" provided="1" ref="0x2ace83c22780">
+      <component-ref nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45dbVolume" qname="At45dbVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="volumeSize" ref="0x2ace83c22ad0" scoped=""/>
+        <function-ref name="remap" ref="0x2ace83c22c58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc" name="Resource" provided="1" ref="0x2ace83ab8d70">
+      <component-ref nicename="tos.chips.at45db.At45dbC" qname="At45dbC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83ab70f0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83ab7278" scoped=""/>
+        <function-ref name="request" ref="0x2ace83ab7400" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83ab7588" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83ab7710" scoped=""/>
+      </interface-functions>
+    </interface><component loc="22:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc" nicename="tos.chips.at45db.At45dbC" qname="At45dbC">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+        <short>
+ HAL for Atmel's AT45DB family of serial dataflash chips.</short>
+        <long>
+ HAL for Atmel's AT45DB family of serial dataflash chips. Access to the HAL
+ is controlled by a parameterised Resource interface - client ids are 
+ obtained with unique(UQ_AT45DB).
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="36:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="At45db" ref="0x2ace83abc8d8" scoped=""/></from>
+          <to><interface-ref name="At45db" ref="0x2ace83ab22a8" scoped=""/></to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ace83ab7a28" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ace83c2c268" scoped=""/></to>
+        </wire>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace83c2ed80" scoped=""/></to>
+        </wire>
+        <wire loc="39:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ace83ab6770" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ace83c2ce20" scoped=""/></to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ace81c784c8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ace83ab5c08" scoped=""/></to>
+        </wire>
+        <wire loc="42:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="HplAt45db" ref="0x2ace83b28ab0" scoped=""/></from>
+          <to><interface-ref name="HplAt45db" ref="0x2ace83b314e8" scoped=""/></to>
+        </wire>
+        <wire loc="43:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbC.nc">
+          <from><interface-ref name="BusyWait" ref="0x2ace83b26150" scoped=""/></from>
+          <to><interface-ref name="BusyWait" ref="0x2ace82a483c0" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="17:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC" safe="">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc">
+        <short>
+ HAL component providing information on the flash volumes.</short>
+        <long>
+ HAL component providing information on the flash volumes.
+
+ @author: David Gay &lt;dgay@acm.org&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="53:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc" nicename="tos.chips.at45db.BlockStorageP" qname="BlockStorageP" safe="">
+      <documentation loc="43:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageP.nc">
+        <short>
+ Private component of the AT45DB implementation of the block storage
+ abstraction.</short>
+        <long>
+ Private component of the AT45DB implementation of the block storage
+ abstraction.
+
+ @author: Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+ @author: David Gay &lt;dgay@acm.org&gt;
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

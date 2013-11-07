@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% load bootstrap_toolkit %}
+
+{% block title %}Dynamic View{% endblock %}
+
+{% block extrahead %}
+ <!-- Auto refresh code -->
+<meta http-equiv="refresh" content="600">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<center><h3>Dynamic View</h3></center>
+<div id="Chart" style="height: 600px;"></div>
+<center><p> Number of samples in the chat: {{samples_list|length}}</p></center>
+</div>
+{% endblock %} 
+
+{% block script %}
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript"> 
+	google.load('visualization', '1.0', {'packages':['corechart']});
+    google.setOnLoadCallback(function() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('datetime', 'Time');
+        {% for mote in motes %}
+        	data.addColumn('number', 'ID: {{ mote.id }}, Description: {{ mote.localizationDescription }} ');
+        {% endfor %}
+        data.addRows({{ samples_list|length }});
+        {% for sample in samples_list %}
+        	var year = {{sample.timeStamp|date:"Y"}};
+        	var month = {{sample.timeStamp|date:"m"}}-1;
+        	var day = {{sample.timeStamp|date:"j"}};
+        	var hour = {{sample.timeStamp|date:"H"}};
+        	var minute = {{sample.timeStamp|date:"i"}};
+        	var second = {{sample.timeStamp|date:"s"}};
+        	data.setValue({{ forloop.counter0 }}, 0, new Date (year,month,day,hour,minute,second,0));
+        	{% for mote in motes %}  
+        		{% if sample.mote.id == mote.id and view_type == "Temperature" %}
+        			data.setValue({{forloop.parentloop.counter0}}, {{ forloop.counter }}, {{sample.readingTemperature}});        			
+            	{% endif %}
+            	{% if sample.mote.id == mote.id and view_type == "Battery" %}
+    				data.setValue({{forloop.parentloop.counter0}}, {{ forloop.counter }}, {{sample.readingVoltage}});        			
+        		{% endif %}
+        		{% if sample.mote.id == mote.id and view_type == "Light" %}
+					data.setValue({{forloop.parentloop.counter0}}, {{ forloop.counter }}, {{sample.readingLight}});        			
+    			{% endif %}
+			{% endfor %}
+        {% endfor %}
+        
+        var options = {animation: {duration : 1000}, vAxis: {title: "{{view_type}}"}, hAxis: {title: "Time"},visibleInLegend: true};
+        
+        var chart = new google.visualization.LineChart(document.getElementById('Chart'));
+        chart.draw(data, options);
+    });
+</script>
+{% endblock %}
+

@@ -1,0 +1,17 @@
+2013-03-14 18:01:43,749: root              : WARNING : Starting...
+2013-03-14 18:03:48,734: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSLS.py", line 272, in main
+    p = am.read()  # get a packet
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 455, in read
+    return self.oobHook(super(AM, self).read(timeout))
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 381, in read
+    f = self._hdlc.read(timeout)
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 231, in read
+    d = self._s.getByte()
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 122, in getByte
+    c = self._s.read()
+  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 456, in read
+    raise SerialException('device reports readiness to read but returned no data (device disconnected?)')
+SerialException: device reports readiness to read but returned no data (device disconnected?)
+2013-03-14 18:03:48,735: root              : WARNING : Done...

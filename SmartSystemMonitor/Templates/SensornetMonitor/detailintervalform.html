@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% load bootstrap_toolkit %} 
+{% block title %}
+Detail Interval Form by Mote
+{% endblock %} 
+{% block extra_head %} 
+<link rel="stylesheet" type="text/css" media="screen"
+	href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+{% endblock %} 
+{% block content %}
+<div class="container">
+	<form action="" method="post">
+	{% csrf_token %}
+		<div class="control-group required">
+			<label class="control-label" for="id_id">Mote ID</label>
+			<div class="controls">
+				<input type="text" name="id" value="{{ form.id.value }}" id="id_id"> <span
+					class="help-inline">Id of mote to detail</span>
+			</div>
+		</div>
+		<div class="control-group required">
+			<label class="control-label" for="id_startDate">Initial
+				period</label>
+			<div class="controls">
+				<div id="datetimepicker1" class="input-append">
+					<input data-format="MM/dd/yyyy hh:mm:ss" name="startDate" type="text" id="id_startDate">
+					<span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="control-group required">
+			<label class="control-label" for="id_finalDate">Final period</label>
+			<div class="controls">
+				<div id="datetimepicker2" class="input-append">
+					<input data-format="MM/dd/yyyy hh:mm:ss" name="finalDate" type="text" id="id_finalDate">
+					<span class="add-on"> <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
+					</span>
+				</div>
+			</div>
+		</div>
+		<button type="submit" class="btn btn">Detail</button>
+	</form>
+</div>
+  <script type="text/javascript"
+     src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker1').datetimepicker({
+        language: 'en'
+      });
+    </script>
+    <script type="text/javascript">
+      $('#datetimepicker2').datetimepicker({
+        language: 'en'
+      });
+    </script>
+{% endblock %}

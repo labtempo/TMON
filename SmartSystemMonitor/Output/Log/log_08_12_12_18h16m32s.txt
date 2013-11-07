@@ -1,0 +1,31 @@
+2012-12-08 18:16:33,815: root              : WARNING : Starting...
+2012-12-08 18:16:50,253: root              : WARNING : Mote 228 entered the network!
+2012-12-08 18:17:03,265: root              : WARNING : Mote 1 entered the network!
+2012-12-08 18:17:32,567: root              : WARNING : Mote 227 entered the network!
+2012-12-08 18:17:59,306: root              : WARNING : Mote 233 entered the network!
+2012-12-08 18:18:45,557: root              : WARNING : Mote 252 entered the network!
+2012-12-08 18:19:29,420: root              : WARNING : Mote 131 entered the network!
+2012-12-08 18:20:14,772: root              : WARNING : Mote 222 entered the network!
+2012-12-08 18:20:48,146: root              : WARNING : Mote 218 entered the network!
+2012-12-08 18:20:51,758: root              : WARNING : Mote 235 entered the network!
+2012-12-08 18:20:56,287: root              : WARNING : Mote 242 entered the network!
+2012-12-08 18:20:56,362: root              : WARNING : Mote 251 entered the network!
+2012-12-08 18:20:56,487: root              : WARNING : Mote 248 entered the network!
+2012-12-08 18:20:56,653: root              : WARNING : Mote 245 entered the network!
+2012-12-08 18:20:56,870: root              : WARNING : Mote 215 entered the network!
+2012-12-08 18:20:56,887: root              : WARNING : Mote 225 entered the network!
+2012-12-08 18:20:56,961: root              : WARNING : Mote 249 entered the network!
+2012-12-08 18:20:57,086: root              : WARNING : Mote 217 entered the network!
+2012-12-08 18:20:57,386: root              : WARNING : Mote 253 entered the network!
+2012-12-08 18:20:57,586: root              : WARNING : Mote 226 entered the network!
+2012-12-08 18:20:57,919: root              : WARNING : Mote 241 entered the network!
+2012-12-08 18:20:59,401: root              : WARNING : Mote 214 entered the network!
+2012-12-08 18:29:27,968: root              : WARNING : Mote 10 entered the network!
+2012-12-08 18:33:51,167: root              : WARNING : Mote 30 entered the network!
+2012-12-08 18:33:56,799: root              : WARNING : Mote 216 entered the network!
+2012-12-08 18:38:03,020: root              : WARNING : Mote 20 entered the network!
+2012-12-08 18:41:08,310: root              : WARNING : Mote 238 entered the network!
+2012-12-08 18:41:51,839: root              : WARNING : Mote 237 entered the network!
+2012-12-08 18:42:42,444: root              : WARNING : Mote 239 entered the network!
+2012-12-08 18:49:38,667: root              : WARNING : Aborting...
+2012-12-08 18:49:38,668: root              : WARNING : Done...

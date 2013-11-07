@@ -1,0 +1,11 @@
+digraph "tos.lib.net.Deluge.BlockStorageManager.BlockReaderC" {
+  n0x2ace839a6200 [shape=ellipse, style=filled, label="BlockRead", fontsize=12];
+  "BlockStorageManagerC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC.html"];
+  n0x2ace839a6e10 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "BlockReaderC.BlockStorageLockClientC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageLockClientC", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageLockClientC.html"];
+  "BlockStorageManagerC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC.html"];
+  "BlockReaderC.VolumeIdC" [fontsize=12, shape=box, style=dashed, label="VolumeIdC", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.VolumeIdC.html"];
+  "n0x2ace839a6200" -> "BlockStorageManagerC" [label="BlockRead", URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "n0x2ace839a6e10" -> "BlockReaderC.BlockStorageLockClientC" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "BlockStorageManagerC" -> "BlockReaderC.VolumeIdC" [label="VolumeId[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.Deluge.BlockStorageManager.VolumeId.html", fontsize=10];
+}

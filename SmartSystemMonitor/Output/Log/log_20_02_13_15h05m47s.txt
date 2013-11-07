@@ -1,0 +1,44 @@
+2013-02-20 15:05:48,387: root              : WARNING : Starting...
+2013-02-20 15:06:20,041: root              : WARNING : Mote 227 entered the network!
+2013-02-20 15:06:42,767: root              : WARNING : Mote 251 entered the network!
+2013-02-20 15:07:03,347: root              : WARNING : Mote 228 entered the network!
+2013-02-20 15:07:03,372: root              : WARNING : Mote 238 entered the network!
+2013-02-20 15:08:16,589: root              : WARNING : Mote 235 entered the network!
+2013-02-20 15:08:16,606: root              : WARNING : Mote 253 entered the network!
+2013-02-20 15:08:59,871: root              : WARNING : Mote 223 entered the network!
+2013-02-20 15:12:06,059: root              : WARNING : Mote 30 entered the network!
+2013-02-20 15:12:08,590: root              : WARNING : Mote 252 entered the network!
+2013-02-20 15:12:36,095: root              : WARNING : Mote 216 entered the network!
+2013-02-20 15:12:38,859: root              : WARNING : Mote 248 entered the network!
+2013-02-20 15:12:50,522: root              : WARNING : Mote 222 entered the network!
+2013-02-20 15:13:08,363: root              : WARNING : Mote 249 entered the network!
+2013-02-20 15:13:08,396: root              : WARNING : Mote 245 entered the network!
+2013-02-20 15:16:04,187: root              : WARNING : Mote 239 entered the network!
+2013-02-20 15:24:39,156: root              : WARNING : Mote 241 entered the network!
+2013-02-20 15:24:40,189: root              : WARNING : Mote 215 entered the network!
+2013-02-20 15:25:36,299: root              : WARNING : Mote 20 entered the network!
+2013-02-20 15:25:40,344: root              : WARNING : Mote 10 entered the network!
+2013-02-20 15:26:18,889: root              : WARNING : Mote 226 entered the network!
+2013-02-20 15:34:27,894: root              : WARNING : Mote 225 entered the network!
+2013-02-20 15:34:27,911: root              : WARNING : Mote 217 entered the network!
+2013-02-20 15:34:33,522: root              : WARNING : Mote 214 entered the network!
+2013-02-20 15:35:26,186: root              : WARNING : Mote 237 entered the network!
+2013-02-20 15:35:33,820: root              : WARNING : Mote 242 entered the network!
+2013-02-20 15:38:14,116: root              : WARNING : Mote 233 entered the network!
+2013-02-20 15:38:19,827: root              : WARNING : Mote 131 entered the network!
+2013-02-20 19:15:21,034: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSL.py", line 267, in main
+    p = am.read()  # get a packet
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 455, in read
+    return self.oobHook(super(AM, self).read(timeout))
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 381, in read
+    f = self._hdlc.read(timeout)
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 231, in read
+    d = self._s.getByte()
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 122, in getByte
+    c = self._s.read()
+  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 456, in read
+    raise SerialException('device reports readiness to read but returned no data (device disconnected?)')
+SerialException: device reports readiness to read but returned no data (device disconnected?)
+2013-02-20 19:15:21,058: root              : WARNING : Done...

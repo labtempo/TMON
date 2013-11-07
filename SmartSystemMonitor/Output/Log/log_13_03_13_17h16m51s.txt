@@ -1,0 +1,18 @@
+2013-03-13 17:16:52,936: root              : WARNING : Starting...
+2013-03-13 17:17:02,671: root              : WARNING : Mote 1 entered the network!
+2013-03-13 17:17:11,862: root              : WARNING : Mote 2 entered the network!
+2013-03-13 17:17:23,683: root              : WARNING : Mote 3 entered the network!
+2013-03-13 17:20:10,473: root              : WARNING : Skipping packet None
+2013-03-13 17:20:10,482: root              : WARNING : Skipping packet None
+2013-03-13 17:20:10,491: root              : WARNING : Skipping packet None
+2013-03-13 17:20:10,500: root              : WARNING : Skipping packet None
+2013-03-13 17:21:02,605: root              : WARNING : Skipping packet None
+2013-03-13 17:21:02,614: root              : WARNING : Skipping packet None
+2013-03-13 17:21:02,622: root              : WARNING : Skipping packet None
+2013-03-13 17:21:02,631: root              : WARNING : Skipping packet None
+2013-03-13 17:21:07,606: root              : WARNING : Skipping packet None
+2013-03-13 17:21:07,615: root              : WARNING : Skipping packet None
+2013-03-13 17:21:07,623: root              : WARNING : Skipping packet None
+2013-03-13 17:21:07,632: root              : WARNING : Skipping packet None
+2013-03-13 17:25:19,840: root              : WARNING : Aborting...
+2013-03-13 17:25:19,841: root              : WARNING : Done...

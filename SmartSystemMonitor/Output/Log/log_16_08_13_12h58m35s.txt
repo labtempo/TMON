@@ -1,0 +1,6 @@
+2013-08-16 12:58:36,299: root              : WARNING : Starting...
+2013-08-16 12:58:47,461: root              : WARNING : Mote 307 entered the network!
+2013-08-16 12:58:49,318: root              : WARNING : Mote 20 entered the network!
+2013-08-16 12:59:21,552: root              : WARNING : Mote 312 entered the network!
+2013-08-16 13:02:16,899: root              : WARNING : Mote 316 entered the network!
+2013-08-16 13:03:30,467: root              : WARNING : Mote 313 entered the network!

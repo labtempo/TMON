@@ -1,0 +1,8 @@
+digraph "tos.lib.net.Deluge.BlockStorageManager.BlockStorageLockC" {
+  n0x2ace83c8e020 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "BlockStorageLockC.Arbiter" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SimpleFcfsArbiterC\n(Arbiter)", URL="../chtml/tos.system.SimpleFcfsArbiterC.html"];
+  n0x2ace83c8ec48 [shape=ellipse, style=filled, label="ArbiterInfo", fontsize=12];
+  "BlockStorageLockC.Arbiter" [fontsize=12, shape=box,peripheries=2, style=dashed, label="SimpleFcfsArbiterC\n(Arbiter)", URL="../chtml/tos.system.SimpleFcfsArbiterC.html"];
+  "n0x2ace83c8e020" -> "BlockStorageLockC.Arbiter" [label="Resource[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "n0x2ace83c8ec48" -> "BlockStorageLockC.Arbiter" [label="ArbiterInfo", URL="../ihtml/tos.interfaces.ArbiterInfo.html", fontsize=10];
+}

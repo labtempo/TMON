@@ -1,0 +1,6 @@
+2013-05-09 13:23:36,223: root              : WARNING : Starting...
+2013-05-09 13:26:23,059: root              : WARNING : Mote 1024 entered the network!
+2013-05-09 13:26:23,076: root              : WARNING : Mote 4096 entered the network!
+2013-05-09 13:26:23,101: root              : WARNING : Mote 512 entered the network!
+2013-05-09 13:26:23,332: root              : WARNING : Mote 256 entered the network!
+2013-05-09 13:27:22,491: root              : WARNING : Mote 2048 entered the network!

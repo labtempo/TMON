@@ -1,0 +1,11 @@
+digraph "tos.sensorboards.mda100.ArbitratedPhotoDeviceP" {
+  n0x2ace83772020 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "ArbitratedPhotoDeviceP.ArbitrateRead" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC\n(ArbitrateRead)", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "ArbitratedPhotoDeviceP.ArbitrateRead" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC\n(ArbitrateRead)", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "PhotoImplP" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.sensorboards.mda100.PhotoImplP.html"];
+  "ArbitratedPhotoDeviceP.ArbitrateRead" [fontsize=12, shape=box, style=dashed, label="ArbitratedReadC\n(ArbitrateRead)", URL="../chtml/tos.system.ArbitratedReadC.html"];
+  "PhotoImplP" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.sensorboards.mda100.PhotoImplP.html"];
+  "n0x2ace83772020" -> "ArbitratedPhotoDeviceP.ArbitrateRead" [label="Read<uint16_t>[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "ArbitratedPhotoDeviceP.ArbitrateRead" -> "PhotoImplP" [label="Read<uint16_t>[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "ArbitratedPhotoDeviceP.ArbitrateRead" -> "PhotoImplP" [label="Resource[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+}

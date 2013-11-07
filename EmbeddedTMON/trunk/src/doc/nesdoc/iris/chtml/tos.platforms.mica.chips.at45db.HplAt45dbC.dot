@@ -1,0 +1,14 @@
+digraph "tos.platforms.mica.chips.at45db.HplAt45dbC" {
+  n0x2ace83b314e8 [shape=ellipse, style=filled, label="HplAt45db", fontsize=12];
+  "HplAt45dbC.HplAt45dbByteC" [fontsize=12, shape=box, style=dashed, label="HplAt45dbByteC", URL="../chtml/tos.chips.at45db.HplAt45dbByteC.html"];
+  "HplAt45dbC.HplAt45dbByteC" [fontsize=12, shape=box, style=dashed, label="HplAt45dbByteC", URL="../chtml/tos.chips.at45db.HplAt45dbByteC.html"];
+  "HplAt45dbIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.iris.chips.at45db.HplAt45dbIOC.html"];
+  "HplAt45dbC.HplAt45dbByteC" [fontsize=12, shape=box, style=dashed, label="HplAt45dbByteC", URL="../chtml/tos.chips.at45db.HplAt45dbByteC.html"];
+  "HplAt45dbIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.iris.chips.at45db.HplAt45dbIOC.html"];
+  "HplAt45dbC.HplAt45dbByteC" [fontsize=12, shape=box, style=dashed, label="HplAt45dbByteC", URL="../chtml/tos.chips.at45db.HplAt45dbByteC.html"];
+  "HplAt45dbIOC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.iris.chips.at45db.HplAt45dbIOC.html"];
+  "n0x2ace83b314e8" -> "HplAt45dbC.HplAt45dbByteC" [label="HplAt45db", URL="../ihtml/tos.chips.at45db.HplAt45db.html", fontsize=10];
+  "HplAt45dbC.HplAt45dbByteC" -> "HplAt45dbIOC" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+  "HplAt45dbC.HplAt45dbByteC" -> "HplAt45dbIOC" [label="SpiByte", URL="../ihtml/tos.interfaces.SpiByte.html", fontsize=10];
+  "HplAt45dbC.HplAt45dbByteC" -> "HplAt45dbIOC" [label="HplAt45dbByte", URL="../ihtml/tos.chips.at45db.HplAt45dbByte.html", fontsize=10];
+}

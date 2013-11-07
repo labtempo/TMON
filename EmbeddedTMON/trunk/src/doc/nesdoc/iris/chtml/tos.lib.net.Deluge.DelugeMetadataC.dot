@@ -1,0 +1,29 @@
+digraph "tos.lib.net.Deluge.DelugeMetadataC" {
+  n0x2ace83d052b0 [shape=ellipse, style=filled, label="DelugeMetadata", fontsize=12];
+  "DelugeMetadataP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataP.html"];
+  "DelugeMetadataP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataP.html"];
+  n0x2ace83d05e20 [shape=ellipse, style=filled, label="storageReady", fontsize=12];
+  "DelugeMetadataP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataP.html"];
+  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
+  "DelugeMetadataP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataP.html"];
+  "DelugeMetadataC.BlockReaderGoldenImage" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockReaderC\n(BlockReaderGoldenImage)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockReaderC.html"];
+  "DelugeMetadataC.BlockReaderDeluge1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockReaderC\n(BlockReaderDeluge1)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockReaderC.html"];
+  "DelugeMetadataC.BlockReaderDeluge2" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockReaderC\n(BlockReaderDeluge2)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockReaderC.html"];
+  "DelugeMetadataC.BlockReaderDeluge3" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockReaderC\n(BlockReaderDeluge3)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockReaderC.html"];
+  "DelugeMetadataP" [fontsize=12, shape=box, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataP.html"];
+  "DelugeMetadataC.BlockWriterGoldenImage" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockWriterC\n(BlockWriterGoldenImage)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockWriterC.html"];
+  "DelugeMetadataC.BlockWriterDeluge1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockWriterC\n(BlockWriterDeluge1)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockWriterC.html"];
+  "DelugeMetadataC.BlockWriterDeluge2" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockWriterC\n(BlockWriterDeluge2)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockWriterC.html"];
+  "DelugeMetadataC.BlockWriterDeluge3" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockWriterC\n(BlockWriterDeluge3)", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockWriterC.html"];
+  "n0x2ace83d052b0" -> "DelugeMetadataP" [label="DelugeMetadata[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.Deluge.DelugeMetadata.html", fontsize=10];
+  "DelugeMetadataP" -> "n0x2ace83d05e20" [label="event void X()", fontsize=10];
+  "DelugeMetadataP" -> "MainC" [label="Boot", URL="../ihtml/tos.interfaces.Boot.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockReaderGoldenImage" [label="BlockRead[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockReaderDeluge1" [label="BlockRead[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockReaderDeluge2" [label="BlockRead[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockReaderDeluge3" [label="BlockRead[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockWriterGoldenImage" [label="BlockWrite[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockWriterDeluge1" [label="BlockWrite[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockWriterDeluge2" [label="BlockWrite[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "DelugeMetadataP" -> "DelugeMetadataC.BlockWriterDeluge3" [label="BlockWrite[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+}

@@ -1,0 +1,9 @@
+2013-03-07 16:58:09,091: root              : WARNING : Starting...
+2013-03-07 16:58:16,650: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSLS.py", line 279, in main
+    save_reading(now, samples, file_samples)
+  File "MonitorMCSLS.py", line 200, in save_reading
+    logger.info("Mote %d:    Temperature: %f    Light: %d    Voltage: %f    Parent: %d    Metric: %d    Delay: %d" % (msg.source, readingTemperature, msg.readingLight, voltage, msg.parent, msg.metric, delay))
+UnboundLocalError: local variable 'delay' referenced before assignment
+2013-03-07 16:58:16,650: root              : WARNING : Done...

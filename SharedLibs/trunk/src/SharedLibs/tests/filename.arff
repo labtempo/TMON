@@ -1,0 +1,6 @@
+@relation database
+
+@attribute attr1 numeric
+@attribute attr2 numeric
+
+@data

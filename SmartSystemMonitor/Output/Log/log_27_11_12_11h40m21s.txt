@@ -1,0 +1,18 @@
+2012-11-27 11:40:22,715: root              : WARNING : Starting...
+2012-11-27 11:40:25,294: root              : WARNING : Mote 1 entered the network!
+2012-11-27 11:41:02,696: root              : WARNING : Mote 252 entered the network!
+2012-11-27 11:45:11,967: root              : WARNING : Mote 10 entered the network!
+2012-11-27 11:45:35,059: root              : WARNING : Mote 248 entered the network!
+2012-11-27 11:46:03,588: root              : WARNING : Mote 20 entered the network!
+2012-11-27 11:46:10,705: root              : WARNING : Mote 30 entered the network!
+2012-11-27 11:46:24,923: root              : WARNING : Mote 215 entered the network!
+2012-11-27 11:47:56,952: root              : WARNING : Mote 222 entered the network!
+2012-11-27 11:48:11,670: root              : WARNING : Mote 223 entered the network!
+2012-11-27 11:49:17,965: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSL.py", line 273, in main
+    save_reading(now, samples, file_samples)
+  File "MonitorMCSL.py", line 194, in save_reading
+    logger.info("Mote %d:    Temperature: %f    Light: %d    Voltage: %f    Parent: %d    Metric: %d" % (msg.source, readingTemperature, msg.readingLight, voltage, msg.parent, msg.metric))
+TypeError: float argument required, not NoneType
+2012-11-27 11:49:17,965: root              : WARNING : Done...

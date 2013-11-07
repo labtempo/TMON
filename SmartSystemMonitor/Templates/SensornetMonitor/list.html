@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load bootstrap_toolkit %}
+{% block title %}
+Mote List {% endblock %}
+{% block content %}
+<div class="container">
+	<center>
+		<h3>Motes in network: {{ all_motes_list|length }}</h3>
+	</center>
+	<form action="" method="post">
+		{% csrf_token %} {{ form|as_bootstrap }}
+		<button type="submit" class="btn btn">Detail</button>
+	</form>
+		<table class="table table-hover">
+			<caption>
+				<h3>Motes List</h3>
+			</caption>
+			<thead>
+				<tr>
+					<th><center><h5>Id</h5></center></th>
+					<th><center><h5>Function</h5></center></th>
+					<th><center><h5>Localization</h5></center></th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for mote in all_motes_list %} {% if mote.status %}
+				<tr class="success">
+					<td><center><font color="green"><a href="/SensornetMonitor/{{mote.id}}/" title="Status: Active" class="btn btn-success">{{ mote.id}}</font></center></td>
+					<td><center><font color="green">{{mote.moteLocalization}} </font></center></td>
+					<td><center><font color="green">{{ mote.localizationDescription}}</font></center></td>
+				</tr>
+				{% else %}
+				<tr class="error">
+					<td><center><font color="red"><a href="/SensornetMonitor/{{mote.id}}/" title="Status: Inactive" class="btn btn-danger">{{ mote.id}}</font></center></td>
+					<td><center><font color="red">{{mote.moteLocalization}}</font></center></td>
+					<td><center><font color="red">{{ mote.localizationDescription}}</font></center></td>
+				</tr>
+				{% endif %}{% empty %}
+				<tr>
+					<td><center>No motes are available.</center></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+</div>
+{% endblock %}

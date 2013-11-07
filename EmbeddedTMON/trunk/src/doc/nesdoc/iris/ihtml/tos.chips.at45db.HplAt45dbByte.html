@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.at45db.HplAt45dbByte</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.at45db.HplAt45dbByte</h2>
+    <b>interface HplAt45dbByte</b><p>
+ Interface between generic byte-at-a-time AT45DB HPL implementation and
+ its platform specific aspects.
+ <p>
+ Each platform must provide its own HPL implementation for its AT45DB
+ flash chip. To simplify this task, this directory provides a generic HPL
+ implementation (HplAt45dbByteC) which can easily be used to build an
+ AT45DB HPL by connecting it to a byte-at-a-time SPI interface, and an
+ implementation of the operations of this interface.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#deselect">deselect</a>()
+      </span><menu>
+ Deassert the flash's select pin.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#getCompareStatus">getCompareStatus</a>()
+      </span><menu>
+ This command may be called immediately after idle is signaled.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#select">select</a>()
+      </span><menu>
+ Assert the flash's select pin.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#waitIdle">waitIdle</a>()
+      </span><menu>
+ Wait for the flash chip to report that it is idle.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#idle">idle</a>()
+      </span><menu>
+ Signaled when the flash chip is idle.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="deselect"></a>
+    <h4>deselect
+    </h4>
+    <span id=funcnameshort>command void <b>deselect</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Deassert the flash's select pin.
+
+    </menu>
+    <hr>
+    <a name="getCompareStatus"></a>
+    <h4>getCompareStatus
+    </h4>
+    <span id=funcnameshort>command bool <b>getCompareStatus</b>()
+    </span>
+    <p>
+    <menu>
+      
+ This command may be called immediately after idle is signaled. It
+ must report the flash's current compare status.
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the last compare succeeded, FALSE if it failed.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="select"></a>
+    <h4>select
+    </h4>
+    <span id=funcnameshort>command void <b>select</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Assert the flash's select pin.
+
+    </menu>
+    <hr>
+    <a name="waitIdle"></a>
+    <h4>waitIdle
+    </h4>
+    <span id=funcnameshort>command void <b>waitIdle</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Wait for the flash chip to report that it is idle. This command is
+ called immediately after sending a status request command to the
+ flash, so it is sufficient to wait for the flash's data pin to go
+ high.
+
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="idle"></a>
+    <h4>idle
+    </h4>
+    <span id=funcnameshort>event void <b>idle</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when the flash chip is idle.
+
+    </menu>
+  </body>
+</html>

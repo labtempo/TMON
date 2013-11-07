@@ -1,0 +1,6 @@
+<area shape="rect" id="node2" href="../chtml/tos.lib.timer.TransformCounterC.html" title="TransformCounterC\n(Transform32)" alt="" coords="5,120,181,171">
+<area shape="poly" id="edge2" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMicro, uint32_t&gt;" alt="" coords="96,53 96,106 91,106 91,53">
+<area shape="rect" id="edge2" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TMicro, uint32_t&gt;" alt="" coords="93,78,268,95">
+<area shape="rect" id="node3" href="../chtml/tos.platforms.mica.CounterThree16C.html" title="CounterThree16C" alt="" coords="8,237,179,296">
+<area shape="poly" id="edge4" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TThree, uint16_t&gt;" alt="" coords="96,171 96,224 91,224 91,171">
+<area shape="rect" id="edge4" href="../ihtml/tos.lib.timer.Counter.html" title="Counter&lt;TThree, uint16_t&gt;" alt="" coords="93,195,271,213">

@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.Deluge.ObjectTransfer</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.Deluge.ObjectTransfer</h2>
+    <b>interface ObjectTransfer</b><p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+ 
+      </dd>
+      <dd>
+        Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+ 
+      </dd>
+      <dd>
+        Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#publish">publish</a>(object_id_t new_objid, object_size_t new_size, uint8_t img_num)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#receive">receive</a>(object_id_t new_objid, object_size_t new_size, uint8_t img_num)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#stop">stop</a>()
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#receiveDone">receiveDone</a>(error_t error)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="publish"></a>
+    <h4>publish
+    </h4>
+    <span id=funcnameshort>command error_t <b>publish</b>(object_id_t new_objid, object_size_t new_size, uint8_t img_num)
+    </span><hr>
+    <a name="receive"></a>
+    <h4>receive
+    </h4>
+    <span id=funcnameshort>command error_t <b>receive</b>(object_id_t new_objid, object_size_t new_size, uint8_t img_num)
+    </span><hr>
+    <a name="stop"></a>
+    <h4>stop
+    </h4>
+    <span id=funcnameshort>command error_t <b>stop</b>()
+    </span><p><div id=heading>Events - Details</div>
+    <a name="receiveDone"></a>
+    <h4>receiveDone
+    </h4>
+    <span id=funcnameshort>event void <b>receiveDone</b>(error_t error)
+    </span>
+  </body>
+</html>

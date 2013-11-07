@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.Deluge.BitVecUtils</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.Deluge.BitVecUtils</h2>
+    <b>interface BitVecUtils</b><p>
+ Provides generic methods for manipulating bit vectors.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#countOnes">countOnes</a>(uint16_t *pResult, uint8_t *bitVec, uint16_t length)
+      </span><menu>
+ Counts the number of '1' bits in a bit vector.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command error_t <a href="#indexOf">indexOf</a>(uint16_t *pResult, uint16_t fromIndex, uint8_t *bitVec, uint16_t length)
+      </span><menu>
+ Locates the index of the first '1' bit in a bit vector.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#printBitVec">printBitVec</a>(char *buf, uint8_t *bitVec, uint16_t length)
+      </span><menu>
+ Generates an ASCII representation of the bit vector.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="countOnes"></a>
+    <h4>countOnes
+    </h4>
+    <span id=funcnameshort>command error_t <b>countOnes</b>(uint16_t *pResult, uint8_t *bitVec, uint16_t length)
+    </span>
+    <p>
+    <menu>
+      
+ Counts the number of '1' bits in a bit vector.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>result</code> -   the number of '1' bits
+ 
+        </dd>
+        <dd>
+          <code>bitVec</code> -   the bit vector
+ 
+        </dd>
+        <dd>
+          <code>length</code> -   the length of the bit vector in bits
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+                 <code>SUCCESS</code> if the operation completed successfully;
+                <code>FAIL</code> otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="indexOf"></a>
+    <h4>indexOf
+    </h4>
+    <span id=funcnameshort>command error_t <b>indexOf</b>(uint16_t *pResult, uint16_t fromIndex, uint8_t *bitVec, uint16_t length)
+    </span>
+    <p>
+    <menu>
+      
+ Locates the index of the first '1' bit in a bit vector.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>result</code> -      the location of the '1' bit
+ 
+        </dd>
+        <dd>
+          <code>fromIndex</code> -   the index to start search for '1' bit
+ 
+        </dd>
+        <dd>
+          <code>bitVec</code> -      the bit vector
+ 
+        </dd>
+        <dd>
+          <code>length</code> -      the length of the bit vector in bits
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+                    <code>SUCCESS</code> if a '1' bit was found;
+                   <code>FAIL</code> otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="printBitVec"></a>
+    <h4>printBitVec
+    </h4>
+    <span id=funcnameshort>command void <b>printBitVec</b>(char *buf, uint8_t *bitVec, uint16_t length)
+    </span>
+    <p>
+    <menu>
+      
+ Generates an ASCII representation of the bit vector.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>buf</code> -      the character array to place the ASCII string
+ 
+        </dd>
+        <dd>
+          <code>bitVec</code> -   the bit vector
+ 
+        </dd>
+        <dd>
+          <code>length</code> -   the length of the bit vector in bits
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<area shape="rect" id="node2" href="../chtml/tos.sensorboards.mda100.SharedAnalogDeviceP.html" title="SharedAnalogDeviceP\n(AnalogDevice)" alt="" coords="173,139,363,189">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;[uint8_t]" alt="" coords="176,60 176,84 182,108 200,129 196,132 178,111 170,85 171,60">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;[uint8_t]" alt="" coords="180,91,340,109">
+<area shape="rect" id="node6" href="../chtml/tos.chips.atm128.adc.AdcReadNowClientC.html" title="AdcReadNowClientC\n(Adc)" alt="" coords="5,261,195,323">
+<area shape="poly" id="edge12" href="../ihtml/tos.interfaces.ReadNow.html" title="ReadNow&lt;uint16_t&gt;" alt="" coords="174,180 106,197 80,208 64,220 59,234 63,249 58,250 54,234 59,217 77,203 104,192 173,175">
+<area shape="rect" id="edge12" href="../ihtml/tos.interfaces.ReadNow.html" title="ReadNow&lt;uint16_t&gt;" alt="" coords="61,219,195,237">
+<area shape="poly" id="edge16" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="248,191 196,239 172,256 169,252 193,235 244,188">
+<area shape="rect" id="edge16" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="217,219,276,237">
+<area shape="rect" id="node7" href="../chtml/tos.system.TimerMilliC.html" title="TimerMilliC" alt="" coords="257,263,369,321">
+<area shape="poly" id="edge14" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="" coords="280,189 301,249 296,250 275,191">
+<area shape="rect" id="edge14" href="../ihtml/tos.lib.timer.Timer.html" title="Timer&lt;TMilli&gt;" alt="" coords="295,219,384,237">
+<area shape="poly" id="edge20" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="339,187 391,217 432,256 429,260 388,221 336,192">
+<area shape="rect" id="edge20" href="../ihtml/tos.interfaces.GeneralIO.html" title="GeneralIO" alt="" coords="409,219,473,237">
+<area shape="rect" id="node4" href="../chtml/tos.system.RoundRobinArbiterC.html" title="RoundRobinArbiterC\n(Arbiter)" alt="" coords="477,133,667,195">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="741,61 726,87 706,111 681,129 678,125 702,107 722,84 736,59">
+<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="719,91,832,109">
+<area shape="rect" id="node5" href="../chtml/tos.lib.power.SplitControlPowerManagerC.html" title="SplitControlPowerManagerC\n(PowerManager)" alt="" coords="351,5,599,67">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="426,69 322,134 319,129 423,65">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.SplitControl.html" title="SplitControl" alt="" coords="383,91,457,109">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="471,67 472,88 478,108 490,123 486,126 474,111 466,89 466,67">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="476,91,543,109">
+<area shape="poly" id="edge10" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="522,65 545,89 561,119 557,122 541,92 518,69">
+<area shape="rect" id="edge10" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="553,91,699,109">
+<area shape="poly" id="edge18" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="103,323 103,376 97,376 97,323">
+<area shape="rect" id="edge18" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="100,347,216,365">

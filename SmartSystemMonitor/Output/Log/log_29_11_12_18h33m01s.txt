@@ -1,0 +1,11 @@
+2012-11-29 18:33:02,394: root              : WARNING : Starting...
+2012-11-29 18:34:41,850: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSL.py", line 273, in main
+    publish_reading(datetime.datetime.now(), samples)
+  File "MonitorMCSL.py", line 212, in publish_reading
+    publish(ALERT_INFO, timestamp, event, EXCHANGE_READINGS)
+  File "/home/zanatta/workspace/Thermal_Management/SmartSystemMonitor/Shared.py", line 31, in publish
+    connection.close()
+UnboundLocalError: local variable 'connection' referenced before assignment
+2012-11-29 18:34:41,851: root              : WARNING : Done...

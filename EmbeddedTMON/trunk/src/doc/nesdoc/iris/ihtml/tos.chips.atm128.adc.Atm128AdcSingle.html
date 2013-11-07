@@ -1,0 +1,134 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128.adc.Atm128AdcSingle</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128.adc.Atm128AdcSingle</h2>
+    <b>interface Atm128AdcSingle</b><p>
+ Hardware Abstraction Layer interface of Atmega128 for acquiring
+ a single sample from a channel.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Hu Siquan &lt;husq@xbow.com&gt;
+ 
+      </dd>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#cancel">cancel</a>()
+      </span><menu>
+ Cancel an outstanding getData operation.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#getData">getData</a>(uint8_t channel, uint8_t refVoltage, bool leftJustify, uint8_t prescaler)
+      </span><menu>
+ Initiates an ADC conversion on a given channel.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#dataReady">dataReady</a>(uint16_t data, bool precise)
+      </span><menu>
+ Indicates a sample has been recorded by the ADC as the result
+ of a <code>getData()</code> command.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="cancel"></a>
+    <h4>cancel
+    </h4>
+    <span id=funcnameshort>command bool <b>cancel</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Cancel an outstanding getData operation. Use with care, to
+ avoid problems with races between the dataReady event and cancel.
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if a conversion was in-progress or an interrupt
+   was pending. dataReady will not be signaled. FALSE if the
+   conversion was already complete. dataReady will be (or has
+   already been) signaled.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="getData"></a>
+    <h4>getData
+    </h4>
+    <span id=funcnameshort>command bool <b>getData</b>(uint8_t channel, uint8_t refVoltage, bool leftJustify, uint8_t prescaler)
+    </span>
+    <p>
+    <menu>
+      
+ Initiates an ADC conversion on a given channel.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>channel</code> -  A/D conversion channel.
+ 
+        </dd>
+        <dd>
+          <code>refVoltage</code> -  Select reference voltage for A/D conversion. See
+   the ATM128_ADC_VREF_xxx constants in Atm128ADC.h
+ 
+        </dd>
+        <dd>
+          <code>leftJustify</code> -  TRUE to place A/D result in high-order bits 
+   (i.e., shifted left by 6 bits), low to place it in the low-order bits
+ 
+        </dd>
+        <dd>
+          <code>prescaler</code> -  Prescaler value for the A/D conversion clock. If you 
+  specify ATM128_ADC_PRESCALE, a prescaler will be chosen that guarantees
+  full precision. Other prescalers can be used to get faster conversions. 
+  See the ATmega128 manual for details.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the conversion will be precise, FALSE if it will be 
+   imprecise (due to a change in refernce voltage, or switching to a
+   differential input channel)
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="dataReady"></a>
+    <h4>dataReady
+    </h4>
+    <span id=funcnameshort>event void <b>dataReady</b>(uint16_t data, bool precise)
+    </span>
+    <p>
+    <menu>
+      
+ Indicates a sample has been recorded by the ADC as the result
+ of a <code>getData()</code> command.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  a 2 byte unsigned data value sampled by the ADC.
+ 
+        </dd>
+        <dd>
+          <code>precise</code> -  if the conversion precise, FALSE if it wasn't. This
+   values matches the result from the <code>getData</code> call.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

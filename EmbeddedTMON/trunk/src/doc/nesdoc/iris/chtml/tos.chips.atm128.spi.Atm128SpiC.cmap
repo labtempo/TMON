@@ -1,0 +1,22 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm128.spi.Atm128SpiP.html" title="Atm128SpiP" alt="" coords="257,120,375,168">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="99,48 178,94 246,120 244,125 176,98 96,53">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.SpiPacket.html" title="SpiPacket" alt="" coords="177,78,240,95">
+<area shape="rect" id="node7" href="../chtml/tos.system.SimpleFcfsArbiterC.html" title="SimpleFcfsArbiterC\n(Arbiter)" alt="" coords="61,235,240,296">
+<area shape="poly" id="edge12" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="258,154 179,169 147,180 127,194 123,207 125,222 120,223 117,206 123,190 145,175 178,164 256,148">
+<area shape="rect" id="edge12" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="125,193,239,210">
+<area shape="poly" id="edge14" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="292,170 240,213 216,230 213,225 237,209 288,166">
+<area shape="rect" id="edge14" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="261,193,328,210">
+<area shape="rect" id="node8" href="../chtml/tos.chips.atm128.spi.HplAtm128SpiC.html" title="HplAtm128SpiC" alt="" coords="289,236,441,295">
+<area shape="poly" id="edge16" href="../ihtml/tos.chips.atm128.spi.Atm128Spi.html" title="Atm128Spi" alt="" coords="329,167 338,191 351,222 346,224 334,193 324,169">
+<area shape="rect" id="edge16" href="../ihtml/tos.chips.atm128.spi.Atm128Spi.html" title="Atm128Spi" alt="" coords="343,193,415,210">
+<area shape="rect" id="node9" href="../chtml/tos.chips.atm1281.McuSleepC.html" title="McuSleepC" alt="" coords="465,241,572,289">
+<area shape="poly" id="edge18" href="../ihtml/tos.interfaces.McuPowerState.html" title="McuPowerState" alt="" coords="375,166 421,190 480,230 477,235 419,194 373,170">
+<area shape="rect" id="edge18" href="../ihtml/tos.interfaces.McuPowerState.html" title="McuPowerState" alt="" coords="448,193,548,210">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="224,50 263,94 279,109 275,113 259,98 220,54">
+<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.SpiByte.html" title="SpiByte" alt="" coords="261,78,311,95">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="319,54 319,106 313,106 313,54">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="316,78,336,95">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.FastSpiByte.html" title="FastSpiByte" alt="" coords="424,54 356,113 352,109 420,50">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.FastSpiByte.html" title="FastSpiByte" alt="" coords="389,78,465,95">
+<area shape="poly" id="edge10" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="571,51 472,98 389,127 387,122 470,94 568,47">
+<area shape="rect" id="edge10" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="512,78,625,95">

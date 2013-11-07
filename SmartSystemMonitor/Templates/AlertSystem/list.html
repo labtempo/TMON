@@ -1,0 +1,115 @@
+{% extends "base.html" %}{% load bootstrap_toolkit %} 
+{% block title %}Event List {% endblock %} 
+{% block extrahead %}
+<!-- Auto refresh code -->
+<meta http-equiv="refresh" content="600">
+{% endblock %} 
+{% block extra_head %}
+    {{ form.media }}
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span3">
+			<caption>
+				<center><h3>Event Filter</h3></center>
+			</caption>
+			<form action="" method="post">
+				{% csrf_token %} {{ form|as_bootstrap }}
+				<button type="submit" class="btn btn">Consult</button>
+				<p></p>
+				<p>
+					<a href="alertlist/" class="btn btn-warning"> Complete Log List</a>
+				</p>
+				<p>Attention! May take some time to process this query.</p>
+			</form>
+		</div>
+		<div class="span9">
+			<center>
+				<table class="table table-hover">
+					<caption>
+						<h3>Event List</h3>
+					</caption>
+					<thead>
+						<tr>
+							<th><center>
+									<h5>Type</h5>
+								</center></th>
+							<th><center>
+									<h5>Time</h5>
+								</center></th>
+							<th><center>
+									<h5>Description</h5>
+								</center></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for alert in all_alert_list %} 
+						{% ifequal alert.type "info" %}
+						<tr class="success">
+							<td><center>
+									<p>
+										<font color="green">{{ alert.type}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="green">{{alert.timeStamp|date:'d/m/y G:i:s'}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="green">{{ alert.event}}</font>
+									</p>
+								</center></td>
+						</tr>
+						{% endifequal %} 
+						{% ifequal alert.type "warning" %}
+						<tr class="warning">
+							<td><center>
+									<p>
+										<font color="orange">{{ alert.type}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="orange">{{alert.timeStamp|date:'d/m/y G:i:s'}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="orange">{{ alert.event}}</font>
+									</p>
+								</center></td>
+						</tr>
+						{% endifequal %} {% ifequal alert.type "critical" %}
+						<tr class="error">
+							<td><center>
+									<p>
+										<font color="red">{{ alert.type}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="red">{{alert.timeStamp|date:'d/m/y G:i:s'}}</font>
+									</p>
+								</center></td>
+							<td><center>
+									<p>
+										<font color="red">{{ alert.event}}</font>
+									</p>
+								</center></td>
+						</tr>
+						{% endifequal %}
+						{% empty %}<tr><td><center>Event list empty</center></td></tr> 
+						{% endfor %}
+					</tbody>
+				</table>
+			</center>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+

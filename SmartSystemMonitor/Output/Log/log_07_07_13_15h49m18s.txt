@@ -1,0 +1,6 @@
+2013-07-07 15:49:19,940: root              : WARNING : Starting...
+2013-07-07 15:50:03,017: root              : WARNING : Mote 32 entered the network!
+2013-07-07 15:50:03,583: root              : WARNING : Mote 64 entered the network!
+2013-07-07 15:50:04,006: root              : WARNING : Mote 128 entered the network!
+2013-07-07 15:50:06,438: root              : WARNING : Mote 200 entered the network!
+2013-07-07 15:50:10,043: root              : WARNING : Mote 8192 entered the network!

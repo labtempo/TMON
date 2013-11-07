@@ -1,0 +1,83 @@
+#board{
+	width: 90%;
+	min-height:600px;
+    display: table;
+    border: 1px dashed black;
+}
+
+#map_label{
+	width:10px;
+	padding: 10px 10px;
+	font-size: 20px;
+}
+
+#view_graphs{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 600px;
+    width: 600px;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 100;
+}
+
+div.separator{
+    display:table-row;
+    width: auto;
+    height: 0px;
+}
+
+div.frame{
+	height: auto;
+    display: table-cell;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid black;
+    z-index: 0;
+}
+
+.rack{
+    position:absolute;
+    background-color: gray;
+    border: 1px solid black;
+    margin: 0px 0px -2px -2px;
+    color: white;
+    font-size:20px;
+    z-index:1;
+}
+
+.mote{
+	width: 70px;
+	height:70px;
+    position:absolute;
+    background-color: gray;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius:100px;
+    font-size:20px;
+    z-index:1;
+}
+
+.min_mote{
+	width: 10px;
+	height:10px;
+    background-color: gray;
+    display: inline-block;
+    border-radius:100px;
+    font-size:20px;
+    z-index:2;
+}
+
+.content_temp_balloon{
+	min-width: 100px;
+}
+
+.content_temp_item{
+	float:top;
+	z-index:10;
+}
+
+.content{
+	position:absolute;
+	top:45%;
+	left:45%;
+}

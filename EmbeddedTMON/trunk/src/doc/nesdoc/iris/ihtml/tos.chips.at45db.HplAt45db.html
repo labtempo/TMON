@@ -1,0 +1,530 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.at45db.HplAt45db</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.at45db.HplAt45db</h2>
+    <b>interface HplAt45db</b><p>
+ HPL for Atmel's AT45DB family of serial dataflash chips. 
+ Provides access to all basic AT45DB operations plus operations to 
+ wait for the flash to go idle or finish a comparison. See the AT45DB
+ family datasheets for full details on these operations.
+ <p>
+ This interface only supports one operation at a time.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command void <a href="#compare">compare</a>(uint8_t cmd, at45page_t page)
+      </span><menu>
+ Compare a page from flash with a buffer.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#crc">crc</a>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, at45pageoffset_t n, uint16_t baseCrc)
+      </span><menu>
+ Compute CRC of data in a flash buffer (using the CRC function from crc.h).
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#erase">erase</a>(uint8_t cmd, at45page_t page)
+      </span><menu>
+ Erase a flash page.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#fill">fill</a>(uint8_t cmd, at45page_t page)
+      </span><menu>
+ Read a page from flash into a buffer.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#flush">flush</a>(uint8_t cmd, at45page_t page)
+      </span><menu>
+ Write a buffer to a flash page.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#read">read</a>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, uint8_t *data, at45pageoffset_t n)
+      </span><menu>
+ Read directly from flash.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#readBuffer">readBuffer</a>(uint8_t cmd, at45pageoffset_t offset, uint8_t *data, uint16_t n)
+      </span><menu>
+ Read from a flash buffer.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#waitCompare">waitCompare</a>()
+      </span><menu>
+ Wait for a buffer-flash comparison to complete.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#waitIdle">waitIdle</a>()
+      </span><menu>
+ Wait for a "Group A" operation to complete (essentially all non-buffer
+ operations).
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#write">write</a>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, uint8_t *data, at45pageoffset_t n)
+      </span><menu>
+ Write some data to a flash buffer, and optionally the flash itself.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#compareDone">compareDone</a>()
+      </span><menu>
+ Signaled when compare command sent (use waitCompare to detect when
+ compare command completes and find out comparison result)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#crcDone">crcDone</a>(uint16_t computedCrc)
+      </span><menu>
+ Signaled when CRC has been computed.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#eraseDone">eraseDone</a>()
+      </span><menu>
+ Signaled when erase command sent (use waitIdle to detect when
+ erase command completes)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#fillDone">fillDone</a>()
+      </span><menu>
+ Signaled when fill command sent (use waitIdle to detect when
+ fill command completes)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#flushDone">flushDone</a>()
+      </span><menu>
+ Signaled when flush command sent (use waitIdle to detect when
+ flush command completes)
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#readDone">readDone</a>()
+      </span><menu>
+ Signaled when data has been read from the buffer.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#waitCompareDone">waitCompareDone</a>(bool compareOk)
+      </span><menu>
+ Signaled when the buffer-flash comparison is complete.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#waitIdleDone">waitIdleDone</a>()
+      </span><menu>
+ Signaled when the flash is idle.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#writeDone">writeDone</a>()
+      </span><menu>
+ Signaled when data has been written to the buffer.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="compare"></a>
+    <h4>compare
+    </h4>
+    <span id=funcnameshort>command void <b>compare</b>(uint8_t cmd, at45page_t page)
+    </span>
+    <p>
+    <menu>
+      
+ Compare a page from flash with a buffer. compareDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_COMPARE_BUFFER1 to compare buffer 1, 
+   AT45_C_COMPARE_BUFFER2 to compare buffer 2
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to compare with (must be less than AT45_MAX_PAGES)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="crc"></a>
+    <h4>crc
+    </h4>
+    <span id=funcnameshort>command void <b>crc</b>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, at45pageoffset_t n, uint16_t baseCrc)
+    </span>
+    <p>
+    <menu>
+      
+ Compute CRC of data in a flash buffer (using the CRC function from crc.h).
+ crcDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_READ_BUFFER1 to compute CRC from buffer 1,
+   AT45_C_READ_BUFFER2 to compute CRC from buffer 2
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  ignored (reserved for future use)
+ 
+        </dd>
+        <dd>
+          <code>offset</code> -  Offset in page at which to start reading - must be between
+   0 and AT45_PAGE_SIZE - 1 
+ 
+        </dd>
+        <dd>
+          <code>n</code> -  Number of bytes to read (> 0). offset + n must be <= 
+   AT45_PAGE_SIZE
+ 
+        </dd>
+        <dd>
+          <code>baseCrc</code> -  initial CRC value - use 0 if computing a "standalone"
+   CRC, or a previous crc result if computing a CRC over several
+   flash pages
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="erase"></a>
+    <h4>erase
+    </h4>
+    <span id=funcnameshort>command void <b>erase</b>(uint8_t cmd, at45page_t page)
+    </span>
+    <p>
+    <menu>
+      
+ Erase a flash page. eraseDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  must be AT45_C_ERASE_PAGE
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to compare with (must be less than AT45_MAX_PAGES)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="fill"></a>
+    <h4>fill
+    </h4>
+    <span id=funcnameshort>command void <b>fill</b>(uint8_t cmd, at45page_t page)
+    </span>
+    <p>
+    <menu>
+      
+ Read a page from flash into a buffer. fillDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_FILL_BUFFER1 to read into buffer 1, 
+   AT45_C_FILL_BUFFER2 to read into buffer 2
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to read (must be less than AT45_MAX_PAGES)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="flush"></a>
+    <h4>flush
+    </h4>
+    <span id=funcnameshort>command void <b>flush</b>(uint8_t cmd, at45page_t page)
+    </span>
+    <p>
+    <menu>
+      
+ Write a buffer to a flash page. flushDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_FLUSH_BUFFER1 to write buffer 1 to flash,
+   AT45_C_FLUSH_BUFFER2 to write buffer 2 to flash,
+   AT45_C_QFLUSH_BUFFER1 to write buffer 1 to flash w/o erase
+   (page must have been previously erased),
+   AT45_C_QFLUSH_BUFFER2 to write buffer 2 to flash w/o erase
+   (page must have been previously erased),
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to write (must be less than AT45_MAX_PAGES)
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="read"></a>
+    <h4>read
+    </h4>
+    <span id=funcnameshort>command void <b>read</b>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, uint8_t *data, at45pageoffset_t n)
+    </span>
+    <p>
+    <menu>
+      
+ Read directly from flash. readDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_READ_CONTINUOUS or AT45_C_READ_PAGE. When the end of
+   a page is read, AT45_C_READ_CONTINUOUS continues on the next page,
+   while AT45_C_READ_PAGE continues at the start of the same page.
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to read from
+ 
+        </dd>
+        <dd>
+          <code>offset</code> -  Offset in page at which to start reading - must be between
+   0 and AT45_PAGE_SIZE - 1 
+ 
+        </dd>
+        <dd>
+          <code>data</code> -  Buffer in which to place read data. The buffer is "returned"
+   at readDone time.
+ 
+        </dd>
+        <dd>
+          <code>n</code> -  Number of bytes to read (> 0).
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="readBuffer"></a>
+    <h4>readBuffer
+    </h4>
+    <span id=funcnameshort>command void <b>readBuffer</b>(uint8_t cmd, at45pageoffset_t offset, uint8_t *data, uint16_t n)
+    </span>
+    <p>
+    <menu>
+      
+ Read from a flash buffer. readDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  AT45_C_READ_BUFFER1 to read from buffer 1,
+   AT45_C_READ_BUFFER2 to read from buffer 2
+ 
+        </dd>
+        <dd>
+          <code>offset</code> -  Offset in page at which to start reading - must be between
+   0 and AT45_PAGE_SIZE - 1 
+ 
+        </dd>
+        <dd>
+          <code>data</code> -  Buffer in which to place read data. The buffer is "returned"
+   at readDone time.
+ 
+        </dd>
+        <dd>
+          <code>n</code> -  Number of bytes to read (> 0). offset + n must be <= 
+   AT45_PAGE_SIZE
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="waitCompare"></a>
+    <h4>waitCompare
+    </h4>
+    <span id=funcnameshort>command void <b>waitCompare</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Wait for a buffer-flash comparison to complete. waitCompareDone will
+ be signaled when that occurs.
+
+    </menu>
+    <hr>
+    <a name="waitIdle"></a>
+    <h4>waitIdle
+    </h4>
+    <span id=funcnameshort>command void <b>waitIdle</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Wait for a "Group A" operation to complete (essentially all non-buffer
+ operations). You should use waitComapre if you are waiting for a
+ comparison to complete. waitIdleDone will be signaled when the operation
+ is complete.
+
+    </menu>
+    <hr>
+    <a name="write"></a>
+    <h4>write
+    </h4>
+    <span id=funcnameshort>command void <b>write</b>(uint8_t cmd, at45page_t page, at45pageoffset_t offset, uint8_t *data, at45pageoffset_t n)
+    </span>
+    <p>
+    <menu>
+      
+ Write some data to a flash buffer, and optionally the flash itself. 
+ writeDone will be signaled.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>cmd</code> -  One of AT45_C_WRITE_BUFFER1/2 or AT45_C_WRITE_MEM_BUFFER1/2
+   to write respectively to buffer 1/2, or to buffer 1/2 and the 
+   specified main memory page.
+ 
+        </dd>
+        <dd>
+          <code>page</code> -  Page to write when cmd is AT45_C_WRITE_MEM_BUFFER1/2
+ 
+        </dd>
+        <dd>
+          <code>offset</code> -  Offset in page at which to start writing - must be between
+   0 and AT45_PAGE_SIZE - 1 
+ 
+        </dd>
+        <dd>
+          <code>data</code> -  Data to write. The buffer is "returned" at writeDone time.
+ 
+        </dd>
+        <dd>
+          <code>n</code> -  Number of bytes to write (> 0). offset + n must be <= 
+   AT45_PAGE_SIZE
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="compareDone"></a>
+    <h4>compareDone
+    </h4>
+    <span id=funcnameshort>event void <b>compareDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when compare command sent (use waitCompare to detect when
+ compare command completes and find out comparison result)
+
+    </menu>
+    <hr>
+    <a name="crcDone"></a>
+    <h4>crcDone
+    </h4>
+    <span id=funcnameshort>event void <b>crcDone</b>(uint16_t computedCrc)
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when CRC has been computed.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>computedCrc</code> -  CRC value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="eraseDone"></a>
+    <h4>eraseDone
+    </h4>
+    <span id=funcnameshort>event void <b>eraseDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when erase command sent (use waitIdle to detect when
+ erase command completes)
+
+    </menu>
+    <hr>
+    <a name="fillDone"></a>
+    <h4>fillDone
+    </h4>
+    <span id=funcnameshort>event void <b>fillDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when fill command sent (use waitIdle to detect when
+ fill command completes)
+
+    </menu>
+    <hr>
+    <a name="flushDone"></a>
+    <h4>flushDone
+    </h4>
+    <span id=funcnameshort>event void <b>flushDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when flush command sent (use waitIdle to detect when
+ flush command completes)
+
+    </menu>
+    <hr>
+    <a name="readDone"></a>
+    <h4>readDone
+    </h4>
+    <span id=funcnameshort>event void <b>readDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when data has been read from the buffer. The data buffer
+ is "returned".
+
+    </menu>
+    <hr>
+    <a name="waitCompareDone"></a>
+    <h4>waitCompareDone
+    </h4>
+    <span id=funcnameshort>event void <b>waitCompareDone</b>(bool compareOk)
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when the buffer-flash comparison is complete.
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>compareOk</code> -  TRUE if the comparison succeeded, FALSE otherwise.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="waitIdleDone"></a>
+    <h4>waitIdleDone
+    </h4>
+    <span id=funcnameshort>event void <b>waitIdleDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when the flash is idle.
+
+    </menu>
+    <hr>
+    <a name="writeDone"></a>
+    <h4>writeDone
+    </h4>
+    <span id=funcnameshort>event void <b>writeDone</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Signaled when data has been written to the buffer. The data buffer
+ is "returned".
+
+    </menu>
+  </body>
+</html>

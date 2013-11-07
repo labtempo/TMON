@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.at45db.At45dbVolume</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.at45db.At45dbVolume</h2>
+    <b>interface At45dbVolume</b><p>
+ AT45DB interface for managing flash volumes.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command at45page_t <a href="#remap">remap</a>(at45page_t volumePage)
+      </span><menu>
+ Map a volume page to the corresponding page in the whole flash
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command at45page_t <a href="#volumeSize">volumeSize</a>()
+      </span><menu>
+ Find the flash volume size
+ 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="remap"></a>
+    <h4>remap
+    </h4>
+    <span id=funcnameshort>command at45page_t <b>remap</b>(at45page_t volumePage)
+    </span>
+    <p>
+    <menu>
+      
+ Map a volume page to the corresponding page in the whole flash
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          What flash page this volume page maps to, or 
+   AT45_MAX_PAGES for invalid volumes
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="volumeSize"></a>
+    <h4>volumeSize
+    </h4>
+    <span id=funcnameshort>command at45page_t <b>volumeSize</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Find the flash volume size
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Flash volume size in pages
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

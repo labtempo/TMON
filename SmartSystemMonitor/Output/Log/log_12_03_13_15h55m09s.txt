@@ -1,0 +1,4 @@
+2013-03-12 15:55:10,353: root              : WARNING : Starting...
+2013-03-12 15:55:24,531: root              : WARNING : Mote 1 entered the network!
+2013-03-12 15:55:24,698: root              : WARNING : Mote 2 entered the network!
+2013-03-12 15:55:25,922: root              : WARNING : Mote 3 entered the network!

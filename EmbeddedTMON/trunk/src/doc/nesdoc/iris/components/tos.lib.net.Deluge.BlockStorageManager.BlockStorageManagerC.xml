@@ -1,0 +1,763 @@
+<?xml version="1.0" ?><component loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc" nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" qname="BlockStorageManagerC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManager.h">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="57:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace8399b4c0" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83993bd0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace8399a640" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a4f9a8" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="StorageMap" ref="0x2ace83996b28" scoped=""/></from>
+          <to><interface-ref name="StorageMap" ref="0x2ace83a4e9a8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="VolumeId" ref="0x2ace83a4b020" scoped=""/></from>
+          <to><interface-ref name="VolumeId" ref="0x2ace839986c0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockRead" ref="0x2ace83a4d180" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83c18d60" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockRead" ref="0x2ace83a4d180" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83c14268" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockRead" ref="0x2ace83a4d180" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83c10578" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockRead" ref="0x2ace83a4d180" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83c0da10" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockWrite" ref="0x2ace83a4c020" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83c18020" scoped=""/></to>
+        </wire>
+        <wire loc="73:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockWrite" ref="0x2ace83a4c020" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83c15398" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockWrite" ref="0x2ace83a4c020" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83c11718" scoped=""/></to>
+        </wire>
+        <wire loc="75:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="SubBlockWrite" ref="0x2ace83a4c020" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83c0ec28" scoped=""/></to>
+        </wire>
+        <wire loc="84:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a4b6f8" scoped=""/></from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc" name="BlockRead" provided="1" ref="0x2ace8399b4c0">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" qname="BlockStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace8399b4c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace8399b810" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace8399b998" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace8399bb20" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace8399bca8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace8399be30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc" name="BlockWrite" provided="1" ref="0x2ace8399a640">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" qname="BlockStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace8399a640" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace8399a990" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace8399ab18" scoped=""/>
+        <function-ref name="erase" ref="0x2ace8399aca0" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace8399ae28" scoped=""/>
+        <function-ref name="write" ref="0x2ace83999020" scoped=""/>
+        <function-ref name="sync" ref="0x2ace839991a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc" name="VolumeId" provided="0" ref="0x2ace839986c0">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" qname="BlockStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="VolumeId" ref="0x2ace839986c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.BlockStorageManager.VolumeId" qname="VolumeId"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace83998a10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerC.nc" name="StorageMap" provided="1" ref="0x2ace83996b28">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" qname="BlockStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="StorageMap" ref="0x2ace83996b28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.StorageMap" qname="StorageMap"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2ace83996e78" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="18:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" name="At45dbVolume" provided="1" ref="0x2ace83c22780">
+      <component-ref nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45dbVolume" qname="At45dbVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="volumeSize" ref="0x2ace83c22ad0" scoped=""/>
+        <function-ref name="remap" ref="0x2ace83c22c58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="At45dbVolume" provided="0" ref="0x2ace83a4b6f8">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45dbVolume" ref="0x2ace83a4b6f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45dbVolume" qname="At45dbVolume"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="volumeSize" ref="0x2ace83a4ba68" scoped=""/>
+        <function-ref name="remap" ref="0x2ace83a4bbf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2ace83c18020">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_Golden"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83c18020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83c18370" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83c184f8" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83c18680" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83c18808" scoped=""/>
+        <function-ref name="write" ref="0x2ace83c18990" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83c18b18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2ace83c14268">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_1"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83c14268" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83c145b8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83c14740" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83c148c8" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83c14a50" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83c14bd8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="StorageMap" provided="1" ref="0x2ace83a4e9a8">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="StorageMap" ref="0x2ace83a4e9a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.StorageMap" qname="StorageMap"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="getPhysicalAddress" ref="0x2ace83a4ed18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="SubBlockWrite" provided="0" ref="0x2ace83a4c020">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubBlockWrite" ref="0x2ace83a4c020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83a4c390" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83a4c518" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83a4c6a0" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83a4c828" scoped=""/>
+        <function-ref name="write" ref="0x2ace83a4c9b0" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83a4cb38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="BlockRead" provided="1" ref="0x2ace83993bd0">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83993bd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83a4f020" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83a4f1a8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83a4f330" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83a4f4b8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83a4f640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2ace83c18d60">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_Golden"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83c18d60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83c170d8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83c17260" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83c173e8" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83c17570" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83c176f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="VolumeId" provided="0" ref="0x2ace83a4b020">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="VolumeId" ref="0x2ace83a4b020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.BlockStorageManager.VolumeId" qname="VolumeId"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace83a4b390" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2ace83c0ec28">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_3"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83c0ec28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83c0d020" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83c0d1a8" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83c0d330" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83c0d4b8" scoped=""/>
+        <function-ref name="write" ref="0x2ace83c0d640" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83c0d7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="SubBlockRead" provided="0" ref="0x2ace83a4d180">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubBlockRead" ref="0x2ace83a4d180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83a4d4f0" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83a4d678" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83a4d800" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83a4d988" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83a4db10" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" name="BlockWrite" provided="1" ref="0x2ace83a4f9a8">
+      <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83a4f9a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83a4fd18" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83a4e020" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83a4e1a8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83a4e330" scoped=""/>
+        <function-ref name="write" ref="0x2ace83a4e4b8" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83a4e640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2ace83c10578">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_2"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83c10578" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83c108c8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83c10a50" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83c10bd8" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83c10d60" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83c0f020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockRead" provided="1" ref="0x2ace83c0da10">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_3"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockRead" ref="0x2ace83c0da10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockRead" qname="BlockRead"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83c0dd60" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83c0c020" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83c0c1a8" scoped=""/>
+        <function-ref name="getSize" ref="0x2ace83c0c330" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83c0c4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2ace83c11718">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_2"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83c11718" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83c11a68" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83c11bf0" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83c11d78" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83c10020" scoped=""/>
+        <function-ref name="write" ref="0x2ace83c101a8" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83c10330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" name="BlockWrite" provided="1" ref="0x2ace83c15398">
+      <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_1"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BlockWrite" ref="0x2ace83c15398" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="syncDone" ref="0x2ace83c156e8" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83c15870" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83c159f8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83c15b80" scoped=""/>
+        <function-ref name="write" ref="0x2ace83c15d08" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83c14020" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37(BlockStorageManagerC.BlockStorageManagerP):/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc" nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerC.BlockStorageManagerP">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/BlockStorageManagerP.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP" qname="BlockStorageManagerP"/>
+        <arguments>
+          <value cst="I:17">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="23(BlockStorageManagerC.BlockStorageC_1):/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_1">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+        <short>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.</short>
+        <long>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.
+
+ @param volid Volume to use for block storage
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:2">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83c15398" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83c14268" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="23(BlockStorageManagerC.BlockStorageC_2):/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_2">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+        <short>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.</short>
+        <long>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.
+
+ @param volid Volume to use for block storage
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:3">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83c11718" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83c10578" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="23(BlockStorageManagerC.BlockStorageC_3):/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_3">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+        <short>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.</short>
+        <long>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.
+
+ @param volid Volume to use for block storage
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:1">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83c0ec28" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83c0da10" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component><component loc="17:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc" nicename="tos.chips.at45db.At45dbStorageManagerC" qname="At45dbStorageManagerC" safe="">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbStorageManagerC.nc">
+        <short>
+ HAL component providing information on the flash volumes.</short>
+        <long>
+ HAL component providing information on the flash volumes.
+
+ @author: David Gay &lt;dgay@acm.org&gt;
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="23(BlockStorageManagerC.BlockStorageC_Golden):/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc" nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageManagerC.BlockStorageC_Golden">
+      <documentation loc="12:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+        <short>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.</short>
+        <long>
+ Implementation of the block storage abstraction from TEP103 for the
+ Atmel AT45DB serial data flash.
+
+ @param volid Volume to use for block storage
+
+ @author David Gay
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.at45db.BlockStorageC" qname="BlockStorageC"/>
+        <arguments>
+          <value cst="I:0">
+            <type-int alignment="I:1" cname="int" size="I:2"/>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+      <wiring>
+        <wire loc="37:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83c18020" scoped=""/></from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83a3e378" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="38:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83c18d60" scoped=""/></from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83a3d660" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="40:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="At45dbVolume" ref="0x2ace83a3a990" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="At45dbVolume" ref="0x2ace83c22780" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+                <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+              </type-int>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+        <wire loc="41:/opt/tinyos-2.1.2/tos/chips/at45db/BlockStorageC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83a27658" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83ab8d70" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

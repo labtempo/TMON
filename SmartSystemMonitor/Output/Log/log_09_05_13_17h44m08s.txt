@@ -1,0 +1,5 @@
+2013-05-09 17:44:09,462: root              : WARNING : Starting...
+2013-05-09 17:47:07,024: root              : WARNING : Mote 105 entered the network!
+2013-05-09 17:51:18,753: root              : WARNING : Mote 120 entered the network!
+2013-05-09 17:53:42,125: root              : WARNING : Mote 110 entered the network!
+2013-05-09 17:55:28,143: root              : WARNING : Mote 130 entered the network!

@@ -1,0 +1,8 @@
+digraph "tos.platforms.mica.VoltageC" {
+  n0x2ace837dba10 [shape=ellipse, style=filled, label="Read", fontsize=12];
+  "VoltageC.AdcReadClientC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AdcReadClientC", URL="../chtml/tos.chips.atm128.adc.AdcReadClientC.html"];
+  "VoltageC.AdcReadClientC" [fontsize=12, shape=box,peripheries=2, style=dashed, label="AdcReadClientC", URL="../chtml/tos.chips.atm128.adc.AdcReadClientC.html"];
+  "VoltageP" [fontsize=12, shape=box, URL="../chtml/tos.platforms.mica.VoltageP.html"];
+  "n0x2ace837dba10" -> "VoltageC.AdcReadClientC" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
+  "VoltageC.AdcReadClientC" -> "VoltageP" [label="Atm128AdcConfig", URL="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html", fontsize=10];
+}

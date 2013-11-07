@@ -1,0 +1,1335 @@
+<?xml version="1.0" ?><component loc="18:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+        <short>
+ A simplistic beginning to providing a standard interface to the
+ mica-family 51-pin bus.</short>
+        <long>
+ A simplistic beginning to providing a standard interface to the
+ mica-family 51-pin bus. Just provides the PW0-PW7 and Int0-3 digital
+ I/O pins and returns the ADC channel number for the ADC pins.
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="82:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int1_Interrupt" ref="0x2ace836c5ca8" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace837a5728" scoped=""/></to>
+        </wire>
+        <wire loc="92:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc0" ref="0x2ace836b93d8" scoped=""/></from>
+          <to><interface-ref name="Adc0" ref="0x2ace836b7640" scoped=""/></to>
+        </wire>
+        <wire loc="62:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW3" ref="0x2ace836d1ad0" scoped=""/></from>
+          <to><interface-ref name="PortC3" ref="0x2ace81cadaf0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW6" ref="0x2ace836cd020" scoped=""/></from>
+          <to><interface-ref name="PortC6" ref="0x2ace81cbf020" scoped=""/></to>
+        </wire>
+        <wire loc="95:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc3" ref="0x2ace836bb760" scoped=""/></from>
+          <to><interface-ref name="Adc3" ref="0x2ace836b4a30" scoped=""/></to>
+        </wire>
+        <wire loc="97:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc5" ref="0x2ace836ba490" scoped=""/></from>
+          <to><interface-ref name="Adc5" ref="0x2ace836b3760" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int1" ref="0x2ace836c94c0" scoped=""/></from>
+          <to><interface-ref name="PortE5" ref="0x2ace81cc4af0" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_TXD" ref="0x2ace836be4f8" scoped=""/></from>
+          <to><interface-ref name="PortD3" ref="0x2ace81cbaaf0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW1" ref="0x2ace836d37c0" scoped=""/></from>
+          <to><interface-ref name="PortC1" ref="0x2ace81caf7e0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW4" ref="0x2ace836d0c58" scoped=""/></from>
+          <to><interface-ref name="PortC4" ref="0x2ace81cacc78" scoped=""/></to>
+        </wire>
+        <wire loc="90:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int3_Interrupt" ref="0x2ace836c1548" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace8379e728" scoped=""/></to>
+        </wire>
+        <wire loc="93:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc1" ref="0x2ace836b9a48" scoped=""/></from>
+          <to><interface-ref name="Adc1" ref="0x2ace836b7cb0" scoped=""/></to>
+        </wire>
+        <wire loc="73:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_RXD" ref="0x2ace836bf370" scoped=""/></from>
+          <to><interface-ref name="PortD2" ref="0x2ace81cbb968" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW7" ref="0x2ace836cc180" scoped=""/></from>
+          <to><interface-ref name="PortC7" ref="0x2ace81cbe1a0" scoped=""/></to>
+        </wire>
+        <wire loc="78:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int0_Interrupt" ref="0x2ace836c5020" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace83735060" scoped=""/></to>
+        </wire>
+        <wire loc="98:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc6" ref="0x2ace836bad00" scoped=""/></from>
+          <to><interface-ref name="Adc6" ref="0x2ace836b3dd0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int2" ref="0x2ace836c8648" scoped=""/></from>
+          <to><interface-ref name="PortE6" ref="0x2ace81cc3c78" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW2" ref="0x2ace836d2948" scoped=""/></from>
+          <to><interface-ref name="PortC2" ref="0x2ace81cae968" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW5" ref="0x2ace836cfde0" scoped=""/></from>
+          <to><interface-ref name="PortC5" ref="0x2ace81cc1e00" scoped=""/></to>
+        </wire>
+        <wire loc="94:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc2" ref="0x2ace836bb0f0" scoped=""/></from>
+          <to><interface-ref name="Adc2" ref="0x2ace836b43c0" scoped=""/></to>
+        </wire>
+        <wire loc="96:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc4" ref="0x2ace836bbdd0" scoped=""/></from>
+          <to><interface-ref name="Adc4" ref="0x2ace836b30f0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int0" ref="0x2ace836cb338" scoped=""/></from>
+          <to><interface-ref name="PortE4" ref="0x2ace81cc6968" scoped=""/></to>
+        </wire>
+        <wire loc="86:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int2_Interrupt" ref="0x2ace836c4858" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace837a1020" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_CLK" ref="0x2ace836c00c8" scoped=""/></from>
+          <to><interface-ref name="PortD5" ref="0x2ace81cb8e00" scoped=""/></to>
+        </wire>
+        <wire loc="99:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc7" ref="0x2ace836b83c0" scoped=""/></from>
+          <to><interface-ref name="Adc7" ref="0x2ace83730490" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW0" ref="0x2ace836d6518" scoped=""/></from>
+          <to><interface-ref name="PortC0" ref="0x2ace81cb0658" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int3" ref="0x2ace836c77d0" scoped=""/></from>
+          <to><interface-ref name="PortE7" ref="0x2ace81cc2e00" scoped=""/></to>
+        </wire>
+        <wire loc="77:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace83735b10" scoped=""/></from>
+          <to><interface-ref name="Int4" ref="0x2ace8371b518" scoped=""/></to>
+        </wire>
+        <wire loc="81:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace837a42e8" scoped=""/></from>
+          <to><interface-ref name="Int5" ref="0x2ace8371a518" scoped=""/></to>
+        </wire>
+        <wire loc="85:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace837a1ad0" scoped=""/></from>
+          <to><interface-ref name="Int6" ref="0x2ace83719518" scoped=""/></to>
+        </wire>
+        <wire loc="89:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace8379d2e8" scoped=""/></from>
+          <to><interface-ref name="Int7" ref="0x2ace83718518" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="36:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int1_Interrupt" provided="1" ref="0x2ace836c5ca8">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int1_Interrupt" ref="0x2ace836c5ca8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace836c4020" scoped=""/>
+        <function-ref name="disable" ref="0x2ace836c41a8" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace836c4330" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace836c44b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc0" provided="1" ref="0x2ace836b93d8">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc0" ref="0x2ace836b93d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b9728" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW3" provided="1" ref="0x2ace836d1ad0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW3" ref="0x2ace836d1ad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836d1e20" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836d0020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836d01a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836d0330" scoped=""/>
+        <function-ref name="get" ref="0x2ace836d04b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836d0640" scoped=""/>
+        <function-ref name="set" ref="0x2ace836d07c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836d0950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="26:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW6" provided="1" ref="0x2ace836cd020">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW6" ref="0x2ace836cd020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836cd370" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836cd4f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836cd680" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836cd808" scoped=""/>
+        <function-ref name="get" ref="0x2ace836cd990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836cdb18" scoped=""/>
+        <function-ref name="set" ref="0x2ace836cdca0" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836cde28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc3" provided="1" ref="0x2ace836bb760">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc3" ref="0x2ace836bb760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836bbab0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc5" provided="1" ref="0x2ace836ba490">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc5" ref="0x2ace836ba490" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836ba9e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="30:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int1" provided="1" ref="0x2ace836c94c0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int1" ref="0x2ace836c94c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836c9810" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836c9998" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836c9b20" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836c9ca8" scoped=""/>
+        <function-ref name="get" ref="0x2ace836c9e30" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836c8020" scoped=""/>
+        <function-ref name="set" ref="0x2ace836c81a8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836c8330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="USART1_TXD" provided="1" ref="0x2ace836be4f8">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="USART1_TXD" ref="0x2ace836be4f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836be848" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836be9d0" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836beb58" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836bece0" scoped=""/>
+        <function-ref name="get" ref="0x2ace836bee68" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836bd020" scoped=""/>
+        <function-ref name="set" ref="0x2ace836bd1a8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836bd330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW1" provided="1" ref="0x2ace836d37c0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW1" ref="0x2ace836d37c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836d3b10" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836d3c98" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836d3e20" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836d2020" scoped=""/>
+        <function-ref name="get" ref="0x2ace836d21a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836d2330" scoped=""/>
+        <function-ref name="set" ref="0x2ace836d24b8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836d2640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW4" provided="1" ref="0x2ace836d0c58">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW4" ref="0x2ace836d0c58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836cf020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836cf1a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836cf330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836cf4b8" scoped=""/>
+        <function-ref name="get" ref="0x2ace836cf640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836cf7c8" scoped=""/>
+        <function-ref name="set" ref="0x2ace836cf950" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836cfad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="38:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int3_Interrupt" provided="1" ref="0x2ace836c1548">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int3_Interrupt" ref="0x2ace836c1548" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace836c1898" scoped=""/>
+        <function-ref name="disable" ref="0x2ace836c1a20" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace836c1ba8" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace836c1d30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc1" provided="1" ref="0x2ace836b9a48">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc1" ref="0x2ace836b9a48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b9d98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="USART1_RXD" provided="1" ref="0x2ace836bf370">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="USART1_RXD" ref="0x2ace836bf370" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836bf6c0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836bf848" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836bf9d0" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836bfb58" scoped=""/>
+        <function-ref name="get" ref="0x2ace836bfce0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836bfe68" scoped=""/>
+        <function-ref name="set" ref="0x2ace836be020" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836be1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW7" provided="1" ref="0x2ace836cc180">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW7" ref="0x2ace836cc180" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836cc4d0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836cc658" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836cc7e0" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836cc968" scoped=""/>
+        <function-ref name="get" ref="0x2ace836ccaf0" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836ccc78" scoped=""/>
+        <function-ref name="set" ref="0x2ace836cce00" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836cb020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="35:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int0_Interrupt" provided="1" ref="0x2ace836c5020">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int0_Interrupt" ref="0x2ace836c5020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace836c5470" scoped=""/>
+        <function-ref name="disable" ref="0x2ace836c55f8" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace836c5780" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace836c5908" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc6" provided="1" ref="0x2ace836bad00">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc6" ref="0x2ace836bad00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b80a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="31:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int2" provided="1" ref="0x2ace836c8648">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int2" ref="0x2ace836c8648" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836c8998" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836c8b20" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836c8ca8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836c8e30" scoped=""/>
+        <function-ref name="get" ref="0x2ace836c7020" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836c71a8" scoped=""/>
+        <function-ref name="set" ref="0x2ace836c7330" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836c74b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW2" provided="1" ref="0x2ace836d2948">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW2" ref="0x2ace836d2948" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836d2c98" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836d2e20" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836d1020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836d11a8" scoped=""/>
+        <function-ref name="get" ref="0x2ace836d1330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836d14b8" scoped=""/>
+        <function-ref name="set" ref="0x2ace836d1640" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836d17c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW5" provided="1" ref="0x2ace836cfde0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW5" ref="0x2ace836cfde0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836ce170" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836ce2f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836ce480" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836ce608" scoped=""/>
+        <function-ref name="get" ref="0x2ace836ce790" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836ce918" scoped=""/>
+        <function-ref name="set" ref="0x2ace836ceaa0" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836cec28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc2" provided="1" ref="0x2ace836bb0f0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc2" ref="0x2ace836bb0f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836bb440" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc4" provided="1" ref="0x2ace836bbdd0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc4" ref="0x2ace836bbdd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836ba170" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="29:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int0" provided="1" ref="0x2ace836cb338">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int0" ref="0x2ace836cb338" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836cb688" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836cb810" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836cb998" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836cbb20" scoped=""/>
+        <function-ref name="get" ref="0x2ace836cbca8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836cbe30" scoped=""/>
+        <function-ref name="set" ref="0x2ace836c9020" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836c91a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="37:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int2_Interrupt" provided="1" ref="0x2ace836c4858">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int2_Interrupt" ref="0x2ace836c4858" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace836c4ba8" scoped=""/>
+        <function-ref name="disable" ref="0x2ace836c4d30" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace836c1020" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace836c11a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="USART1_CLK" provided="1" ref="0x2ace836c00c8">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="USART1_CLK" ref="0x2ace836c00c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836c0418" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836c05a0" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836c0728" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836c08b0" scoped=""/>
+        <function-ref name="get" ref="0x2ace836c0a38" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836c0bc0" scoped=""/>
+        <function-ref name="set" ref="0x2ace836c0d48" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836bf020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc7" provided="1" ref="0x2ace836b83c0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc7" ref="0x2ace836b83c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b8710" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="PW0" provided="1" ref="0x2ace836d6518">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PW0" ref="0x2ace836d6518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836d6868" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836d69f0" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836d6b78" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836d6d00" scoped=""/>
+        <function-ref name="get" ref="0x2ace836d3020" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836d31a8" scoped=""/>
+        <function-ref name="set" ref="0x2ace836d3330" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836d34b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="32:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Int3" provided="1" ref="0x2ace836c77d0">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int3" ref="0x2ace836c77d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace836c7b20" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace836c7ca8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace836c7e30" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace836c6020" scoped=""/>
+        <function-ref name="get" ref="0x2ace836c61a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace836c6330" scoped=""/>
+        <function-ref name="set" ref="0x2ace836c64b8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace836c6640" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="9:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Atm128Interrupt" provided="0" ref="0x2ace837a42e8">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt1C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Interrupt" ref="0x2ace837a42e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace837a4638" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837a47c0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace837a4948" scoped=""/>
+        <function-ref name="edge" ref="0x2ace837a4ad0" scoped=""/>
+        <function-ref name="enable" ref="0x2ace837a4c58" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837a4de0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="20:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc2" provided="1" ref="0x2ace836b43c0">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc2" ref="0x2ace836b43c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b4710" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="84:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortE4" provided="1" ref="0x2ace81cc6968">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortE4" ref="0x2ace81cc6968" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cc6cb8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cc6e40" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cc4020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cc41a8" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cc4330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cc44b8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cc4640" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cc47c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC2" provided="1" ref="0x2ace81cae968">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC2" ref="0x2ace81cae968" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81caecb8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81caee40" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cad020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cad1a8" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cad330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cad4b8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cad640" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cad7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC7" provided="1" ref="0x2ace81cbe1a0">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC7" ref="0x2ace81cbe1a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cbe4f0" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cbe678" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cbe800" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cbe988" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cbeb10" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cbec98" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cbee20" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cbd020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC0" provided="1" ref="0x2ace81cb0658">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC0" ref="0x2ace81cb0658" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cb09a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cb0b30" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cb0cb8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cb0e40" scoped=""/>
+        <function-ref name="get" ref="0x2ace81caf020" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81caf1a8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81caf330" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81caf4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="67:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC5" provided="1" ref="0x2ace81cc1e00">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC5" ref="0x2ace81cc1e00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cc01a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cc0330" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cc04b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cc0640" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cc07c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cc0950" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cc0ad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cc0c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc5" provided="1" ref="0x2ace836b3760">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc5" ref="0x2ace836b3760" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b3ab0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc7" provided="1" ref="0x2ace83730490">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc7" ref="0x2ace83730490" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace837307e0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="18:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc0" provided="1" ref="0x2ace836b7640">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc0" ref="0x2ace836b7640" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b7990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC3" provided="1" ref="0x2ace81cadaf0">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC3" ref="0x2ace81cadaf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cade40" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cac020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cac1a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cac330" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cac4b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cac640" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cac7c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cac950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Interrupt" provided="1" ref="0x2ace83735060">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt0C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Interrupt" ref="0x2ace83735060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace837353b0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace83735538" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace837356c0" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace83735848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="85:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortE5" provided="1" ref="0x2ace81cc4af0">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortE5" ref="0x2ace81cc4af0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cc4e40" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cc3020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cc31a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cc3330" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cc34b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cc3640" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cc37c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cc3950" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Atm128Interrupt" provided="0" ref="0x2ace83735b10">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt0C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Interrupt" ref="0x2ace83735b10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace83735e60" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837a7020" scoped=""/>
+        <function-ref name="disable" ref="0x2ace837a71a8" scoped=""/>
+        <function-ref name="edge" ref="0x2ace837a7330" scoped=""/>
+        <function-ref name="enable" ref="0x2ace837a74b8" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837a7640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc" name="Int5" provided="1" ref="0x2ace8371a518">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptC" qname="HplAtm128InterruptC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int5" ref="0x2ace8371a518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8371a868" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8371a9f0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace8371ab78" scoped=""/>
+        <function-ref name="edge" ref="0x2ace8371ad00" scoped=""/>
+        <function-ref name="enable" ref="0x2ace83719020" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837191a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc" name="Int4" provided="1" ref="0x2ace8371b518">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptC" qname="HplAtm128InterruptC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int4" ref="0x2ace8371b518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8371b868" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8371b9f0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace8371bb78" scoped=""/>
+        <function-ref name="edge" ref="0x2ace8371bd00" scoped=""/>
+        <function-ref name="enable" ref="0x2ace8371a020" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace8371a1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc" name="Int7" provided="1" ref="0x2ace83718518">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptC" qname="HplAtm128InterruptC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int7" ref="0x2ace83718518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace83718868" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837189f0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace83718b78" scoped=""/>
+        <function-ref name="edge" ref="0x2ace83718d00" scoped=""/>
+        <function-ref name="enable" ref="0x2ace83717020" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837171a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="76:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortD5" provided="1" ref="0x2ace81cb8e00">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortD5" ref="0x2ace81cb8e00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cb71a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cb7330" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cb74b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cb7640" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cb77c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cb7950" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cb7ad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cb7c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc6" provided="1" ref="0x2ace836b3dd0">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc6" ref="0x2ace836b3dd0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace83730170" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortD2" provided="1" ref="0x2ace81cbb968">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortD2" ref="0x2ace81cbb968" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cbbcb8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cbbe40" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cba020" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cba1a8" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cba330" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cba4b8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cba640" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cba7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc4" provided="1" ref="0x2ace836b30f0">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc4" ref="0x2ace836b30f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b3440" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc" name="Int6" provided="1" ref="0x2ace83719518">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptC" qname="HplAtm128InterruptC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Int6" ref="0x2ace83719518" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace83719868" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837199f0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace83719b78" scoped=""/>
+        <function-ref name="edge" ref="0x2ace83719d00" scoped=""/>
+        <function-ref name="enable" ref="0x2ace83718020" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837181a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Atm128Interrupt" provided="0" ref="0x2ace837a1ad0">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt2C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Interrupt" ref="0x2ace837a1ad0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace837a1e20" scoped=""/>
+        <function-ref name="fired" ref="0x2ace837a0020" scoped=""/>
+        <function-ref name="disable" ref="0x2ace837a01a8" scoped=""/>
+        <function-ref name="edge" ref="0x2ace837a0330" scoped=""/>
+        <function-ref name="enable" ref="0x2ace837a04b8" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace837a0640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="19:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc1" provided="1" ref="0x2ace836b7cb0">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc1" ref="0x2ace836b7cb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b40a0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="86:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortE6" provided="1" ref="0x2ace81cc3c78">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortE6" ref="0x2ace81cc3c78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cc2020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cc21a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cc2330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cc24b8" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cc2640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cc27c8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cc2950" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cc2ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" name="Adc3" provided="1" ref="0x2ace836b4a30">
+      <component-ref nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc3" ref="0x2ace836b4a30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b4d80" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Interrupt" provided="1" ref="0x2ace837a1020">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt2C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Interrupt" ref="0x2ace837a1020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace837a1370" scoped=""/>
+        <function-ref name="disable" ref="0x2ace837a14f8" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace837a1680" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace837a1808" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Interrupt" provided="1" ref="0x2ace8379e728">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt3C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Interrupt" ref="0x2ace8379e728" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace8379ea78" scoped=""/>
+        <function-ref name="disable" ref="0x2ace8379ec00" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace8379ed88" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace8379d020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="68:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC6" provided="1" ref="0x2ace81cbf020">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC6" ref="0x2ace81cbf020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cbf370" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cbf4f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cbf680" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cbf808" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cbf990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cbfb18" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cbfca0" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cbfe28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="8:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Interrupt" provided="1" ref="0x2ace837a5728">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt1C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Interrupt" ref="0x2ace837a5728" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GpioInterrupt" qname="GpioInterrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace837a5a78" scoped=""/>
+        <function-ref name="disable" ref="0x2ace837a5c00" scoped=""/>
+        <function-ref name="enableFallingEdge" ref="0x2ace837a5d88" scoped=""/>
+        <function-ref name="enableRisingEdge" ref="0x2ace837a4020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC1" provided="1" ref="0x2ace81caf7e0">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC1" ref="0x2ace81caf7e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cafb30" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cafcb8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cafe40" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cae020" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cae1a8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cae330" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cae4b8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cae640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="66:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortC4" provided="1" ref="0x2ace81cacc78">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortC4" ref="0x2ace81cacc78" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cc1020" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cc11a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cc1330" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cc14b8" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cc1640" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cc17c8" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cc1950" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cc1ad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="9:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" name="Atm128Interrupt" provided="0" ref="0x2ace8379d2e8">
+      <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt3C"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128Interrupt" ref="0x2ace8379d2e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8379d638" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8379d7c0" scoped=""/>
+        <function-ref name="disable" ref="0x2ace8379d948" scoped=""/>
+        <function-ref name="edge" ref="0x2ace8379dad0" scoped=""/>
+        <function-ref name="enable" ref="0x2ace8379dc58" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace8379dde0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="87:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortE7" provided="1" ref="0x2ace81cc2e00">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortE7" ref="0x2ace81cc2e00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cd71a8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cd7330" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cd74b8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cd7640" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cd77c8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cd7950" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cd7ad8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cd7c60" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="74:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" name="PortD3" provided="1" ref="0x2ace81cbaaf0">
+      <component-ref nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PortD3" ref="0x2ace81cbaaf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace81cbae40" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace81cb9020" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace81cb91a8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace81cb9330" scoped=""/>
+        <function-ref name="get" ref="0x2ace81cb94b8" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace81cb9640" scoped=""/>
+        <function-ref name="set" ref="0x2ace81cb97c8" scoped=""/>
+        <function-ref name="clr" ref="0x2ace81cb9950" scoped=""/>
+      </interface-functions>
+    </interface><component loc="40:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc" nicename="tos.chips.atm1281.HplAtm128GeneralIOC" qname="HplAtm128GeneralIOC">
+      <documentation loc="34:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+        <short>
+ Provide GeneralIO interfaces for all of the ATmega128's pins.</short>
+        <long>
+ Provide GeneralIO interfaces for all of the ATmega128's pins.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="191:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG0" ref="0x2ace81ccec78" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81dc7520" scoped=""/></to>
+        </wire>
+        <wire loc="165:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD1" ref="0x2ace81cbc7e0" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d50020" scoped=""/></to>
+        </wire>
+        <wire loc="176:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE3" ref="0x2ace81cc77e0" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d58d60" scoped=""/></to>
+        </wire>
+        <wire loc="185:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF3" ref="0x2ace81cd34d0" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d788c8" scoped=""/></to>
+        </wire>
+        <wire loc="196:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG5" ref="0x2ace81cdeaf0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81de1c38" scoped=""/></to>
+        </wire>
+        <wire loc="143:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA6" ref="0x2ace81ca64d0" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d2f740" scoped=""/></to>
+        </wire>
+        <wire loc="183:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF1" ref="0x2ace81cd51a0" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d7b5b8" scoped=""/></to>
+        </wire>
+        <wire loc="146:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB0" ref="0x2ace81ca47e0" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d28930" scoped=""/></to>
+        </wire>
+        <wire loc="157:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC2" ref="0x2ace81cae968" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d46740" scoped=""/></to>
+        </wire>
+        <wire loc="168:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD4" ref="0x2ace81cb9c78" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d4d430" scoped=""/></to>
+        </wire>
+        <wire loc="179:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE6" ref="0x2ace81cc3c78" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d6b120" scoped=""/></to>
+        </wire>
+        <wire loc="138:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA1" ref="0x2ace81c96c78" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d1d020" scoped=""/></to>
+        </wire>
+        <wire loc="149:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB3" ref="0x2ace81ca1c78" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d3cd60" scoped=""/></to>
+        </wire>
+        <wire loc="160:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC5" ref="0x2ace81cc1e00" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d43bd8" scoped=""/></to>
+        </wire>
+        <wire loc="171:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD7" ref="0x2ace81ccb1a0" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d628c8" scoped=""/></to>
+        </wire>
+        <wire loc="188:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF6" ref="0x2ace81cd0968" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d75d60" scoped=""/></to>
+        </wire>
+        <wire loc="194:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG3" ref="0x2ace81ce07e0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81dd2c38" scoped=""/></to>
+        </wire>
+        <wire loc="174:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE1" ref="0x2ace81cc94d0" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d5aa50" scoped=""/></to>
+        </wire>
+        <wire loc="141:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA4" ref="0x2ace81ca81a0" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d32430" scoped=""/></to>
+        </wire>
+        <wire loc="152:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB6" ref="0x2ace81cb2348" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d38120" scoped=""/></to>
+        </wire>
+        <wire loc="192:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG1" ref="0x2ace81ce24d0" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81dc2cd8" scoped=""/></to>
+        </wire>
+        <wire loc="155:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC0" ref="0x2ace81cb0658" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d48500" scoped=""/></to>
+        </wire>
+        <wire loc="166:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD2" ref="0x2ace81cbb968" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d4f120" scoped=""/></to>
+        </wire>
+        <wire loc="177:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE4" ref="0x2ace81cc6968" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d6fe18" scoped=""/></to>
+        </wire>
+        <wire loc="186:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF4" ref="0x2ace81cd2658" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d77a50" scoped=""/></to>
+        </wire>
+        <wire loc="144:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA7" ref="0x2ace81ca5658" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d2e8c8" scoped=""/></to>
+        </wire>
+        <wire loc="147:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB1" ref="0x2ace81ca3968" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d3fa50" scoped=""/></to>
+        </wire>
+        <wire loc="158:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC3" ref="0x2ace81cadaf0" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d458c8" scoped=""/></to>
+        </wire>
+        <wire loc="169:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD5" ref="0x2ace81cb8e00" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d4c5b8" scoped=""/></to>
+        </wire>
+        <wire loc="180:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE7" ref="0x2ace81cc2e00" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d6a2a8" scoped=""/></to>
+        </wire>
+        <wire loc="139:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA2" ref="0x2ace81cabe00" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d1c120" scoped=""/></to>
+        </wire>
+        <wire loc="150:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB4" ref="0x2ace81cb6e00" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d3be18" scoped=""/></to>
+        </wire>
+        <wire loc="161:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC6" ref="0x2ace81cbf020" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d42d60" scoped=""/></to>
+        </wire>
+        <wire loc="189:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF7" ref="0x2ace81ccfaf0" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d74e18" scoped=""/></to>
+        </wire>
+        <wire loc="164:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD0" ref="0x2ace81cbd348" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d52e40" scoped=""/></to>
+        </wire>
+        <wire loc="175:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE2" ref="0x2ace81cc8658" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d59bd8" scoped=""/></to>
+        </wire>
+        <wire loc="184:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF2" ref="0x2ace81cd4348" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d7a740" scoped=""/></to>
+        </wire>
+        <wire loc="195:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG4" ref="0x2ace81cdf968" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81dcc3e0" scoped=""/></to>
+        </wire>
+        <wire loc="142:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA5" ref="0x2ace81ca7348" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d315b8" scoped=""/></to>
+        </wire>
+        <wire loc="153:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB7" ref="0x2ace81cb14d0" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d372a8" scoped=""/></to>
+        </wire>
+        <wire loc="182:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF0" ref="0x2ace81cd6020" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d64500" scoped=""/></to>
+        </wire>
+        <wire loc="156:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC1" ref="0x2ace81caf7e0" scoped=""/></from>
+          <to><interface-ref name="Pin1" ref="0x2ace81d475b8" scoped=""/></to>
+        </wire>
+        <wire loc="167:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD3" ref="0x2ace81cbaaf0" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d4e2a8" scoped=""/></to>
+        </wire>
+        <wire loc="178:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE5" ref="0x2ace81cc4af0" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d6d020" scoped=""/></to>
+        </wire>
+        <wire loc="187:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortF5" ref="0x2ace81cd17e0" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d76bd8" scoped=""/></to>
+        </wire>
+        <wire loc="137:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA0" ref="0x2ace81c8fa70" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d1fdc0" scoped=""/></to>
+        </wire>
+        <wire loc="148:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB2" ref="0x2ace81ca2af0" scoped=""/></from>
+          <to><interface-ref name="Pin2" ref="0x2ace81d3ebd8" scoped=""/></to>
+        </wire>
+        <wire loc="159:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC4" ref="0x2ace81cacc78" scoped=""/></from>
+          <to><interface-ref name="Pin4" ref="0x2ace81d44a50" scoped=""/></to>
+        </wire>
+        <wire loc="170:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortD6" ref="0x2ace81ccc020" scoped=""/></from>
+          <to><interface-ref name="Pin6" ref="0x2ace81d63740" scoped=""/></to>
+        </wire>
+        <wire loc="193:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortG2" ref="0x2ace81ce1658" scoped=""/></from>
+          <to><interface-ref name="IO" ref="0x2ace81dbc3e0" scoped=""/></to>
+        </wire>
+        <wire loc="173:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortE0" ref="0x2ace81cca348" scoped=""/></from>
+          <to><interface-ref name="Pin0" ref="0x2ace81d5b930" scoped=""/></to>
+        </wire>
+        <wire loc="162:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortC7" ref="0x2ace81cbe1a0" scoped=""/></from>
+          <to><interface-ref name="Pin7" ref="0x2ace81d41e18" scoped=""/></to>
+        </wire>
+        <wire loc="140:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortA3" ref="0x2ace81ca9020" scoped=""/></from>
+          <to><interface-ref name="Pin3" ref="0x2ace81d332a8" scoped=""/></to>
+        </wire>
+        <wire loc="151:/opt/tinyos-2.1.2/tos/chips/atm1281/HplAtm128GeneralIOC.nc">
+          <from><interface-ref name="PortB5" ref="0x2ace81cb3100" scoped=""/></from>
+          <to><interface-ref name="Pin5" ref="0x2ace81d39020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="41:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc" nicename="tos.chips.atm128.pins.HplAtm128InterruptC" qname="HplAtm128InterruptC">
+      <documentation loc="36:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+        <short>
+ Component providing access to all external interrupt pins on ATmega128.</short>
+        <long>
+ Component providing access to all external interrupt pins on ATmega128.
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="77:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int6" ref="0x2ace83719518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace837463e0" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int1" ref="0x2ace83722518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace8375b7a8" scoped=""/></to>
+        </wire>
+        <wire loc="75:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int4" ref="0x2ace8371b518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace8374fc38" scoped=""/></to>
+        </wire>
+        <wire loc="78:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int7" ref="0x2ace83718518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace83742020" scoped=""/></to>
+        </wire>
+        <wire loc="73:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int2" ref="0x2ace83721518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace837573e0" scoped=""/></to>
+        </wire>
+        <wire loc="76:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int5" ref="0x2ace8371a518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace8374b7a8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int0" ref="0x2ace8371d680" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace836f3a70" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="Int3" ref="0x2ace8371c518" scoped=""/></from>
+          <to><interface-ref name="Irq" ref="0x2ace83753020" scoped=""/></to>
+        </wire>
+        <wire loc="80:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace8375f908" scoped=""/></from>
+          <to><interface-ref name="IntSig0" ref="0x2ace83710208" scoped=""/></to>
+        </wire>
+        <wire loc="81:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace8375a5f8" scoped=""/></from>
+          <to><interface-ref name="IntSig1" ref="0x2ace83710940" scoped=""/></to>
+        </wire>
+        <wire loc="82:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace837562e8" scoped=""/></from>
+          <to><interface-ref name="IntSig2" ref="0x2ace837130a8" scoped=""/></to>
+        </wire>
+        <wire loc="83:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace83753de0" scoped=""/></from>
+          <to><interface-ref name="IntSig3" ref="0x2ace837137e0" scoped=""/></to>
+        </wire>
+        <wire loc="84:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace8374ea90" scoped=""/></from>
+          <to><interface-ref name="IntSig4" ref="0x2ace83712020" scoped=""/></to>
+        </wire>
+        <wire loc="85:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace8374a5f8" scoped=""/></from>
+          <to><interface-ref name="IntSig5" ref="0x2ace83712758" scoped=""/></to>
+        </wire>
+        <wire loc="86:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace837452e8" scoped=""/></from>
+          <to><interface-ref name="IntSig6" ref="0x2ace8370f020" scoped=""/></to>
+        </wire>
+        <wire loc="87:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptC.nc">
+          <from><interface-ref name="IrqSignal" ref="0x2ace83742de0" scoped=""/></from>
+          <to><interface-ref name="IntSig7" ref="0x2ace8370f758" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="6(MicaBusC.Atm128GpioInterrupt1C):/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt1C">
+      <documentation loc="3:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc">
+        <short>
+ </short>
+        <long>
+ @author Phil Levis
+</long>
+      </documentation>
+      <instance number="1">
+        <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="Atm128GpioInterruptC"/>
+      </instance>
+      <module/>
+    </component><component loc="16:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc" nicename="tos.platforms.mica.MicaBusP" qname="MicaBusP">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusP.nc">
+        <short>
+ Internal component of the simplistic mica bus interface.</short>
+        <long>
+ Internal component of the simplistic mica bus interface.
+ @author David Gay
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="6(MicaBusC.Atm128GpioInterrupt0C):/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt0C">
+      <documentation loc="3:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc">
+        <short>
+ </short>
+        <long>
+ @author Phil Levis
+</long>
+      </documentation>
+      <instance number="0">
+        <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="Atm128GpioInterruptC"/>
+      </instance>
+      <module/>
+    </component><component loc="6(MicaBusC.Atm128GpioInterrupt2C):/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt2C">
+      <documentation loc="3:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc">
+        <short>
+ </short>
+        <long>
+ @author Phil Levis
+</long>
+      </documentation>
+      <instance number="2">
+        <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="Atm128GpioInterruptC"/>
+      </instance>
+      <module/>
+    </component><component loc="6(MicaBusC.Atm128GpioInterrupt3C):/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc" nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="MicaBusC.Atm128GpioInterrupt3C">
+      <documentation loc="3:/opt/tinyos-2.1.2/tos/chips/atm128/pins/Atm128GpioInterruptC.nc">
+        <short>
+ </short>
+        <long>
+ @author Phil Levis
+</long>
+      </documentation>
+      <instance number="3">
+        <component-ref nicename="tos.chips.atm128.pins.Atm128GpioInterruptC" qname="Atm128GpioInterruptC"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

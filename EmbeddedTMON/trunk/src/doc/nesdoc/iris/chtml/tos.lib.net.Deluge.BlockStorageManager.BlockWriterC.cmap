@@ -1,0 +1,9 @@
+<area shape="rect" id="node2" href="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC.html" title="BlockStorageManagerC" alt="" coords="5,120,219,179">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="115,54 115,106 109,106 109,54">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="112,78,177,95">
+<area shape="rect" id="node5" href="../chtml/tos.lib.net.Deluge.BlockStorageManager.VolumeIdC.html" title="VolumeIdC" alt="" coords="60,245,164,293">
+<area shape="poly" id="edge6" href="../ihtml/tos.lib.net.Deluge.BlockStorageManager.VolumeId.html" title="VolumeId[uint8_t]" alt="" coords="115,179 115,232 109,232 109,179">
+<area shape="rect" id="edge6" href="../ihtml/tos.lib.net.Deluge.BlockStorageManager.VolumeId.html" title="VolumeId[uint8_t]" alt="" coords="112,203,225,221">
+<area shape="rect" id="node4" href="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageLockClientC.html" title="BlockStorageLockClientC" alt="" coords="243,120,467,179">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="357,54 357,106 352,106 352,54">
+<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.Resource.html" title="Resource" alt="" coords="355,78,413,95">

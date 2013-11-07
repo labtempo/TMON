@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.at45db.At45dbBlockConfig</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.at45db.At45dbBlockConfig</h2>
+    <b>interface At45dbBlockConfig</b><p>
+ Private interface between the AT45DB implementations of config and block storage
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author::</b>
+      <dd>
+        David Gay &lt;dgay@acm.org&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command int <a href="#flipped">flipped</a>()
+      </span><menu>
+ Query which half of the block is used by the current config state
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command int <a href="#isConfig">isConfig</a>()
+      </span><menu>
+ Check if this block is a config volumes
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command int <a href="#writeHook">writeHook</a>()
+      </span><menu>
+ Hook called by block storage just before the start of each write
+ 
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event at45page_t <a href="#npages">npages</a>()
+      </span><menu>
+ Return size of a config volume in pages (half of the actual block)
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event at45page_t <a href="#remap">remap</a>(at45page_t page)
+      </span><menu>
+ Map a volume-relative page to an absolute flash page, taking account
+ of the current flipped status
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>event void <a href="#writeContinue">writeContinue</a>(error_t error)
+      </span><menu>
+ Continue or abort write suspended as a result of a <code>writeHook</code>
+ event
+ 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="flipped"></a>
+    <h4>flipped
+    </h4>
+    <span id=funcnameshort>command int <b>flipped</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Query which half of the block is used by the current config state
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE for 2nd half, FALSE for 1st half
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isConfig"></a>
+    <h4>isConfig
+    </h4>
+    <span id=funcnameshort>command int <b>isConfig</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Check if this block is a config volumes
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE for config volumes, FALSE for block volumes
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="writeHook"></a>
+    <h4>writeHook
+    </h4>
+    <span id=funcnameshort>command int <b>writeHook</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Hook called by block storage just before the start of each write
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE to delay the write until <code>writeContinue</code>
+    is called, FALSE to proceed immediately.
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="npages"></a>
+    <h4>npages
+    </h4>
+    <span id=funcnameshort>event at45page_t <b>npages</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Return size of a config volume in pages (half of the actual block)
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Config volume size
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="remap"></a>
+    <h4>remap
+    </h4>
+    <span id=funcnameshort>event at45page_t <b>remap</b>(at45page_t page)
+    </span>
+    <p>
+    <menu>
+      
+ Map a volume-relative page to an absolute flash page, taking account
+ of the current flipped status
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>page</code> -  Volume-relative page
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          Actual flash page for <code>page</code>
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="writeContinue"></a>
+    <h4>writeContinue
+    </h4>
+    <span id=funcnameshort>event void <b>writeContinue</b>(error_t error)
+    </span>
+    <p>
+    <menu>
+      
+ Continue or abort write suspended as a result of a <code>writeHook</code>
+ event
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>error</code> -  SUCCESS to continue write, anything else to abort write 
+   returning that error code
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

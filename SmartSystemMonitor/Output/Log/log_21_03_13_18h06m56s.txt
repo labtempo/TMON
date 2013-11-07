@@ -1,0 +1,71 @@
+2013-03-21 18:06:57,510: root              : WARNING : Starting...
+2013-03-21 18:07:15,150: root              : WARNING : Mote 3 entered the network!
+2013-03-21 18:23:00,106: root              : WARNING : Mote 2 entered the network!
+2013-03-21 18:23:06,106: root              : WARNING : Mote 1 entered the network!
+2013-03-26 18:04:33,834: root              : WARNING : Skipping packet None
+2013-03-26 18:04:33,842: root              : WARNING : Skipping packet None
+2013-03-26 18:04:33,851: root              : WARNING : Skipping packet None
+2013-03-26 18:04:33,861: root              : WARNING : Skipping packet None
+2013-03-26 18:04:33,869: root              : WARNING : Skipping packet None
+2013-03-26 18:04:34,832: root              : WARNING : Skipping packet None
+2013-03-26 18:04:34,840: root              : WARNING : Skipping packet None
+2013-03-26 18:04:34,849: root              : WARNING : Skipping packet None
+2013-03-26 18:04:34,857: root              : WARNING : Skipping packet None
+2013-03-26 18:04:34,866: root              : WARNING : Skipping packet None
+2013-03-26 18:04:35,832: root              : WARNING : Skipping packet None
+2013-03-26 18:04:35,840: root              : WARNING : Skipping packet None
+2013-03-26 18:04:35,849: root              : WARNING : Skipping packet None
+2013-03-26 18:04:35,857: root              : WARNING : Skipping packet None
+2013-03-26 18:04:35,866: root              : WARNING : Skipping packet None
+2013-03-26 18:04:46,420: root              : WARNING : Skipping packet None
+2013-03-26 18:04:46,433: root              : WARNING : Skipping packet None
+2013-03-26 18:04:46,445: root              : WARNING : Skipping packet None
+2013-03-26 18:04:46,454: root              : WARNING : Skipping packet None
+2013-03-26 18:04:47,415: root              : WARNING : Skipping packet None
+2013-03-26 18:04:47,424: root              : WARNING : Skipping packet None
+2013-03-26 18:04:47,433: root              : WARNING : Skipping packet None
+2013-03-26 18:04:47,442: root              : WARNING : Skipping packet None
+2013-03-26 18:04:48,416: root              : WARNING : Skipping packet None
+2013-03-26 18:04:48,425: root              : WARNING : Skipping packet None
+2013-03-26 18:04:48,434: root              : WARNING : Skipping packet None
+2013-03-26 18:04:48,443: root              : WARNING : Skipping packet None
+2013-03-26 18:04:49,417: root              : WARNING : Skipping packet None
+2013-03-26 18:04:49,426: root              : WARNING : Skipping packet None
+2013-03-26 18:04:49,435: root              : WARNING : Skipping packet None
+2013-03-26 18:04:49,444: root              : WARNING : Skipping packet None
+2013-03-26 18:04:50,414: root              : WARNING : Skipping packet None
+2013-03-26 18:04:50,423: root              : WARNING : Skipping packet None
+2013-03-26 18:04:50,432: root              : WARNING : Skipping packet None
+2013-03-26 18:04:50,441: root              : WARNING : Skipping packet None
+2013-03-26 18:05:21,708: root              : WARNING : Skipping packet None
+2013-03-26 18:05:21,718: root              : WARNING : Skipping packet None
+2013-03-26 18:05:21,726: root              : WARNING : Skipping packet None
+2013-03-26 18:05:21,735: root              : WARNING : Skipping packet None
+2013-03-26 18:05:22,708: root              : WARNING : Skipping packet None
+2013-03-26 18:05:22,717: root              : WARNING : Skipping packet None
+2013-03-26 18:05:22,725: root              : WARNING : Skipping packet None
+2013-03-26 18:05:22,734: root              : WARNING : Skipping packet None
+2013-03-26 18:05:23,710: root              : WARNING : Skipping packet None
+2013-03-26 18:05:23,719: root              : WARNING : Skipping packet None
+2013-03-26 18:05:23,728: root              : WARNING : Skipping packet None
+2013-03-26 18:05:23,737: root              : WARNING : Skipping packet None
+2013-03-26 18:05:24,709: root              : WARNING : Skipping packet None
+2013-03-26 18:05:24,718: root              : WARNING : Skipping packet None
+2013-03-26 18:05:24,727: root              : WARNING : Skipping packet None
+2013-03-26 18:05:24,735: root              : WARNING : Skipping packet None
+2013-03-26 18:05:53,606: root              : ERROR   : An unhandled exception occurred.
+Traceback (most recent call last):
+  File "MonitorMCSLS.py", line 274, in main
+    p = am.read()  # get a packet
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 455, in read
+    return self.oobHook(super(AM, self).read(timeout))
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 381, in read
+    f = self._hdlc.read(timeout)
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 236, in read
+    d = self._s.getByte()
+  File "/opt/tinyos-2.1.2/support/sdk/python/tos.py", line 122, in getByte
+    c = self._s.read()
+  File "/usr/lib/python2.7/dist-packages/serial/serialposix.py", line 456, in read
+    raise SerialException('device reports readiness to read but returned no data (device disconnected?)')
+SerialException: device reports readiness to read but returned no data (device disconnected?)
+2013-03-26 18:05:53,640: root              : WARNING : Done...

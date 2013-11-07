@@ -1,0 +1,35 @@
+digraph "tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerC" {
+  n0x2ace8399b4c0 [shape=ellipse, style=filled, label="BlockRead", fontsize=12];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  n0x2ace8399a640 [shape=ellipse, style=filled, label="BlockWrite", fontsize=12];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  n0x2ace83996b28 [shape=ellipse, style=filled, label="StorageMap", fontsize=12];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  n0x2ace839986c0 [shape=ellipse, style=filled, label="VolumeId", fontsize=12];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  "BlockStorageManagerC.BlockStorageC_Golden" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_Golden)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_1)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_2" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_2)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_3" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_3)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  "BlockStorageManagerC.BlockStorageC_Golden" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_Golden)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_1" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_1)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_2" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_2)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageC_3" [fontsize=12, shape=box,peripheries=2, style=dashed, label="BlockStorageC\n(BlockStorageC_3)", URL="../chtml/tos.chips.at45db.BlockStorageC.html"];
+  "BlockStorageManagerC.BlockStorageManagerP" [fontsize=12, shape=box, style=dashed, label="BlockStorageManagerP", URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageManagerP.html"];
+  "At45dbStorageManagerC" [fontsize=12, shape=box, URL="../chtml/tos.chips.at45db.At45dbStorageManagerC.html"];
+  "n0x2ace8399b4c0" -> "BlockStorageManagerC.BlockStorageManagerP" [label="BlockRead[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "n0x2ace8399a640" -> "BlockStorageManagerC.BlockStorageManagerP" [label="BlockWrite[uint8_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "n0x2ace83996b28" -> "BlockStorageManagerC.BlockStorageManagerP" [label="StorageMap[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.Deluge.StorageMap.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "n0x2ace839986c0" [label="VolumeId[uint8_t]", style=bold, URL="../ihtml/tos.lib.net.Deluge.BlockStorageManager.VolumeId.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_Golden" [label="BlockRead[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_1" [label="BlockRead[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_2" [label="BlockRead[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_3" [label="BlockRead[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockRead.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_Golden" [label="BlockWrite[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_1" [label="BlockWrite[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_2" [label="BlockWrite[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "BlockStorageManagerC.BlockStorageC_3" [label="BlockWrite[volume_id_t]", style=bold, URL="../ihtml/tos.interfaces.BlockWrite.html", fontsize=10];
+  "BlockStorageManagerC.BlockStorageManagerP" -> "At45dbStorageManagerC" [label="At45dbVolume[volume_id_t]", style=bold, URL="../ihtml/tos.chips.at45db.At45dbVolume.html", fontsize=10];
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load bootstrap_toolkit %}
+<html lang="en" xmlns:xlink="http://www.w3.org/1999/xlink">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+
+{% block extrahead %}
+ <!-- Auto refresh code -->
+<meta http-equiv="refresh" content="60">
+{% endblock %}
+ 
+<meta name="description" content="Thermal Monitoring System WSN">
+<meta name="author" content="Gustavo Zanatta Bruno">
+{% bootstrap_stylesheet_tag %}
+<style type="text/css">
+body {
+	padding-top: 60px;
+}
+</style>
+<!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+<script type="text/javascript" src="/media/jquery-2.0.2.min.js"></script>
+
+{% bootstrap_javascript_tag %} 
+{% block extra_head %}{% endblock %}
+</head>
+
+<body>
+	{% if alert %}
+	
+	{% ifequal alert.type "warning" %}
+	<div class="alert alert-block">
+		<a class="close" data-dismiss="alert">×</a>
+		<h4 class="alert-heading">Warning!</h4>
+		{{alert.event}}
+		<audio src="/media/warning_alarm.mp3" autoplay>
+    	Your browser does not support the <audio> element.   
+		</audio>
+	</div>
+	{% endifequal %}	
+	
+	{% ifequal alert.type "critical" %}
+	<div class="alert alert-error">
+		<a class="close" data-dismiss="alert">×</a>
+		<h4 class="alert-heading">Critical!</h4>
+		{{alert.event}}
+		<audio src="/media/critical_alarm.mp3" autoplay>
+    	Your browser does not support the <audio> element.   
+		</audio>
+	</div>
+	{% endifequal %}	
+
+	{% endif %}	
+	
+	
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="/">TMON</a>
+				<ul class="nav">
+					<li><a href="/" class="">Home</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown">WSN Monitor<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/SensornetMonitor/list/">List of Motes</a></li>
+							<li><a href="/SensornetMonitor/networkgraph/">Network
+									Graph</a></li>
+							<li><a href="/SensornetMonitor/thermalmap/">Thermal Map</a></li>
+							<li><a href="/SensornetMonitor/detaildynamic/">Dynamic View</a></li>
+						</ul></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"data-toggle="dropdown">Events System<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="/AlertSystem/loginterval/"> Events Query</a></li>
+							<li><a href="/SensornetMonitor/systemstatus/">System
+									Status</a></li>
+						</ul></li>
+				</ul>
+				<ul class="nav pull-right">
+					<li><a href="/admin/">Administration</a></li>
+					<li><a class href="/contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		{% bootstrap_messages %} {% block content %}Empty page{% endblock %}
+	<div class="container">
+		<p>
+		<hr>
+		</p>
+		<footer class="row">
+			<div class="span6">
+				<p>
+					This is TMON</a>
+				</p>
+			</div>
+			<div class="span6" style="text-align: right">
+				<p>
+					&copy; <a href="http://www.tempo.uff.br/">Tempo Laboratory
+						Real-Time and Embedded Systems</a> 2013
+				</p>
+			</div>
+		</footer>
+
+	</div>
+	<!-- container -->
+
+</body>
+</html>
+{% block script %}
+<!-- scripts -->
+{% endblock %}

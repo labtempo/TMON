@@ -1,0 +1,23 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm1281.adc.Atm128AdcP.html" title="Atm128AdcP" alt="" coords="292,140,415,188">
+<area shape="poly" id="edge2" href="../ihtml/tos.chips.atm128.adc.Atm128AdcMultiple.html" title="Atm128AdcMultiple" alt="" coords="148,57 224,107 280,134 278,138 221,112 145,61">
+<area shape="rect" id="edge2" href="../ihtml/tos.chips.atm128.adc.Atm128AdcMultiple.html" title="Atm128AdcMultiple" alt="" coords="223,91,348,109">
+<area shape="rect" id="node7" href="../chtml/tos.platforms.mica.PlatformC.html" title="PlatformC" alt="" coords="175,261,284,320">
+<area shape="poly" id="edge14" href="../ihtml/tos.chips.atm128.timer.Atm128Calibrate.html" title="Atm128Calibrate" alt="" coords="293,182 242,200 223,210 212,220 207,233 208,248 203,249 202,233 207,217 220,206 240,195 291,177">
+<area shape="rect" id="edge14" href="../ihtml/tos.chips.atm128.timer.Atm128Calibrate.html" title="Atm128Calibrate" alt="" coords="209,219,319,237">
+<area shape="rect" id="node8" href="../chtml/tos.chips.atm128.adc.HplAtm128AdcC.html" title="HplAtm128AdcC" alt="" coords="324,261,484,320">
+<area shape="poly" id="edge12" href="../ihtml/tos.chips.atm128.adc.HplAtm128Adc.html" title="HplAtm128Adc" alt="" coords="366,187 390,247 385,249 361,189">
+<area shape="rect" id="edge12" href="../ihtml/tos.chips.atm128.adc.HplAtm128Adc.html" title="HplAtm128Adc" alt="" coords="381,219,479,237">
+<area shape="poly" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcSingle.html" title="Atm128AdcSingle" alt="" coords="356,60 356,126 351,126 351,60">
+<area shape="rect" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcSingle.html" title="Atm128AdcSingle" alt="" coords="353,91,468,109">
+<area shape="rect" id="node5" href="../chtml/tos.system.RoundRobinArbiterC.html" title="RoundRobinArbiterC\n(AdcArbiter)" alt="" coords="665,133,855,195">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="846,61 820,111 808,125 804,121 815,108 842,59">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="828,91,941,109">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="763,195 763,253 757,253 757,195">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="760,219,933,237">
+<area shape="poly" id="edge10" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="283,266 304,252 322,236 333,219 341,200 346,202 338,221 326,239 307,256 285,270">
+<area shape="rect" id="edge10" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="335,219,355,237">
+<area shape="rect" id="node9" href="../chtml/tos.lib.power.AsyncStdControlPowerManagerC.html" title="AsyncStdControlPowerManagerC\n(PM)" alt="" coords="480,5,768,67">
+<area shape="poly" id="edge16" href="../ihtml/tos.interfaces.AsyncStdControl.html" title="AsyncStdControl" alt="" coords="563,69 474,112 421,137 419,132 472,107 561,64">
+<area shape="rect" id="edge16" href="../ihtml/tos.interfaces.AsyncStdControl.html" title="AsyncStdControl" alt="" coords="511,91,617,109">
+<area shape="poly" id="edge18" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="640,66 652,87 669,107 688,124 684,128 665,111 648,90 635,68">
+<area shape="rect" id="edge18" href="../ihtml/tos.interfaces.ResourceDefaultOwner.html" title="ResourceDefaultOwner" alt="" coords="667,91,812,109">
