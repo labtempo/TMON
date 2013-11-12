@@ -1,5 +1,0 @@
-digraph "tos.sensorboards.mda100.PhotoC" {
-  n0x2ace83779978 [shape=ellipse, style=filled, label="Read", fontsize=12];
-  "ArbitratedPhotoDeviceP" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.sensorboards.mda100.ArbitratedPhotoDeviceP.html"];
-  "n0x2ace83779978" -> "ArbitratedPhotoDeviceP" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
-}

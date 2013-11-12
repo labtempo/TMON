@@ -1,5 +1,0 @@
-<area shape="rect" id="node2" href="../chtml/tos.system.SimpleFcfsArbiterC.html" title="SimpleFcfsArbiterC\n(Arbiter)" alt="" coords="55,120,233,181">
-<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="70,53 73,74 81,95 91,108 87,111 76,97 68,76 64,54">
-<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="79,78,192,95">
-<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="215,55 194,97 185,111 180,108 190,95 210,53">
-<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.ArbiterInfo.html" title="ArbiterInfo" alt="" coords="201,78,268,95">

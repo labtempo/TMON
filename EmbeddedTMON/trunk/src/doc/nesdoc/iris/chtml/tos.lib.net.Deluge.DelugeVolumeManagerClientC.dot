@@ -1,5 +1,0 @@
-digraph "tos.lib.net.Deluge.DelugeVolumeManagerClientC" {
-  n0x2ace83d2f388 [shape=ellipse, style=filled, label="DelugeVolumeManager", fontsize=12];
-  "DelugeVolumeManagerC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.Deluge.DelugeVolumeManagerC.html"];
-  "n0x2ace83d2f388" -> "DelugeVolumeManagerC" [label="DelugeVolumeManager", URL="../ihtml/tos.lib.net.Deluge.DelugeVolumeManager.html", fontsize=10];
-}

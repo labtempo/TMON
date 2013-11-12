@@ -1,8 +1,0 @@
-digraph "tos.chips.atm128.adc.HplAtm128AdcC" {
-  n0x2ace83623020 [shape=ellipse, style=filled, label="HplAtm128Adc", fontsize=12];
-  "HplAtm128AdcP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm1281.adc.HplAtm128AdcP.html"];
-  "HplAtm128AdcP" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm1281.adc.HplAtm128AdcP.html"];
-  "McuSleepC" [fontsize=12, shape=box, URL="../chtml/tos.chips.atm1281.McuSleepC.html"];
-  "n0x2ace83623020" -> "HplAtm128AdcP" [label="HplAtm128Adc", URL="../ihtml/tos.chips.atm128.adc.HplAtm128Adc.html", fontsize=10];
-  "HplAtm128AdcP" -> "McuSleepC" [label="McuPowerState", URL="../ihtml/tos.interfaces.McuPowerState.html", fontsize=10];
-}

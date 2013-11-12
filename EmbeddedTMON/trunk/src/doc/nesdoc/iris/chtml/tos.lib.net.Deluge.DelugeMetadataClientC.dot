@@ -1,5 +1,0 @@
-digraph "tos.lib.net.Deluge.DelugeMetadataClientC" {
-  n0x2ace83d37bb8 [shape=ellipse, style=filled, label="DelugeMetadata", fontsize=12];
-  "DelugeMetadataC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.Deluge.DelugeMetadataC.html"];
-  "n0x2ace83d37bb8" -> "DelugeMetadataC" [label="DelugeMetadata", URL="../ihtml/tos.lib.net.Deluge.DelugeMetadata.html", fontsize=10];
-}

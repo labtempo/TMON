@@ -1,8 +1,0 @@
-digraph "tos.lib.rfxlink.util.NeighborhoodC" {
-  n0x2ace82244d58 [shape=ellipse, style=filled, label="Neighborhood", fontsize=12];
-  "NeighborhoodP" [fontsize=12, shape=box, URL="../chtml/tos.lib.rfxlink.util.NeighborhoodP.html"];
-  "MainC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.system.MainC.html"];
-  "NeighborhoodP" [fontsize=12, shape=box, URL="../chtml/tos.lib.rfxlink.util.NeighborhoodP.html"];
-  "n0x2ace82244d58" -> "NeighborhoodP" [label="Neighborhood", URL="../ihtml/tos.lib.rfxlink.util.Neighborhood.html", fontsize=10];
-  "MainC" -> "NeighborhoodP" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
-}

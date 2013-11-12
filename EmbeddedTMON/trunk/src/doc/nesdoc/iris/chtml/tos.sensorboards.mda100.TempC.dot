@@ -1,5 +1,0 @@
-digraph "tos.sensorboards.mda100.TempC" {
-  n0x2ace834b0740 [shape=ellipse, style=filled, label="Read", fontsize=12];
-  "ArbitratedTempDeviceP" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.sensorboards.mda100.ArbitratedTempDeviceP.html"];
-  "n0x2ace834b0740" -> "ArbitratedTempDeviceP" [label="Read<uint16_t>", URL="../ihtml/tos.interfaces.Read.html", fontsize=10];
-}

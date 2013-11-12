@@ -1,8 +1,0 @@
-digraph "tos.platforms.mica.InitThreeP" {
-  "PlatformC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.mica.PlatformC.html"];
-  "InitThreeP.InitThree" [fontsize=12, shape=box, style=dashed, label="Atm128TimerInitC\n(InitThree)", URL="../chtml/tos.chips.atm128.timer.Atm128TimerInitC.html"];
-  "InitThreeP.InitThree" [fontsize=12, shape=box, style=dashed, label="Atm128TimerInitC\n(InitThree)", URL="../chtml/tos.chips.atm128.timer.Atm128TimerInitC.html"];
-  "HplAtm128Timer3C" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.atm1281.timer.HplAtm128Timer3C.html"];
-  "PlatformC" -> "InitThreeP.InitThree" [label="Init", URL="../ihtml/tos.interfaces.Init.html", fontsize=10];
-  "InitThreeP.InitThree" -> "HplAtm128Timer3C" [label="HplAtm128Timer<uint16_t>", URL="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html", fontsize=10];
-}

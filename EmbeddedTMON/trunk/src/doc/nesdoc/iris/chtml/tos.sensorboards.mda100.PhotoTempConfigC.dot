@@ -1,8 +1,0 @@
-digraph "tos.sensorboards.mda100.PhotoTempConfigC" {
-  n0x2ace8378d978 [shape=ellipse, style=filled, label="Atm128AdcConfig", fontsize=12];
-  "PhotoTempConfigP" [fontsize=12, shape=box, URL="../chtml/tos.sensorboards.mda100.PhotoTempConfigP.html"];
-  "PhotoTempConfigP" [fontsize=12, shape=box, URL="../chtml/tos.sensorboards.mda100.PhotoTempConfigP.html"];
-  "MicaBusC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.platforms.mica.MicaBusC.html"];
-  "n0x2ace8378d978" -> "PhotoTempConfigP" [label="Atm128AdcConfig", URL="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html", fontsize=10];
-  "PhotoTempConfigP" -> "MicaBusC" [label="MicaBusAdc", URL="../ihtml/tos.platforms.mica.MicaBusAdc.html", fontsize=10];
-}

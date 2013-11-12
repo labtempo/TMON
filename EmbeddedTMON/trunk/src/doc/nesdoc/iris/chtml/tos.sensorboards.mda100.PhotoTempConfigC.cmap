@@ -1,6 +1,0 @@
-<area shape="rect" id="node2" href="../chtml/tos.sensorboards.mda100.PhotoTempConfigP.html" title="PhotoTempConfigP" alt="" coords="28,120,196,168">
-<area shape="poly" id="edge2" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="115,54 115,106 109,106 109,54">
-<area shape="rect" id="edge2" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="112,78,228,95">
-<area shape="rect" id="node3" href="../chtml/tos.platforms.mica.MicaBusC.html" title="MicaBusC" alt="" coords="59,235,165,293">
-<area shape="poly" id="edge4" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="115,168 115,221 109,221 109,168">
-<area shape="rect" id="edge4" href="../ihtml/tos.platforms.mica.MicaBusAdc.html" title="MicaBusAdc" alt="" coords="112,193,189,210">
