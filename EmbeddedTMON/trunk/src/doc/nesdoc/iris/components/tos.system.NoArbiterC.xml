@@ -1,0 +1,51 @@
+<?xml version="1.0" ?><component abstract="" loc="20:/opt/tinyos-2.1.2/tos/system/NoArbiterC.nc" nicename="tos.system.NoArbiterC" qname="NoArbiterC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/system/NoArbiterC.nc">
+        <short>
+ A do-nothing arbiter for non-shared resources which need to pretend to
+ have arbitration.</short>
+        <long>
+ A do-nothing arbiter for non-shared resources which need to pretend to
+ have arbitration. Just grants all requests, without any error
+ checking. Does still call ResourceConfigure at the right time.
+
+ @author David Gay
+ @author Kevin Klues
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="22:/opt/tinyos-2.1.2/tos/system/NoArbiterC.nc" name="ResourceConfigure" provided="0" ref="0x2ace83bc7cc8">
+      <component-ref nicename="tos.system.NoArbiterC" qname="NoArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ace83bc7cc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ace83bc60a0" scoped=""/>
+        <function-ref name="configure" ref="0x2ace83bc6228" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="21:/opt/tinyos-2.1.2/tos/system/NoArbiterC.nc" name="Resource" provided="1" ref="0x2ace83bc7020">
+      <component-ref nicename="tos.system.NoArbiterC" qname="NoArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83bc7020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83bc7370" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83bc74f8" scoped=""/>
+        <function-ref name="request" ref="0x2ace83bc7680" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83bc7808" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83bc7990" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="25:/opt/tinyos-2.1.2/tos/system/NoArbiterC.nc" name="granted" provided="0" ref="0x2ace83bc5020">
+      <component-ref nicename="tos.system.NoArbiterC" qname="NoArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="granted" ref="0x2ace83bc5020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace83bc5370" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace83bc54f8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

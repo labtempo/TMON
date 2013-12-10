@@ -11,7 +11,6 @@ from pika import channel
 from Shared import *
 from SensornetMonitor.models import Sample, Mote, SystemStatus, AverageTemperature
 
-#quando recebe uma mensagem, aqui é persistido
 def persistEvent(event):
     data_sample = event.split()
     try:
@@ -30,7 +29,7 @@ def persistEvent(event):
                            int(data_sample[9]))
     sample.save()
                 
-#quando recebe uma mensagem, o fluxo vem para ca
+
 def callback(ch, method, properties, event):
     print " Reading received %r: " % (event)
     persistEvent(event)
@@ -53,8 +52,7 @@ def averageSave():
         print 
         average_temperature = AverageTemperature.create(0)
         average_temperature.save()        
-
-#checagem dos sensores - DAEMON
+    
 def checkMotesInactive():
     averageSave()
     try:
@@ -101,7 +99,6 @@ def main():
     finally:        
         print 'Waiting for readings. To exit press CTRL+C'
     
-#sistema entra em loop para escutar mensagens
     channel.basic_consume(callback, queue=queue_name, no_ack=True)
     try:
         channel.start_consuming()

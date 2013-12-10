@@ -1,0 +1,273 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC">
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="RadioPacket" ref="0x2ace82621020" scoped=""/></from>
+          <to><interface-ref name="RadioPacket" ref="0x2ace8265e9f8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="PacketTimeStampRadio" ref="0x2ace82625378" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampRadio" ref="0x2ace82661020" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="PacketTimeStampMilli" ref="0x2ace82629478" scoped=""/></from>
+          <to><interface-ref name="PacketTimeStampMilli" ref="0x2ace82657270" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="SubPacket" ref="0x2ace826595e8" scoped=""/></from>
+          <to><interface-ref name="SubPacket" ref="0x2ace8261f1d0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="LocalTimeRadio" ref="0x2ace8265c538" scoped=""/></from>
+          <to><interface-ref name="LocalTimeRadio" ref="0x2ace826200f0" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="LocalTimeMilli" ref="0x2ace8265b618" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ace82693dc0" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc">
+          <from><interface-ref name="TimeStampFlag" ref="0x2ace8265d928" scoped=""/></from>
+          <to><interface-ref name="TimeStampFlag" ref="0x2ace8261e060" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="50:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="TimeStampFlag" provided="0" ref="0x2ace8261e060">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TimeStampFlag" ref="0x2ace8261e060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8261e3b0" scoped=""/>
+        <function-ref name="get" ref="0x2ace8261e538" scoped=""/>
+        <function-ref name="setValue" ref="0x2ace8261e6c0" scoped=""/>
+        <function-ref name="set" ref="0x2ace8261e848" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="RadioPacket" provided="1" ref="0x2ace82621020">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioPacket" ref="0x2ace82621020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace82621370" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace826214f8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82621680" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace82621808" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace82621990" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace82621b18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="SubPacket" provided="0" ref="0x2ace8261f1d0">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubPacket" ref="0x2ace8261f1d0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8261f520" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace8261f6a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace8261f830" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace8261f9b8" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace8261fb40" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace8261fcc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="PacketTimeStampRadio" provided="1" ref="0x2ace82625378">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampRadio" ref="0x2ace82625378" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a46430"/>
+            <typename><typedef-ref name="TRadio" ref="0x2ace81b44140"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ace826247d8" scoped=""/>
+        <function-ref name="clear" ref="0x2ace82623020" scoped=""/>
+        <function-ref name="isValid" ref="0x2ace826240f8" scoped=""/>
+        <function-ref name="set" ref="0x2ace82623700" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="LocalTimeRadio" provided="0" ref="0x2ace826200f0">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTimeRadio" ref="0x2ace826200f0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a46430"/>
+            <typename><typedef-ref name="TRadio" ref="0x2ace81b44140"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace82620c70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="41:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerC.nc" name="PacketTimeStampMilli" provided="1" ref="0x2ace82629478">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerC" qname="TimeStampingLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampMilli" ref="0x2ace82629478" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ace82628900" scoped=""/>
+        <function-ref name="clear" ref="0x2ace82627020" scoped=""/>
+        <function-ref name="isValid" ref="0x2ace82628220" scoped=""/>
+        <function-ref name="set" ref="0x2ace82627700" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="20:/opt/tinyos-2.1.2/tos/system/LocalTimeMilliC.nc" name="LocalTime" provided="1" ref="0x2ace82693dc0">
+      <component-ref nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTime" ref="0x2ace82693dc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace82690968" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="LocalTimeRadio" provided="0" ref="0x2ace8265c538">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTimeRadio" ref="0x2ace8265c538" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a46430"/>
+            <typename><typedef-ref name="TRadio" ref="0x2ace81b44140"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace8265b0f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="PacketTimeStampRadio" provided="1" ref="0x2ace82661020">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampRadio" ref="0x2ace82661020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a46430"/>
+            <typename><typedef-ref name="TRadio" ref="0x2ace81b44140"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ace8265f478" scoped=""/>
+        <function-ref name="clear" ref="0x2ace8265fb58" scoped=""/>
+        <function-ref name="isValid" ref="0x2ace82661d70" scoped=""/>
+        <function-ref name="set" ref="0x2ace8265e278" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="SubPacket" provided="0" ref="0x2ace826595e8">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubPacket" ref="0x2ace826595e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace82659938" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace82659ac0" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82659c48" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace82659dd0" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace82694020" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace826941a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="42:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="PacketTimeStampMilli" provided="1" ref="0x2ace82657270">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PacketTimeStampMilli" ref="0x2ace82657270" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.PacketTimeStamp" qname="PacketTimeStamp"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="timestamp" ref="0x2ace82663700" scoped=""/>
+        <function-ref name="clear" ref="0x2ace82663de0" scoped=""/>
+        <function-ref name="isValid" ref="0x2ace82663020" scoped=""/>
+        <function-ref name="set" ref="0x2ace826624f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="TimeStampFlag" provided="0" ref="0x2ace8265d928">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TimeStampFlag" ref="0x2ace8265d928" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.PacketFlag" qname="PacketFlag"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8265dc78" scoped=""/>
+        <function-ref name="get" ref="0x2ace8265de00" scoped=""/>
+        <function-ref name="setValue" ref="0x2ace8265c020" scoped=""/>
+        <function-ref name="set" ref="0x2ace8265c1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="RadioPacket" provided="1" ref="0x2ace8265e9f8">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RadioPacket" ref="0x2ace8265e9f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8265ed48" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace8265d020" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace8265d1a8" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace8265d330" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace8265d4b8" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace8265d640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="52:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" name="LocalTimeMilli" provided="0" ref="0x2ace8265b618">
+      <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="LocalTimeMilli" ref="0x2ace8265b618" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.LocalTime" qname="LocalTime"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="get" ref="0x2ace826591d0" scoped=""/>
+      </interface-functions>
+    </interface><component loc="19:/opt/tinyos-2.1.2/tos/system/LocalTimeMilliC.nc" nicename="tos.system.LocalTimeMilliC" qname="LocalTimeMilliC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/system/LocalTimeMilliC.nc">
+        <short>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.</short>
+        <long>
+ Provide current time via the LocalTime&lt;TMilli&gt; interface.
+
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="26:/opt/tinyos-2.1.2/tos/system/LocalTimeMilliC.nc">
+          <from><interface-ref name="LocalTime" ref="0x2ace82693dc0" scoped=""/></from>
+          <to><interface-ref name="LocalTime" ref="0x2ace82347020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="38(TimeStampingLayerC.TimeStampingLayerP):/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TimeStampingLayerP.nc" nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerC.TimeStampingLayerP">
+      <instance>
+        <component-ref nicename="tos.lib.rfxlink.layers.TimeStampingLayerP" qname="TimeStampingLayerP"/>
+      </instance>
+      <module/>
+    </component></referenced></component>

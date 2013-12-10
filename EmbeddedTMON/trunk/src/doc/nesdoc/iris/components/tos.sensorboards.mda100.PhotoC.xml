@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><component abstract="" loc="18:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoC.nc" nicename="tos.sensorboards.mda100.PhotoC" qname="PhotoC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/mda100.h">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="24:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoC.nc">
+          <from><interface-ref name="Read" ref="0x2ace83779978" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2ace83772020" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="19:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoC.nc" name="Read" provided="1" ref="0x2ace83779978">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoC" qname="PhotoC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace83779978" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83776528" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83776978" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="39:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc" name="Read" provided="1" ref="0x2ace83772020">
+      <component-ref nicename="tos.sensorboards.mda100.ArbitratedPhotoDeviceP" qname="ArbitratedPhotoDeviceP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace83772020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83772b68" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83771020" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc" nicename="tos.sensorboards.mda100.ArbitratedPhotoDeviceP" qname="ArbitratedPhotoDeviceP">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc">
+          <from><interface-ref name="Read" ref="0x2ace83772020" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2ace837e3288" scoped=""/></to>
+        </wire>
+        <wire loc="47:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc">
+          <from><interface-ref name="Service" ref="0x2ace837e2b18" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2ace837ef5a0" scoped=""/></to>
+        </wire>
+        <wire loc="48:/opt/tinyos-2.1.2/tos/sensorboards/mda100/ArbitratedPhotoDeviceP.nc">
+          <from><interface-ref name="Resource" ref="0x2ace837df240" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace837f1370" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

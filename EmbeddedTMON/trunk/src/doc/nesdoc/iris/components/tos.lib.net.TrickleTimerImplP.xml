@@ -1,0 +1,157 @@
+<?xml version="1.0" ?><component abstract="" loc="51:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP">
+      <parameters>
+        <constant loc="51:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="low" ref="0x2ace82bf5108">
+          <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="52:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="high" ref="0x2ace82bf5458">
+          <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="53:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="k" ref="0x2ace82bf5778">
+          <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="54:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="count" ref="0x2ace82bf5ac0">
+          <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="55:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="scale" ref="0x2ace82bf5e08">
+          <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="62:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Pending" provided="0" ref="0x2ace82be6b30">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Pending" ref="0x2ace82be6b30" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x2ace82be6e80" scoped=""/>
+        <function-ref name="clear" ref="0x2ace82bed030" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace82bed1b8" scoped=""/>
+        <function-ref name="get" ref="0x2ace82bed340" scoped=""/>
+        <function-ref name="assign" ref="0x2ace82bed4c8" scoped=""/>
+        <function-ref name="setAll" ref="0x2ace82bed650" scoped=""/>
+        <function-ref name="set" ref="0x2ace82bed7d8" scoped=""/>
+        <function-ref name="size" ref="0x2ace82bed960" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Changed" provided="0" ref="0x2ace82bedc90">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Changed" ref="0x2ace82bedc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.BitVector" qname="BitVector"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clearAll" ref="0x2ace82bec020" scoped=""/>
+        <function-ref name="clear" ref="0x2ace82bec1a8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace82bec330" scoped=""/>
+        <function-ref name="get" ref="0x2ace82bec4b8" scoped=""/>
+        <function-ref name="assign" ref="0x2ace82bec640" scoped=""/>
+        <function-ref name="setAll" ref="0x2ace82bec7c8" scoped=""/>
+        <function-ref name="set" ref="0x2ace82bec950" scoped=""/>
+        <function-ref name="size" ref="0x2ace82becad8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="64:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Random" provided="0" ref="0x2ace82becd60">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Random" ref="0x2ace82becd60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Random" qname="Random"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="rand16" ref="0x2ace82c370d8" scoped=""/>
+        <function-ref name="rand32" ref="0x2ace82c37260" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="TrickleTimer" provided="1" ref="0x2ace82bf4dc0">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TrickleTimer" ref="0x2ace82bf4dc0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.TrickleTimer" qname="TrickleTimer"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace82bf3170" scoped=""/>
+        <function-ref name="incrementCounter" ref="0x2ace82bf32f8" scoped=""/>
+        <function-ref name="reset" ref="0x2ace82bf3480" scoped=""/>
+        <function-ref name="start" ref="0x2ace82bf3608" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82bf3790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Init" provided="1" ref="0x2ace82bf42b8">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x2ace82bf42b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ace82bf4608" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="154:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="timerTask" provided="0" ref="0x2ace82c1d368">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="timerTask" ref="0x2ace82c1d368" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace82c1d6b8" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace82c1d840" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="65:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Leds" provided="0" ref="0x2ace82c374d8">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x2ace82c374d8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ace82c37828" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ace82c379b0" scoped=""/>
+        <function-ref name="led1On" ref="0x2ace82c37b38" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ace82c37cc0" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ace82c37e48" scoped=""/>
+        <function-ref name="get" ref="0x2ace82c36020" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ace82c361a8" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ace82c367c8" scoped=""/>
+        <function-ref name="set" ref="0x2ace82c36330" scoped=""/>
+        <function-ref name="led0On" ref="0x2ace82c364b8" scoped=""/>
+        <function-ref name="led2On" ref="0x2ace82c36640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/lib/net/TrickleTimerImplP.nc" name="Timer" provided="0" ref="0x2ace82bf3bd8">
+      <component-ref nicename="tos.lib.net.TrickleTimerImplP" qname="TrickleTimerImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x2ace82bf3bd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ace82befe18" scoped=""/>
+        <function-ref name="fired" ref="0x2ace82bf1548" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ace82bef278" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ace82bf1de8" scoped=""/>
+        <function-ref name="getdt" ref="0x2ace82bee728" scoped=""/>
+        <function-ref name="gett0" ref="0x2ace82bee2d8" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ace82bf1998" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ace82bf2768" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ace82bef848" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ace82bf2c08" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82bf10f8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

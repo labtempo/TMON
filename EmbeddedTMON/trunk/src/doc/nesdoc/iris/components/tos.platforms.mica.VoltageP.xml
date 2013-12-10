@@ -1,0 +1,25 @@
+<?xml version="1.0" ?><component loc="38:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc" nicename="tos.platforms.mica.VoltageP" qname="VoltageP">
+      <documentation loc="31:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc">
+        <short>
+ Battery Voltage.</short>
+        <long>
+ Battery Voltage. The returned value represents the difference
+ between the battery voltage and V_BG (1.23V). The formula to convert
+ it to mV is: 1223 * 1024 / value.
+
+ @author Razvan Musaloiu-E.
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="40:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc" name="Atm128AdcConfig" provided="1" ref="0x2ace837c8020">
+      <component-ref nicename="tos.platforms.mica.VoltageP" qname="VoltageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace837c8020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace837c8370" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace837c84f8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace837c8680" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

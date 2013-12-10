@@ -1,0 +1,86 @@
+<?xml version="1.0" ?><component loc="41:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP" safe="">
+      <documentation loc="34:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc">
+        <short>
+ Interrupt interface access for interrupt capable GPIO pins.</short>
+        <long>
+ Interrupt interface access for interrupt capable GPIO pins.
+ Exposes just the interrupt vector routine for 
+ easy linking to generic components.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="49:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig6" provided="1" ref="0x2ace8370f020">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig6" ref="0x2ace8370f020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace8370f370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig1" provided="1" ref="0x2ace83710940">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig1" ref="0x2ace83710940" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace83710c90" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="47:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig4" provided="1" ref="0x2ace83712020">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig4" ref="0x2ace83712020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace83712370" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig7" provided="1" ref="0x2ace8370f758">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig7" ref="0x2ace8370f758" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace8370faa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig2" provided="1" ref="0x2ace837130a8">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig2" ref="0x2ace837130a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace837133f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig5" provided="1" ref="0x2ace83712758">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig5" ref="0x2ace83712758" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace83712aa8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig0" provided="1" ref="0x2ace83710208">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig0" ref="0x2ace83710208" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace83710558" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptSigP.nc" name="IntSig3" provided="1" ref="0x2ace837137e0">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSigP" qname="HplAtm128InterruptSigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IntSig3" ref="0x2ace837137e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace83713b30" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

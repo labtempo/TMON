@@ -1,0 +1,22 @@
+<?xml version="1.0" ?><interfacedef loc="37:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/VolumeId.nc" nicename="tos.lib.net.Deluge.BlockStorageManager.VolumeId" qname="VolumeId">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/VolumeId.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <function command="" loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/BlockStorageManager/VolumeId.nc" name="get" provided="0" ref="0x2ace839a1d80">
+        <interfacedef-ref nicename="tos.lib.net.Deluge.BlockStorageManager.VolumeId" qname="VolumeId"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="volume_id_t" ref="0x2ace8381d2b0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

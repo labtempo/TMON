@@ -1,0 +1,5 @@
+digraph "tos.chips.at45db.WireBlockStorageP" {
+  "BlockStorageP" [fontsize=12, shape=box, URL="../chtml/tos.chips.at45db.BlockStorageP.html"];
+  "At45dbC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.chips.at45db.At45dbC.html"];
+  "BlockStorageP" -> "At45dbC" [label="At45db", URL="../ihtml/tos.chips.at45db.At45db.html", fontsize=10];
+}

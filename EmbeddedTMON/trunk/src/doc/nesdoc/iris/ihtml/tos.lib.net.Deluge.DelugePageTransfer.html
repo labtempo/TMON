@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.lib.net.Deluge.DelugePageTransfer</title>
+  </head>
+  <body>
+    <h2>Interface: tos.lib.net.Deluge.DelugePageTransfer</h2>
+    <b>interface DelugePageTransfer</b><p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+ 
+      </dd>
+      <dd>
+        Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+ 
+      </dd>
+      <dd>
+        Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#dataAvailable">dataAvailable</a>(uint16_t sourceAddr)
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isTransferring">isTransferring</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#setImgNum">setImgNum</a>(uint8_t new_img_num)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#setWorkingPage">setWorkingPage</a>(object_id_t new_objid, page_num_t new_pgNum)
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#stop">stop</a>()
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#receivedPage">receivedPage</a>(object_id_t new_objid, page_num_t new_pgNum)
+      </span></div><div id=funcsig><span id=funcnameshort>event void <a href="#suppressMsgs">suppressMsgs</a>(object_id_t new_objid)
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="dataAvailable"></a>
+    <h4>dataAvailable
+    </h4>
+    <span id=funcnameshort>command error_t <b>dataAvailable</b>(uint16_t sourceAddr)
+    </span><hr>
+    <a name="isTransferring"></a>
+    <h4>isTransferring
+    </h4>
+    <span id=funcnameshort>command bool <b>isTransferring</b>()
+    </span><hr>
+    <a name="setImgNum"></a>
+    <h4>setImgNum
+    </h4>
+    <span id=funcnameshort>command void <b>setImgNum</b>(uint8_t new_img_num)
+    </span><hr>
+    <a name="setWorkingPage"></a>
+    <h4>setWorkingPage
+    </h4>
+    <span id=funcnameshort>command error_t <b>setWorkingPage</b>(object_id_t new_objid, page_num_t new_pgNum)
+    </span><hr>
+    <a name="stop"></a>
+    <h4>stop
+    </h4>
+    <span id=funcnameshort>command error_t <b>stop</b>()
+    </span><p><div id=heading>Events - Details</div>
+    <a name="receivedPage"></a>
+    <h4>receivedPage
+    </h4>
+    <span id=funcnameshort>event void <b>receivedPage</b>(object_id_t new_objid, page_num_t new_pgNum)
+    </span><hr>
+    <a name="suppressMsgs"></a>
+    <h4>suppressMsgs
+    </h4>
+    <span id=funcnameshort>event void <b>suppressMsgs</b>(object_id_t new_objid)
+    </span>
+  </body>
+</html>

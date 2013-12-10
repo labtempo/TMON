@@ -1,0 +1,142 @@
+<?xml version="1.0" ?><component loc="45:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc">
+        <short>
+ The DisseminationEngineImplP component implements the dissemination
+ logic.</short>
+        <long>
+ The DisseminationEngineImplP component implements the dissemination
+ logic.
+
+ See TEP118 - Dissemination for details.
+ 
+ @author Gilman Tolle &lt;gtolle@archrock.com&gt;
+ @version $Revision: 1.1 $ $Date: 2007-09-14 00:22:18 $
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="57:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="ProbeReceive" provided="0" ref="0x2ace82ac8990">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ProbeReceive" ref="0x2ace82ac8990" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace82ac8ce0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="ProbeAMSend" provided="0" ref="0x2ace82ac9c48">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ProbeAMSend" ref="0x2ace82ac9c48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace82ac8020" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ace82ac81a8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82ac8330" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace82ac84b8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace82ac8640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="53:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="AMSend" provided="0" ref="0x2ace82aca928">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AMSend" ref="0x2ace82aca928" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.AMSend" qname="AMSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace82acac78" scoped=""/>
+        <function-ref name="getPayload" ref="0x2ace82acae00" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82ac9020" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace82ac91a8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace82ac9330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="50:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="TrickleTimer" provided="0" ref="0x2ace82a80e10">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TrickleTimer" ref="0x2ace82a80e10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.TrickleTimer" qname="TrickleTimer"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+          <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace82a7e1a8" scoped=""/>
+        <function-ref name="incrementCounter" ref="0x2ace82a7e330" scoped=""/>
+        <function-ref name="reset" ref="0x2ace82a7e4b8" scoped=""/>
+        <function-ref name="start" ref="0x2ace82a7e640" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82a7e7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="49:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="DisseminationCache" provided="0" ref="0x2ace82a81a90">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DisseminationCache" ref="0x2ace82a81a90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.drip.DisseminationCache" qname="DisseminationCache"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+          <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="storeData" ref="0x2ace82a80020" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82a80640" scoped=""/>
+        <function-ref name="newData" ref="0x2ace82a801a8" scoped=""/>
+        <function-ref name="start" ref="0x2ace82a80330" scoped=""/>
+        <function-ref name="requestSeqno" ref="0x2ace82a804b8" scoped=""/>
+        <function-ref name="requestData" ref="0x2ace82a81de0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="Receive" provided="0" ref="0x2ace82ac95c0">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Receive" ref="0x2ace82ac95c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Receive" qname="Receive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace82ac9910" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="59:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="Leds" provided="0" ref="0x2ace82ac7020">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Leds" ref="0x2ace82ac7020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Leds" qname="Leds"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="led0Off" ref="0x2ace82ac7370" scoped=""/>
+        <function-ref name="led0Toggle" ref="0x2ace82ac74f8" scoped=""/>
+        <function-ref name="led1On" ref="0x2ace82ac7680" scoped=""/>
+        <function-ref name="led1Toggle" ref="0x2ace82ac7808" scoped=""/>
+        <function-ref name="led2Toggle" ref="0x2ace82ac7990" scoped=""/>
+        <function-ref name="get" ref="0x2ace82ac7b18" scoped=""/>
+        <function-ref name="led1Off" ref="0x2ace82ac7ca0" scoped=""/>
+        <function-ref name="led2Off" ref="0x2ace82ac6330" scoped=""/>
+        <function-ref name="set" ref="0x2ace82ac7e28" scoped=""/>
+        <function-ref name="led0On" ref="0x2ace82ac6020" scoped=""/>
+        <function-ref name="led2On" ref="0x2ace82ac61a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="StdControl" provided="1" ref="0x2ace82a88ce0">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="StdControl" ref="0x2ace82a88ce0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ace82a810a0" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82a81228" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="51:/opt/tinyos-2.1.2/tos/lib/net/drip/DisseminationEngineImplP.nc" name="DisseminatorControl" provided="0" ref="0x2ace82aca1c8">
+      <component-ref nicename="tos.lib.net.drip.DisseminationEngineImplP" qname="DisseminationEngineImplP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DisseminatorControl" ref="0x2ace82aca1c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.StdControl" qname="StdControl"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+          <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="start" ref="0x2ace82aca518" scoped=""/>
+        <function-ref name="stop" ref="0x2ace82aca6a0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

@@ -1,0 +1,154 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataClientC.nc" nicename="tos.lib.net.Deluge.DelugeMetadataClientC" qname="DelugeMetadataClientC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataClientC.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataClientC.nc">
+          <from><interface-ref name="DelugeMetadata" ref="0x2ace83d37bb8" scoped=""/></from>
+          <to><interface-ref name="DelugeMetadata" ref="0x2ace83d052b0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataClientC.nc" name="DelugeMetadata" provided="1" ref="0x2ace83d37bb8">
+      <component-ref nicename="tos.lib.net.Deluge.DelugeMetadataClientC" qname="DelugeMetadataClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DelugeMetadata" ref="0x2ace83d37bb8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.DelugeMetadata" qname="DelugeMetadata"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83d34020" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83d341a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc" name="DelugeMetadata" provided="1" ref="0x2ace83d052b0">
+      <component-ref nicename="tos.lib.net.Deluge.DelugeMetadataC" qname="DelugeMetadataC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DelugeMetadata" ref="0x2ace83d052b0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.DelugeMetadata" qname="DelugeMetadata"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83d05600" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83d05788" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc" nicename="tos.lib.net.Deluge.DelugeMetadataC" qname="DelugeMetadataC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="48:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="DelugeMetadata" ref="0x2ace83d052b0" scoped=""/></from>
+          <to><interface-ref name="DelugeMetadata" ref="0x2ace83cfd020" scoped=""/></to>
+        </wire>
+        <wire loc="49:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><function-ref name="storageReady" ref="0x2ace83cf81d8" scoped=""/></from>
+          <to><function-ref name="storageReady" ref="0x2ace83d05e20" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="Boot" ref="0x2ace83cfd7d0" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ace81c7b020" scoped=""/></to>
+        </wire>
+        <wire loc="57:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83cfc340" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83d587e0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83cfc340" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83d548d8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83cfc340" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83d51c20" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockRead" ref="0x2ace83cfc340" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockRead" ref="0x2ace83d4ee08" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83cfa4d8" scoped=""/>
+          <arguments>
+            <value cst="I:0">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83d49510" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83cfa4d8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83d46710" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83cfa4d8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83d42c20" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeMetadataC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83cfa4d8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83d3e020" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

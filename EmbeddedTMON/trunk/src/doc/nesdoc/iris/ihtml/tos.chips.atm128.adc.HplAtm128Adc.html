@@ -1,0 +1,449 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128.adc.HplAtm128Adc</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128.adc.HplAtm128Adc</h2>
+    <b>interface HplAtm128Adc</b><p>
+ HPL interface to the Atmega128 A/D conversion subsystem. Please see the
+ Atmega128 manual for full details on the functioning of this subsystem.
+ <p>
+ A word of warning: the Atmega128 SLEEP instruction initiates an A/D
+ conversion when the ADC and ADC interrupt are enabled.
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Martin Turon &lt;mturon@xbow.com&gt;
+ 
+      </dd>
+      <dd>
+        Hu Siquan &lt;husq@xbow.com&gt;
+ 
+      </dd>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#cancel">cancel</a>()
+      </span><menu>
+ Cancel A/D conversion and any pending A/D interrupt.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#disableAdc">disableAdc</a>()
+      </span><menu>
+ Disable ADC sampling
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#disableInterruption">disableInterruption</a>()
+      </span><menu>
+ Disable ADC interrupt
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#enableAdc">enableAdc</a>()
+      </span><menu>
+ Enable ADC sampling
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#enableInterruption">enableInterruption</a>()
+      </span><menu>
+ Enable ADC interrupt
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command Atm128Adcsra_t <a href="#getAdcsra">getAdcsra</a>()
+      </span><menu>
+ Read the ADCSRA (ADC control) register
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command Atm128Admux_t <a href="#getAdmux">getAdmux</a>()
+      </span><menu>
+ Read the ADMUX (ADC selection) register
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command uint16_t <a href="#getValue">getValue</a>()
+      </span><menu>
+ Read the latest A/D conversion result
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isComplete">isComplete</a>()
+      </span><menu>
+ Is A/D conversion complete? Note that this flag is automatically
+ cleared when an A/D interrupt occurs.
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isEnabled">isEnabled</a>()
+      </span><menu>
+ Is ADC enabled?
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command bool <a href="#isStarted">isStarted</a>()
+      </span><menu>
+ Is A/D conversion in progress?
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#resetInterrupt">resetInterrupt</a>()
+      </span><menu>
+ Clear the ADC interrupt flag
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setAdcsra">setAdcsra</a>(Atm128Adcsra_t adcsra)
+      </span><menu>
+ Set the ADCSRA (ADC control) register
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setAdmux">setAdmux</a>(Atm128Admux_t admux)
+      </span><menu>
+ Set the ADMUX (ADC selection) register
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setContinuous">setContinuous</a>()
+      </span><menu>
+ Enable continuous sampling
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setPrescaler">setPrescaler</a>(uint8_t scale)
+      </span><menu>
+ Set ADC prescaler selection bits
+ 
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#setSingle">setSingle</a>()
+      </span><menu>
+ Disable continuous sampling
+
+      </menu>
+    </div><div id=funcsig><span id=funcnameshort>command void <a href="#startConversion">startConversion</a>()
+      </span><menu>
+ Start ADC conversion.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#dataReady">dataReady</a>(uint16_t data)
+      </span><menu>
+ A/D interrupt occured
+ 
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="cancel"></a>
+    <h4>cancel
+    </h4>
+    <span id=funcnameshort>command bool <b>cancel</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Cancel A/D conversion and any pending A/D interrupt. Also disables the
+ ADC interruption (otherwise a sample might start at the next sleep
+ instruction). This command can assume that the A/D converter is enabled. 
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if an A/D conversion was in progress or an A/D interrupt
+   was pending, FALSE otherwise. In single conversion mode, a return
+   of TRUE implies that the dataReady event will not be signaled.
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="disableAdc"></a>
+    <h4>disableAdc
+    </h4>
+    <span id=funcnameshort>command void <b>disableAdc</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Disable ADC sampling
+
+    </menu>
+    <hr>
+    <a name="disableInterruption"></a>
+    <h4>disableInterruption
+    </h4>
+    <span id=funcnameshort>command void <b>disableInterruption</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Disable ADC interrupt
+
+    </menu>
+    <hr>
+    <a name="enableAdc"></a>
+    <h4>enableAdc
+    </h4>
+    <span id=funcnameshort>command void <b>enableAdc</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Enable ADC sampling
+
+    </menu>
+    <hr>
+    <a name="enableInterruption"></a>
+    <h4>enableInterruption
+    </h4>
+    <span id=funcnameshort>command void <b>enableInterruption</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Enable ADC interrupt
+
+    </menu>
+    <hr>
+    <a name="getAdcsra"></a>
+    <h4>getAdcsra
+    </h4>
+    <span id=funcnameshort>command Atm128Adcsra_t <b>getAdcsra</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Read the ADCSRA (ADC control) register
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Current ADCSRA value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="getAdmux"></a>
+    <h4>getAdmux
+    </h4>
+    <span id=funcnameshort>command Atm128Admux_t <b>getAdmux</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Read the ADMUX (ADC selection) register
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          Current ADMUX value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="getValue"></a>
+    <h4>getValue
+    </h4>
+    <span id=funcnameshort>command uint16_t <b>getValue</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Read the latest A/D conversion result
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          A/D value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isComplete"></a>
+    <h4>isComplete
+    </h4>
+    <span id=funcnameshort>command bool <b>isComplete</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Is A/D conversion complete? Note that this flag is automatically
+ cleared when an A/D interrupt occurs.
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the A/D conversion is complete, FALSE otherwise
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isEnabled"></a>
+    <h4>isEnabled
+    </h4>
+    <span id=funcnameshort>command bool <b>isEnabled</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Is ADC enabled?
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the ADC is enabled, FALSE otherwise
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="isStarted"></a>
+    <h4>isStarted
+    </h4>
+    <span id=funcnameshort>command bool <b>isStarted</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Is A/D conversion in progress?
+ 
+      <p>
+      <dl>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the A/D conversion is in progress, FALSE otherwise
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="resetInterrupt"></a>
+    <h4>resetInterrupt
+    </h4>
+    <span id=funcnameshort>command void <b>resetInterrupt</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Clear the ADC interrupt flag
+
+    </menu>
+    <hr>
+    <a name="setAdcsra"></a>
+    <h4>setAdcsra
+    </h4>
+    <span id=funcnameshort>command void <b>setAdcsra</b>(Atm128Adcsra_t adcsra)
+    </span>
+    <p>
+    <menu>
+      
+ Set the ADCSRA (ADC control) register
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>adcsra</code> -  New ADCSRA value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setAdmux"></a>
+    <h4>setAdmux
+    </h4>
+    <span id=funcnameshort>command void <b>setAdmux</b>(Atm128Admux_t admux)
+    </span>
+    <p>
+    <menu>
+      
+ Set the ADMUX (ADC selection) register
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>admux</code> -  New ADMUX value
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setContinuous"></a>
+    <h4>setContinuous
+    </h4>
+    <span id=funcnameshort>command void <b>setContinuous</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Enable continuous sampling
+
+    </menu>
+    <hr>
+    <a name="setPrescaler"></a>
+    <h4>setPrescaler
+    </h4>
+    <span id=funcnameshort>command void <b>setPrescaler</b>(uint8_t scale)
+    </span>
+    <p>
+    <menu>
+      
+ Set ADC prescaler selection bits
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>scale</code> -  New ADC prescaler. Must be one of the ATM128_ADC_PRESCALE_xxx
+   values from Atm128Adc.h
+
+        </dd>
+      </dl>
+    </menu>
+    <hr>
+    <a name="setSingle"></a>
+    <h4>setSingle
+    </h4>
+    <span id=funcnameshort>command void <b>setSingle</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Disable continuous sampling
+
+    </menu>
+    <hr>
+    <a name="startConversion"></a>
+    <h4>startConversion
+    </h4>
+    <span id=funcnameshort>command void <b>startConversion</b>()
+    </span>
+    <p>
+    <menu>
+      
+ Start ADC conversion. If ADC interrupts are enabled, the dataReady event
+ will be signaled once (in non-continuous mode) or repeatedly (in
+ continuous mode).
+
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="dataReady"></a>
+    <h4>dataReady
+    </h4>
+    <span id=funcnameshort>event void <b>dataReady</b>(uint16_t data)
+    </span>
+    <p>
+    <menu>
+      
+ A/D interrupt occured
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  Latest A/D conversion result
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

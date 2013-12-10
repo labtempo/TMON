@@ -1,0 +1,6 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm128.adc.AdcReadClientC.html" title="AdcReadClientC" alt="" coords="5,120,157,179">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="84,54 84,106 79,106 79,54">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="81,78,187,95">
+<area shape="rect" id="node3" href="../chtml/tos.platforms.mica.VoltageP.html" title="VoltageP" alt="" coords="37,245,125,293">
+<area shape="poly" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="84,179 84,232 79,232 79,179">
+<area shape="rect" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig" alt="" coords="81,203,197,221">

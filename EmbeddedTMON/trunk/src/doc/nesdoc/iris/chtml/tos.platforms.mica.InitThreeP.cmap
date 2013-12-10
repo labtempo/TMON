@@ -1,0 +1,7 @@
+<area shape="rect" id="node1" href="../chtml/tos.platforms.mica.PlatformC.html" title="PlatformC" alt="" coords="43,5,152,64">
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm128.timer.Atm128TimerInitC.html" title="Atm128TimerInitC\n(InitThree)" alt="" coords="16,131,179,181">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="100,64 100,117 95,117 95,64">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.Init.html" title="Init" alt="" coords="97,89,117,106">
+<area shape="rect" id="node3" href="../chtml/tos.chips.atm1281.timer.HplAtm128Timer3C.html" title="HplAtm128Timer3C" alt="" coords="5,248,189,307">
+<area shape="poly" id="edge4" href="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html" title="HplAtm128Timer&lt;uint16_t&gt;" alt="" coords="100,182 100,234 95,234 95,182">
+<area shape="rect" id="edge4" href="../ihtml/tos.chips.atm128.timer.HplAtm128Timer.html" title="HplAtm128Timer&lt;uint16_t&gt;" alt="" coords="97,206,280,223">

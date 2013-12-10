@@ -1,0 +1,109 @@
+<?xml version="1.0" ?><component loc="53:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" nicename="tos.chips.at45db.At45dbP" qname="At45dbP" safe="">
+      <documentation loc="47:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc">
+        <short>
+ Private componenent for the Atmel's AT45DB HAL.</short>
+        <long>
+ Private componenent for the Atmel's AT45DB HAL.
+
+ @author David Gay
+</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="59:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="HplAt45db" provided="0" ref="0x2ace83b28ab0">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAt45db" ref="0x2ace83b28ab0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.HplAt45db" qname="HplAt45db"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fill" ref="0x2ace83aaebd8" scoped=""/>
+        <function-ref name="waitCompare" ref="0x2ace83aaf020" scoped=""/>
+        <function-ref name="crcDone" ref="0x2ace83aaf1a8" scoped=""/>
+        <function-ref name="flushDone" ref="0x2ace83aaf330" scoped=""/>
+        <function-ref name="read" ref="0x2ace83aaf4b8" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83aaf640" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83aaf7c8" scoped=""/>
+        <function-ref name="waitIdleDone" ref="0x2ace83aaf950" scoped=""/>
+        <function-ref name="waitCompareDone" ref="0x2ace83aafad8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83aafc60" scoped=""/>
+        <function-ref name="waitIdle" ref="0x2ace83aafde8" scoped=""/>
+        <function-ref name="flush" ref="0x2ace83aae020" scoped=""/>
+        <function-ref name="write" ref="0x2ace83aae1a8" scoped=""/>
+        <function-ref name="compareDone" ref="0x2ace83aae430" scoped=""/>
+        <function-ref name="compare" ref="0x2ace83aae5b8" scoped=""/>
+        <function-ref name="crc" ref="0x2ace83aae740" scoped=""/>
+        <function-ref name="readBuffer" ref="0x2ace83aae8c8" scoped=""/>
+        <function-ref name="fillDone" ref="0x2ace83aaea50" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83b28e00" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="At45db" provided="1" ref="0x2ace83ab22a8">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="At45db" ref="0x2ace83ab22a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.at45db.At45db" qname="At45db"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="copyPageDone" ref="0x2ace83ab0020" scoped=""/>
+        <function-ref name="syncDone" ref="0x2ace83ab2780" scoped=""/>
+        <function-ref name="flushDone" ref="0x2ace83ab2908" scoped=""/>
+        <function-ref name="read" ref="0x2ace83ab2a90" scoped=""/>
+        <function-ref name="writeDone" ref="0x2ace83ab2c18" scoped=""/>
+        <function-ref name="copyPage" ref="0x2ace83ab2da0" scoped=""/>
+        <function-ref name="erase" ref="0x2ace83ab1020" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83ab11a8" scoped=""/>
+        <function-ref name="computeCrcDone" ref="0x2ace83ab1330" scoped=""/>
+        <function-ref name="flush" ref="0x2ace83ab14b8" scoped=""/>
+        <function-ref name="syncAll" ref="0x2ace83ab1640" scoped=""/>
+        <function-ref name="flushAll" ref="0x2ace83ab17c8" scoped=""/>
+        <function-ref name="write" ref="0x2ace83ab1950" scoped=""/>
+        <function-ref name="sync" ref="0x2ace83ab1bd8" scoped=""/>
+        <function-ref name="computeCrc" ref="0x2ace83ab1d60" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83ab25f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="BusyWait" provided="0" ref="0x2ace83b26150">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="BusyWait" ref="0x2ace83b26150" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.BusyWait" qname="BusyWait"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a46430"/>
+            <typename><typedef-ref name="TMicro" ref="0x2ace81a46788"/></typename>
+          </type-tag>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="wait" ref="0x2ace83b25020" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="145:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="taskSuccess" provided="0" ref="0x2ace83b10020">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="taskSuccess" ref="0x2ace83b10020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace83b10370" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace83b104f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="148:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="taskFail" provided="0" ref="0x2ace83b0fc28">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="taskFail" ref="0x2ace83b0fc28" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.TaskBasic" qname="TaskBasic"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="postTask" ref="0x2ace83b0e020" scoped=""/>
+        <function-ref name="runTask" ref="0x2ace83b0e1a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/chips/at45db/At45dbP.nc" name="Init" provided="1" ref="0x2ace83ab5c08">
+      <component-ref nicename="tos.chips.at45db.At45dbP" qname="At45dbP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x2ace83ab5c08" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ace83ab2020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

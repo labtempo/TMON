@@ -1,0 +1,234 @@
+<?xml version="1.0" ?><interfacedef loc="42:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" nicename="tos.interfaces.BlockWrite" qname="BlockWrite">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+        <short>
+ Write interface for the block storage abstraction described in
+ TEP103.</short>
+        <long>
+ Write interface for the block storage abstraction described in
+ TEP103.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.6 $ $Date: 2008-06-04 03:00:25 $
+</long>
+      </documentation>
+      <function event="" loc="112:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="syncDone" provided="0" ref="0x2ace838048e0">
+        <documentation loc="105:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of a sync operation.</short>
+          <long>
+ Signals the completion of a sync operation. All written data is
+ flushed to non-volatile storage after this event.
+
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="112:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="error" ref="0x2ace83804670">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="71:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="writeDone" provided="0" ref="0x2ace83809c58">
+        <documentation loc="60:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of a write operation.</short>
+          <long>
+ Signals the completion of a write operation. However, data is not
+ guaranteed to survive a power-cycle unless a sync operation has
+ been completed.
+
+ @param addr starting address of write.
+ @param 'void* COUNT(len) buf' buffer that written data was read from.
+ @param len number of bytes written.
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2ace8381db78"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="71:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="addr" ref="0x2ace83809020">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="71:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="buf" ref="0x2ace83809320">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="71:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="len" ref="0x2ace83809670">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2ace8381db78"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="72:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="error" ref="0x2ace838099b8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="83:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="erase" provided="0" ref="0x2ace83806af8">
+        <documentation loc="74:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate an erase operation.</short>
+          <long>
+ Initiate an erase operation. On SUCCESS, the
+ &lt;code&gt;eraseDone&lt;/code&gt; event will signal completion of the
+ operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="91:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="eraseDone" provided="0" ref="0x2ace83807580">
+        <documentation loc="85:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Signals the completion of an erase operation.</short>
+          <long>
+ Signals the completion of an erase operation.
+
+ @param error SUCCESS if the operation was successful, FAIL if
+   it failed
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="91:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="error" ref="0x2ace83807310">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="58:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="write" provided="0" ref="0x2ace8380a020">
+        <documentation loc="43:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate a write operation within a given volume.</short>
+          <long>
+ Initiate a write operation within a given volume. On SUCCESS, the
+ &lt;code&gt;writeDone&lt;/code&gt; event will signal completion of the
+ operation.
+ &lt;p&gt;
+ Between two erases, no byte may be written more than once.
+ 
+ @param addr starting address to begin write.
+ @param 'void* COUNT(len) buf' buffer to write data from.
+ @param len number of bytes to write.
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EINVAL if the parameters are invalid
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+            <type-pointer alignment="I:1" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2ace8381db78"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="58:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="addr" ref="0x2ace8380b678">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="58:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="buf" ref="0x2ace8380b978">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-void alignment="I:1" size="I:1"/>
+            </type-pointer>
+          </variable>
+          <variable loc="58:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="len" ref="0x2ace8380bcc8">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_len_t" ref="0x2ace8381db78"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="103:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc" name="sync" provided="0" ref="0x2ace83807ce0">
+        <documentation loc="93:/opt/tinyos-2.1.2/tos/interfaces/BlockWrite.nc">
+          <short>
+ Initiate a sync operation to finalize writes to the volume.</short>
+          <long>
+ Initiate a sync operation to finalize writes to the volume. A
+ sync operation must be issued to ensure that data is stored in
+ non-volatile storage. On SUCCES, the &lt;code&gt;syncDone&lt;/code&gt; event
+ will signal completion of the operation.
+
+ @return 
+   &lt;li&gt;SUCCESS if the request was accepted, 
+   &lt;li&gt;EBUSY if a request is already being processed.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.interfaces.BlockWrite" qname="BlockWrite"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

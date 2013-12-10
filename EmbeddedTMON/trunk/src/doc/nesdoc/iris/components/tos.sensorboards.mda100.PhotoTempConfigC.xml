@@ -1,0 +1,210 @@
+<?xml version="1.0" ?><component loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigC.nc" nicename="tos.sensorboards.mda100.PhotoTempConfigC" qname="PhotoTempConfigC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigC.nc">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="43:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x2ace8378d978" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x2ace8378abd8" scoped=""/></to>
+        </wire>
+        <wire loc="45:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigC.nc">
+          <from><interface-ref name="PhotoTempAdc" ref="0x2ace837876e0" scoped=""/></from>
+          <to><interface-ref name="Adc1" ref="0x2ace836b9a48" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="38:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigC.nc" name="Atm128AdcConfig" provided="1" ref="0x2ace8378d978">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoTempConfigC" qname="PhotoTempConfigC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace8378d978" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace8378dcc8" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace8378de50" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace8378a020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="46:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" name="Adc1" provided="1" ref="0x2ace836b9a48">
+      <component-ref nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Adc1" ref="0x2ace836b9a48" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace836b9d98" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="16:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" name="Atm128AdcConfig" provided="1" ref="0x2ace8378abd8">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace8378abd8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace83787020" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace837871a8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace83787330" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="17:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" name="PhotoTempAdc" provided="0" ref="0x2ace837876e0">
+      <component-ref nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="PhotoTempAdc" ref="0x2ace837876e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.platforms.mica.MicaBusAdc" qname="MicaBusAdc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getChannel" ref="0x2ace83787a30" scoped=""/>
+      </interface-functions>
+    </interface><component loc="18:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc" nicename="tos.platforms.mica.MicaBusC" qname="MicaBusC">
+      <documentation loc="11:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+        <short>
+ A simplistic beginning to providing a standard interface to the
+ mica-family 51-pin bus.</short>
+        <long>
+ A simplistic beginning to providing a standard interface to the
+ mica-family 51-pin bus. Just provides the PW0-PW7 and Int0-3 digital
+ I/O pins and returns the ADC channel number for the ADC pins.
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="82:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int1_Interrupt" ref="0x2ace836c5ca8" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace837a5728" scoped=""/></to>
+        </wire>
+        <wire loc="92:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc0" ref="0x2ace836b93d8" scoped=""/></from>
+          <to><interface-ref name="Adc0" ref="0x2ace836b7640" scoped=""/></to>
+        </wire>
+        <wire loc="62:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW3" ref="0x2ace836d1ad0" scoped=""/></from>
+          <to><interface-ref name="PortC3" ref="0x2ace81cadaf0" scoped=""/></to>
+        </wire>
+        <wire loc="65:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW6" ref="0x2ace836cd020" scoped=""/></from>
+          <to><interface-ref name="PortC6" ref="0x2ace81cbf020" scoped=""/></to>
+        </wire>
+        <wire loc="95:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc3" ref="0x2ace836bb760" scoped=""/></from>
+          <to><interface-ref name="Adc3" ref="0x2ace836b4a30" scoped=""/></to>
+        </wire>
+        <wire loc="97:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc5" ref="0x2ace836ba490" scoped=""/></from>
+          <to><interface-ref name="Adc5" ref="0x2ace836b3760" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int1" ref="0x2ace836c94c0" scoped=""/></from>
+          <to><interface-ref name="PortE5" ref="0x2ace81cc4af0" scoped=""/></to>
+        </wire>
+        <wire loc="74:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_TXD" ref="0x2ace836be4f8" scoped=""/></from>
+          <to><interface-ref name="PortD3" ref="0x2ace81cbaaf0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW1" ref="0x2ace836d37c0" scoped=""/></from>
+          <to><interface-ref name="PortC1" ref="0x2ace81caf7e0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW4" ref="0x2ace836d0c58" scoped=""/></from>
+          <to><interface-ref name="PortC4" ref="0x2ace81cacc78" scoped=""/></to>
+        </wire>
+        <wire loc="90:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int3_Interrupt" ref="0x2ace836c1548" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace8379e728" scoped=""/></to>
+        </wire>
+        <wire loc="93:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc1" ref="0x2ace836b9a48" scoped=""/></from>
+          <to><interface-ref name="Adc1" ref="0x2ace836b7cb0" scoped=""/></to>
+        </wire>
+        <wire loc="73:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_RXD" ref="0x2ace836bf370" scoped=""/></from>
+          <to><interface-ref name="PortD2" ref="0x2ace81cbb968" scoped=""/></to>
+        </wire>
+        <wire loc="66:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW7" ref="0x2ace836cc180" scoped=""/></from>
+          <to><interface-ref name="PortC7" ref="0x2ace81cbe1a0" scoped=""/></to>
+        </wire>
+        <wire loc="78:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int0_Interrupt" ref="0x2ace836c5020" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace83735060" scoped=""/></to>
+        </wire>
+        <wire loc="98:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc6" ref="0x2ace836bad00" scoped=""/></from>
+          <to><interface-ref name="Adc6" ref="0x2ace836b3dd0" scoped=""/></to>
+        </wire>
+        <wire loc="69:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int2" ref="0x2ace836c8648" scoped=""/></from>
+          <to><interface-ref name="PortE6" ref="0x2ace81cc3c78" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW2" ref="0x2ace836d2948" scoped=""/></from>
+          <to><interface-ref name="PortC2" ref="0x2ace81cae968" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW5" ref="0x2ace836cfde0" scoped=""/></from>
+          <to><interface-ref name="PortC5" ref="0x2ace81cc1e00" scoped=""/></to>
+        </wire>
+        <wire loc="94:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc2" ref="0x2ace836bb0f0" scoped=""/></from>
+          <to><interface-ref name="Adc2" ref="0x2ace836b43c0" scoped=""/></to>
+        </wire>
+        <wire loc="96:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc4" ref="0x2ace836bbdd0" scoped=""/></from>
+          <to><interface-ref name="Adc4" ref="0x2ace836b30f0" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int0" ref="0x2ace836cb338" scoped=""/></from>
+          <to><interface-ref name="PortE4" ref="0x2ace81cc6968" scoped=""/></to>
+        </wire>
+        <wire loc="86:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int2_Interrupt" ref="0x2ace836c4858" scoped=""/></from>
+          <to><interface-ref name="Interrupt" ref="0x2ace837a1020" scoped=""/></to>
+        </wire>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="USART1_CLK" ref="0x2ace836c00c8" scoped=""/></from>
+          <to><interface-ref name="PortD5" ref="0x2ace81cb8e00" scoped=""/></to>
+        </wire>
+        <wire loc="99:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Adc7" ref="0x2ace836b83c0" scoped=""/></from>
+          <to><interface-ref name="Adc7" ref="0x2ace83730490" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="PW0" ref="0x2ace836d6518" scoped=""/></from>
+          <to><interface-ref name="PortC0" ref="0x2ace81cb0658" scoped=""/></to>
+        </wire>
+        <wire loc="70:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Int3" ref="0x2ace836c77d0" scoped=""/></from>
+          <to><interface-ref name="PortE7" ref="0x2ace81cc2e00" scoped=""/></to>
+        </wire>
+        <wire loc="77:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace83735b10" scoped=""/></from>
+          <to><interface-ref name="Int4" ref="0x2ace8371b518" scoped=""/></to>
+        </wire>
+        <wire loc="81:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace837a42e8" scoped=""/></from>
+          <to><interface-ref name="Int5" ref="0x2ace8371a518" scoped=""/></to>
+        </wire>
+        <wire loc="85:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace837a1ad0" scoped=""/></from>
+          <to><interface-ref name="Int6" ref="0x2ace83719518" scoped=""/></to>
+        </wire>
+        <wire loc="89:/opt/tinyos-2.1.2/tos/platforms/mica/MicaBusC.nc">
+          <from><interface-ref name="Atm128Interrupt" ref="0x2ace8379d2e8" scoped=""/></from>
+          <to><interface-ref name="Int7" ref="0x2ace83718518" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component loc="14:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc" nicename="tos.sensorboards.mda100.PhotoTempConfigP" qname="PhotoTempConfigP">
+      <documentation loc="10:/opt/tinyos-2.1.2/tos/sensorboards/mda100/PhotoTempConfigP.nc">
+        <short>
+ MDA100 photo and temp sensor ADC configuration.</short>
+        <long>
+ MDA100 photo and temp sensor ADC configuration.
+ @author David Gay &lt;david.e.gay@intel.com&gt;
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

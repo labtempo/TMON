@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><component loc="44:/opt/tinyos-2.1.2/tos/chips/atm128/adc/HplAtm128AdcC.nc" nicename="tos.chips.atm128.adc.HplAtm128AdcC" qname="HplAtm128AdcC">
+      <documentation loc="36:/opt/tinyos-2.1.2/tos/chips/atm128/adc/HplAtm128AdcC.nc">
+        <short>
+ HPL for the Atmega128 A/D conversion susbsystem.</short>
+        <long>
+ HPL for the Atmega128 A/D conversion susbsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/chips/atm128/adc/HplAtm128AdcC.nc">
+          <from><interface-ref name="HplAtm128Adc" ref="0x2ace83623020" scoped=""/></from>
+          <to><interface-ref name="HplAtm128Adc" ref="0x2ace8361d248" scoped=""/></to>
+        </wire>
+        <wire loc="51:/opt/tinyos-2.1.2/tos/chips/atm128/adc/HplAtm128AdcC.nc">
+          <from><interface-ref name="McuPowerState" ref="0x2ace8361b7c8" scoped=""/></from>
+          <to><interface-ref name="McuPowerState" ref="0x2ace81aab3c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="45:/opt/tinyos-2.1.2/tos/chips/atm128/adc/HplAtm128AdcC.nc" name="HplAtm128Adc" provided="1" ref="0x2ace83623020">
+      <component-ref nicename="tos.chips.atm128.adc.HplAtm128AdcC" qname="HplAtm128AdcC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x2ace83623020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x2ace83623370" scoped=""/>
+        <function-ref name="getAdmux" ref="0x2ace836234f8" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x2ace83623680" scoped=""/>
+        <function-ref name="isEnabled" ref="0x2ace83623808" scoped=""/>
+        <function-ref name="enableAdc" ref="0x2ace83623990" scoped=""/>
+        <function-ref name="setAdmux" ref="0x2ace83623b18" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x2ace83623ca0" scoped=""/>
+        <function-ref name="isComplete" ref="0x2ace83623e28" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace83622020" scoped=""/>
+        <function-ref name="disableAdc" ref="0x2ace836221a8" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x2ace83622330" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x2ace836224b8" scoped=""/>
+        <function-ref name="startConversion" ref="0x2ace83622640" scoped=""/>
+        <function-ref name="isStarted" ref="0x2ace836228c8" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x2ace83622a50" scoped=""/>
+        <function-ref name="setContinuous" ref="0x2ace83622bd8" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x2ace83622d60" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace83621020" scoped=""/>
+        <function-ref name="dataReady" ref="0x2ace836211a8" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="49:/opt/tinyos-2.1.2/tos/chips/atm1281/adc/HplAtm128AdcP.nc" name="McuPowerState" provided="0" ref="0x2ace8361b7c8">
+      <component-ref nicename="tos.chips.atm1281.adc.HplAtm128AdcP" qname="HplAtm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x2ace8361b7c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x2ace8361bb18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="85:/opt/tinyos-2.1.2/tos/chips/atm1281/McuSleepC.nc" name="McuPowerState" provided="1" ref="0x2ace81aab3c8">
+      <component-ref nicename="tos.chips.atm1281.McuSleepC" qname="McuSleepC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="McuPowerState" ref="0x2ace81aab3c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.McuPowerState" qname="McuPowerState"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="update" ref="0x2ace81aab718" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="48:/opt/tinyos-2.1.2/tos/chips/atm1281/adc/HplAtm128AdcP.nc" name="HplAtm128Adc" provided="1" ref="0x2ace8361d248">
+      <component-ref nicename="tos.chips.atm1281.adc.HplAtm128AdcP" qname="HplAtm128AdcP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="HplAtm128Adc" ref="0x2ace8361d248" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.HplAtm128Adc" qname="HplAtm128Adc"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="setSingle" ref="0x2ace8361d598" scoped=""/>
+        <function-ref name="getAdmux" ref="0x2ace8361d720" scoped=""/>
+        <function-ref name="setPrescaler" ref="0x2ace8361d8a8" scoped=""/>
+        <function-ref name="isEnabled" ref="0x2ace8361da30" scoped=""/>
+        <function-ref name="enableAdc" ref="0x2ace8361dbb8" scoped=""/>
+        <function-ref name="setAdmux" ref="0x2ace8361dd40" scoped=""/>
+        <function-ref name="enableInterruption" ref="0x2ace8361c020" scoped=""/>
+        <function-ref name="isComplete" ref="0x2ace8361c1a8" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace8361c330" scoped=""/>
+        <function-ref name="disableAdc" ref="0x2ace8361c4b8" scoped=""/>
+        <function-ref name="resetInterrupt" ref="0x2ace8361c640" scoped=""/>
+        <function-ref name="disableInterruption" ref="0x2ace8361c7c8" scoped=""/>
+        <function-ref name="startConversion" ref="0x2ace8361c950" scoped=""/>
+        <function-ref name="isStarted" ref="0x2ace8361cbd8" scoped=""/>
+        <function-ref name="setAdcsra" ref="0x2ace8361cd60" scoped=""/>
+        <function-ref name="setContinuous" ref="0x2ace8361b020" scoped=""/>
+        <function-ref name="getAdcsra" ref="0x2ace8361b1a8" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace8361b330" scoped=""/>
+        <function-ref name="dataReady" ref="0x2ace8361b4b8" scoped=""/>
+      </interface-functions>
+    </interface><component loc="82:/opt/tinyos-2.1.2/tos/chips/atm1281/McuSleepC.nc" nicename="tos.chips.atm1281.McuSleepC" qname="McuSleepC" safe="">
+      <documentation loc="67:/opt/tinyos-2.1.2/tos/chips/atm1281/McuSleepC.nc">
+        <short>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the Atmega128.</short>
+        <long>
+ Implementation of TEP 112 (Microcontroller Power Management) for
+ the Atmega128. Power state calculation code copied from Rob
+ Szewczyk's 1.x code in HPLPowerManagementM.nc.
+
+ &lt;pre&gt;
+  $Id: McuSleepC.nc,v 1.6 2010-06-29 22:07:43 scipio Exp $
+ &lt;/pre&gt;
+
+ @author Philip Levis
+ @author Robert Szewczyk
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+ @date   October 30, 2007
+</long>
+      </documentation>
+      <module/>
+    </component><component loc="47:/opt/tinyos-2.1.2/tos/chips/atm1281/adc/HplAtm128AdcP.nc" nicename="tos.chips.atm1281.adc.HplAtm128AdcP" qname="HplAtm128AdcP" safe="">
+      <documentation loc="38:/opt/tinyos-2.1.2/tos/chips/atm1281/adc/HplAtm128AdcP.nc">
+        <short>
+ HPL for the Atmega1281 A/D conversion susbsystem.</short>
+        <long>
+ HPL for the Atmega1281 A/D conversion susbsystem.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+ @author Hu Siquan &lt;husq@xbow.com&gt;
+ @author David Gay
+ @author Janos Sallai &lt;janos.sallai@vanderbilt.edu&gt;
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

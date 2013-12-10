@@ -1,0 +1,61 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP" safe="">
+      <documentation loc="34:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc">
+        <short>
+ Interrupt interface access for interrupt capable GPIO pins.</short>
+        <long>
+ Interrupt interface access for interrupt capable GPIO pins.
+
+ @author Martin Turon &lt;mturon@xbow.com&gt;
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="39:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="ctrl_addr" ref="0x2ace837157e0">
+          <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="40:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="edge0bit" ref="0x2ace83715b48">
+          <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="41:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="edge1bit" ref="0x2ace836f2020">
+          <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+        <constant loc="42:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="bit" ref="0x2ace836f2350">
+          <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <module/>
+    <specification><interface loc="44:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="Irq" provided="1" ref="0x2ace836f2c58">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Irq" ref="0x2ace836f2c58" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128Interrupt" qname="HplAtm128Interrupt"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace8376f020" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8376f1a8" scoped=""/>
+        <function-ref name="disable" ref="0x2ace8376f330" scoped=""/>
+        <function-ref name="edge" ref="0x2ace8376f4b8" scoped=""/>
+        <function-ref name="enable" ref="0x2ace8376f640" scoped=""/>
+        <function-ref name="getValue" ref="0x2ace8376f7c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/chips/atm128/pins/HplAtm128InterruptPinP.nc" name="IrqSignal" provided="0" ref="0x2ace8376fbc8">
+      <component-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptPinP" qname="HplAtm128InterruptPinP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="IrqSignal" ref="0x2ace8376fbc8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.pins.HplAtm128InterruptSig" qname="HplAtm128InterruptSig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="fired" ref="0x2ace8376e020" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

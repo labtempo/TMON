@@ -1,0 +1,504 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="resourceName" ref="0x2ace834a06e0">
+          <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+          <type-pointer alignment="I:1" size="I:2">
+            <type-int alignment="I:1" cname="char" size="I:1"/>
+          </type-pointer>
+        </constant>
+        <constant loc="37:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="startup_delay" ref="0x2ace834a0a68">
+          <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+          </type-int>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="Read" ref="0x2ace8349b5e8" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2ace835a2cf8" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace8349c3c0" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace83510020" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ace83556c38" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ace8350d0e0" scoped=""/></to>
+        </wire>
+        <wire loc="57:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="SplitControl" ref="0x2ace83509080" scoped=""/></from>
+          <to><interface-ref name="SplitControl" ref="0x2ace835a20e0" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ace83556080" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ace8350e4a8" scoped=""/></to>
+        </wire>
+        <wire loc="59:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="ActualRead" ref="0x2ace83598228" scoped=""/></from>
+          <to><interface-ref name="ReadNow" ref="0x2ace836ecae0" scoped=""/></to>
+        </wire>
+        <wire loc="60:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="Timer" ref="0x2ace8359e0a0" scoped=""/></from>
+          <to><interface-ref name="Timer" ref="0x2ace836e76f8" scoped=""/></to>
+        </wire>
+        <wire loc="61:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="AnalogDeviceResource" ref="0x2ace8359f380" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace83592db0" scoped=""/></to>
+        </wire>
+        <wire loc="63:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x2ace836ea100" scoped=""/></from>
+          <to><interface-ref name="AdcConfig" ref="0x2ace83495c00" scoped=""/></to>
+        </wire>
+        <wire loc="64:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc">
+          <from><interface-ref name="EnablePin" ref="0x2ace83599020" scoped=""/></from>
+          <to><interface-ref name="EnablePin" ref="0x2ace83498678" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="44:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="EnablePin" provided="0" ref="0x2ace83498678">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="EnablePin" ref="0x2ace83498678" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace834989c8" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace83498b50" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace83498cd8" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace83498e60" scoped=""/>
+        <function-ref name="get" ref="0x2ace83497020" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace834971a8" scoped=""/>
+        <function-ref name="set" ref="0x2ace83497330" scoped=""/>
+        <function-ref name="clr" ref="0x2ace834974b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="Read" provided="1" ref="0x2ace8349b5e8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace8349b5e8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace8349a158" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace8349a5a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="Resource" provided="1" ref="0x2ace8349c3c0">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace8349c3c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace8349c710" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace8349c898" scoped=""/>
+        <function-ref name="request" ref="0x2ace8349ca20" scoped=""/>
+        <function-ref name="granted" ref="0x2ace8349cba8" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace8349cd30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceC.nc" name="AdcConfig" provided="0" ref="0x2ace83495c00">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceC" qname="SharedAnalogDeviceC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AdcConfig" ref="0x2ace83495c00" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace83498020" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace834981a8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace83498330" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="45:/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc" name="Timer" provided="1" ref="0x2ace836e76f8">
+      <component-ref nicename="tos.system.TimerMilliC" qname="SharedAnalogDeviceC.TimerMilliC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x2ace836e76f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ace836e4a18" scoped=""/>
+        <function-ref name="fired" ref="0x2ace836e5158" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ace836e5e48" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ace836e59f8" scoped=""/>
+        <function-ref name="getdt" ref="0x2ace836e22e8" scoped=""/>
+        <function-ref name="gett0" ref="0x2ace836e4e68" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ace836e55a8" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ace836e6370" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ace836e4448" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ace836e6810" scoped=""/>
+        <function-ref name="stop" ref="0x2ace836e6cb0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="91:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="Resource" provided="1" ref="0x2ace83510020">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="SharedAnalogDeviceC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83510020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83510390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace83510518" scoped=""/>
+        <function-ref name="request" ref="0x2ace835106a0" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83510828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace835109b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="69:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="SplitControl" provided="0" ref="0x2ace83509080">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SharedAnalogDeviceC.PowerManager"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x2ace83509080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ace835093d0" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ace83509558" scoped=""/>
+        <function-ref name="start" ref="0x2ace835096e0" scoped=""/>
+        <function-ref name="stop" ref="0x2ace83509868" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="40:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="Read" provided="1" ref="0x2ace835a2cf8">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace835a2cf8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace835a18b8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace835a1d28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="Timer" provided="0" ref="0x2ace8359e0a0">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Timer" ref="0x2ace8359e0a0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.timer.Timer" qname="Timer"/>
+        <arguments>
+          <type-tag alignment="I:1" size="I:2"><struct-ref ref="0x2ace81a48020"/>
+            <typename><typedef-ref name="TMilli" ref="0x2ace81a48378"/></typename>
+          </type-tag>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="getNow" ref="0x2ace8359a2b8" scoped=""/>
+        <function-ref name="fired" ref="0x2ace8359d9b0" scoped=""/>
+        <function-ref name="startPeriodicAt" ref="0x2ace8359c6c8" scoped=""/>
+        <function-ref name="isOneShot" ref="0x2ace8359c278" scoped=""/>
+        <function-ref name="getdt" ref="0x2ace8359ab58" scoped=""/>
+        <function-ref name="gett0" ref="0x2ace8359a708" scoped=""/>
+        <function-ref name="isRunning" ref="0x2ace8359de00" scoped=""/>
+        <function-ref name="startPeriodic" ref="0x2ace8359ebe8" scoped=""/>
+        <function-ref name="startOneShotAt" ref="0x2ace8359cc98" scoped=""/>
+        <function-ref name="startOneShot" ref="0x2ace8359d0c0" scoped=""/>
+        <function-ref name="stop" ref="0x2ace8359d560" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="72:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="ResourceDefaultOwner" provided="0" ref="0x2ace83556080">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SharedAnalogDeviceC.PowerManager"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ace83556080" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace835563d0" scoped=""/>
+        <function-ref name="requested" ref="0x2ace83556558" scoped=""/>
+        <function-ref name="granted" ref="0x2ace835566e0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83556868" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace835569f0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ArbiterInfo" provided="1" ref="0x2ace8350d0e0">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="SharedAnalogDeviceC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ace8350d0e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ace8350d430" scoped=""/>
+        <function-ref name="userId" ref="0x2ace8350d5b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="46:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="ActualRead" provided="0" ref="0x2ace83598228">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ActualRead" ref="0x2ace83598228" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadNow" qname="ReadNow"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83598da8" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace83597270" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="23:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadNowClientC.nc" name="Resource" provided="1" ref="0x2ace83592db0">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadNowClientC" qname="SharedAnalogDeviceC.Adc"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace83592db0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace836ec170" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace836ec2f8" scoped=""/>
+        <function-ref name="request" ref="0x2ace836ec480" scoped=""/>
+        <function-ref name="granted" ref="0x2ace836ec608" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace836ec790" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="43:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="AnalogDeviceResource" provided="0" ref="0x2ace8359f380">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="AnalogDeviceResource" ref="0x2ace8359f380" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace8359f6d0" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace8359f858" scoped=""/>
+        <function-ref name="request" ref="0x2ace8359f9e0" scoped=""/>
+        <function-ref name="granted" ref="0x2ace8359fb68" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace8359fcf0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadNowClientC.nc" name="ReadNow" provided="1" ref="0x2ace836ecae0">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadNowClientC" qname="SharedAnalogDeviceC.Adc"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ReadNow" ref="0x2ace836ecae0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ReadNow" qname="ReadNow"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace836eb690" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace836ebb18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="EnablePin" provided="0" ref="0x2ace83599020">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="EnablePin" ref="0x2ace83599020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.GeneralIO" qname="GeneralIO"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="makeInput" ref="0x2ace83599370" scoped=""/>
+        <function-ref name="isInput" ref="0x2ace835994f8" scoped=""/>
+        <function-ref name="toggle" ref="0x2ace83599680" scoped=""/>
+        <function-ref name="isOutput" ref="0x2ace83599808" scoped=""/>
+        <function-ref name="get" ref="0x2ace83599990" scoped=""/>
+        <function-ref name="makeOutput" ref="0x2ace83599b18" scoped=""/>
+        <function-ref name="set" ref="0x2ace83599ca0" scoped=""/>
+        <function-ref name="clr" ref="0x2ace83599e28" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="73:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" name="ArbiterInfo" provided="0" ref="0x2ace83556c38">
+      <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SharedAnalogDeviceC.PowerManager"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ace83556c38" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ace83555020" scoped=""/>
+        <function-ref name="userId" ref="0x2ace835551a8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="39:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" name="SplitControl" provided="1" ref="0x2ace835a20e0">
+      <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SplitControl" ref="0x2ace835a20e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.SplitControl" qname="SplitControl"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="startDone" ref="0x2ace835a2430" scoped=""/>
+        <function-ref name="stopDone" ref="0x2ace835a25b8" scoped=""/>
+        <function-ref name="start" ref="0x2ace835a2740" scoped=""/>
+        <function-ref name="stop" ref="0x2ace835a28c8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ace8350e4a8">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="SharedAnalogDeviceC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ace8350e4a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace8350e7f8" scoped=""/>
+        <function-ref name="requested" ref="0x2ace8350e980" scoped=""/>
+        <function-ref name="granted" ref="0x2ace8350eb08" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace8350ec90" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace8350ee18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="27:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadNowClientC.nc" name="Atm128AdcConfig" provided="0" ref="0x2ace836ea100">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadNowClientC" qname="SharedAnalogDeviceC.Adc"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace836ea100" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace836ea450" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace836ea5d8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace836ea760" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="44(SharedAnalogDeviceC.TimerMilliC):/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc" nicename="tos.system.TimerMilliC" qname="SharedAnalogDeviceC.TimerMilliC">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/system/TimerMilliC.nc">
+        <short>
+ The virtualized millisecond timer abstraction.</short>
+        <long>
+ The virtualized millisecond timer abstraction. Instantiating this 
+ component gives an independent millisecond granularity timer.
+
+ @author Philip Levis
+ @date   January 16 2006
+ @see    TEP 102: Timers
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.TimerMilliC" qname="TimerMilliC"/>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="67(SharedAnalogDeviceC.PowerManager):/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc" nicename="tos.lib.power.SplitControlPowerManagerC" qname="SharedAnalogDeviceC.PowerManager">
+      <documentation loc="41:/opt/tinyos-2.1.2/tos/lib/power/SplitControlPowerManagerC.nc">
+        <short>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component povides a power management policy for managing the power
+ states of non-virtualized devices.</short>
+        <long>
+ Please refer to TEP 115 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component povides a power management policy for managing the power
+ states of non-virtualized devices.  Non-virtualized devices are shared
+ using a parameterized Resource interface, and are powered down according
+ to some policy whenever there are no more pending requests to that Resource.
+ The policy implemented by this component is to delay the power down of a
+ device by some contant factor.  Such a policy is useful whenever a device
+ has a long wake-up latency.  The cost of waiting for the device to power
+ up can be avoided if the device is requested again before some predetermined
+ amount of time.&lt;br&gt;&lt;br&gt;
+
+ Powerdown of the device is done through the &lt;code&gt;SplitControl&lt;/code&gt;
+ interface, so this component can only be used with those devices that
+ provide that interface.&lt;br&gt;&lt;br&gt;
+
+ For devices providing either the &lt;code&gt;AsyncStdControl&lt;/code&gt; or
+ &lt;code&gt;StdControl&lt;/code&gt; interfaces, please use either the
+ &lt;code&gt;AsyncStdControlPowerManagerC&lt;/code&gt; component or the
+ &lt;code&gt;StdControlPowerManagerC&lt;/code&gt; component respectively.
+ 
+ @author Kevin Klues (klueska@cs.wustl.edu)
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.lib.power.SplitControlPowerManagerC" qname="SplitControlPowerManagerC"/>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="37(SharedAnalogDeviceC.AnalogDevice):/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc" nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceC.AnalogDevice">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/sensorboards/mda100/SharedAnalogDeviceP.nc">
+        <short>
+ </short>
+        <long>
+ @author Kevin Klues &lt;klueska@cs.stanford.edu&gt;
+ @date August 20th, 2007
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.sensorboards.mda100.SharedAnalogDeviceP" qname="SharedAnalogDeviceP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+            </type-int>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component abstract="" loc="89(SharedAnalogDeviceC.Arbiter):/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" nicename="tos.system.RoundRobinArbiterC" qname="SharedAnalogDeviceC.Arbiter">
+      <documentation loc="69:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ a Round Robin fashion.  An array is used to keep track of which users have 
+ put in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in Round Robin order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+        <arguments>
+          <value cst="U:">
+            <type-pointer alignment="I:1" size="I:2">
+              <type-int alignment="I:1" cname="char" size="I:1"/>
+            </type-pointer>
+          </value>
+        </arguments>
+      </instance>
+      <configuration/>
+    </component><component abstract="" loc="21(SharedAnalogDeviceC.Adc):/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadNowClientC.nc" nicename="tos.chips.atm128.adc.AdcReadNowClientC" qname="SharedAnalogDeviceC.Adc">
+      <documentation loc="10:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadNowClientC.nc">
+        <short>
+ Provide, as per TEP101, Resource-based access to the Atmega128 ADC via a
+ ReadNow interface.</short>
+        <long>
+ Provide, as per TEP101, Resource-based access to the Atmega128 ADC via a
+ ReadNow interface.  Users of this component must link it to an
+ implementation of Atm128AdcConfig which provides the ADC parameters
+ (channel, etc).
+ 
+ @author David Gay
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.atm128.adc.AdcReadNowClientC" qname="AdcReadNowClientC"/>
+      </instance>
+      <configuration/>
+    </component></referenced></component>

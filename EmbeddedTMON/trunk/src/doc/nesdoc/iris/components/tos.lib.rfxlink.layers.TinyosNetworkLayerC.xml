@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><component abstract="" loc="50:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC">
+      <parameters>
+      </parameters>
+      <module/>
+    <specification><interface loc="69:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="SubSend" provided="0" ref="0x2ace82144020">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubSend" ref="0x2ace82144020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace82144370" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace821444f8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace82144680" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="70:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="SubReceive" provided="0" ref="0x2ace821449e0">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubReceive" ref="0x2ace821449e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareReceive" qname="BareReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace82144d30" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="Ieee154Packet" provided="1" ref="0x2ace82148020">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Ieee154Packet" ref="0x2ace82148020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace82148370" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace821484f8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82148680" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace82148808" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace82148990" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace82148b18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="62:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="TinyosReceive" provided="1" ref="0x2ace82146878">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TinyosReceive" ref="0x2ace82146878" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareReceive" qname="BareReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace82146bc8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="71:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="SubPacket" provided="0" ref="0x2ace821430c0">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SubPacket" ref="0x2ace821430c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace82143410" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace82143598" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82143720" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace821438a8" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace82143a30" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace82143bb8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="TinyosSend" provided="1" ref="0x2ace82148e60">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TinyosSend" ref="0x2ace82148e60" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace821461e8" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace82146370" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace821464f8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="55:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="Ieee154Send" provided="1" ref="0x2ace8214cdf0">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Ieee154Send" ref="0x2ace8214cdf0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareSend" qname="BareSend"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="send" ref="0x2ace82149170" scoped=""/>
+        <function-ref name="cancel" ref="0x2ace821492f8" scoped=""/>
+        <function-ref name="sendDone" ref="0x2ace82149480" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="Ieee154Receive" provided="1" ref="0x2ace82149808">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Ieee154Receive" ref="0x2ace82149808" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.BareReceive" qname="BareReceive"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="receive" ref="0x2ace82149b58" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="63:/opt/tinyos-2.1.2/tos/lib/rfxlink/layers/TinyosNetworkLayerC.nc" name="TinyosPacket" provided="1" ref="0x2ace82145020">
+      <component-ref nicename="tos.lib.rfxlink.layers.TinyosNetworkLayerC" qname="TinyosNetworkLayerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="TinyosPacket" ref="0x2ace82145020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.rfxlink.util.RadioPacket" qname="RadioPacket"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="clear" ref="0x2ace82145370" scoped=""/>
+        <function-ref name="payloadLength" ref="0x2ace821454f8" scoped=""/>
+        <function-ref name="maxPayloadLength" ref="0x2ace82145680" scoped=""/>
+        <function-ref name="setPayloadLength" ref="0x2ace82145808" scoped=""/>
+        <function-ref name="headerLength" ref="0x2ace82145990" scoped=""/>
+        <function-ref name="metadataLength" ref="0x2ace82145b18" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

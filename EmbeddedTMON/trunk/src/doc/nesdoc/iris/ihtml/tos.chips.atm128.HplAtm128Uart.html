@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128.HplAtm128Uart</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128.HplAtm128Uart</h2>
+    <b>interface HplAtm128Uart</b><p>
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Alec Woo &lt;awoo@archrock.com&gt;
+ 
+      </dd>
+      <dd>
+        Jonathan Hui &lt;jhui@archrock.com&gt;
+ 
+      </dd>
+      <dt><b>Version:</b>
+      <dd>
+        $Revision: 1.4 $ $Date: 2006-12-12 18:23:03 $
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command error_t <a href="#disableRxIntr">disableRxIntr</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#disableTxIntr">disableTxIntr</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#enableRxIntr">enableRxIntr</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command error_t <a href="#enableTxIntr">enableTxIntr</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isRxEmpty">isRxEmpty</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command bool <a href="#isTxEmpty">isTxEmpty</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command uint8_t <a href="#rx">rx</a>()
+      </span></div><div id=funcsig><span id=funcnameshort>command void <a href="#tx">tx</a>(uint8_t data)
+      </span></div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event void <a href="#rxDone">rxDone</a>(uint8_t data)
+      </span></div><div id=funcsig><span id=funcnameshort>event void <a href="#txDone">txDone</a>()
+      </span></div><p><div id=heading>Commands - Details</div>
+    <a name="disableRxIntr"></a>
+    <h4>disableRxIntr
+    </h4>
+    <span id=funcnameshort>command error_t <b>disableRxIntr</b>()
+    </span><hr>
+    <a name="disableTxIntr"></a>
+    <h4>disableTxIntr
+    </h4>
+    <span id=funcnameshort>command error_t <b>disableTxIntr</b>()
+    </span><hr>
+    <a name="enableRxIntr"></a>
+    <h4>enableRxIntr
+    </h4>
+    <span id=funcnameshort>command error_t <b>enableRxIntr</b>()
+    </span><hr>
+    <a name="enableTxIntr"></a>
+    <h4>enableTxIntr
+    </h4>
+    <span id=funcnameshort>command error_t <b>enableTxIntr</b>()
+    </span><hr>
+    <a name="isRxEmpty"></a>
+    <h4>isRxEmpty
+    </h4>
+    <span id=funcnameshort>command bool <b>isRxEmpty</b>()
+    </span><hr>
+    <a name="isTxEmpty"></a>
+    <h4>isTxEmpty
+    </h4>
+    <span id=funcnameshort>command bool <b>isTxEmpty</b>()
+    </span><hr>
+    <a name="rx"></a>
+    <h4>rx
+    </h4>
+    <span id=funcnameshort>command uint8_t <b>rx</b>()
+    </span><hr>
+    <a name="tx"></a>
+    <h4>tx
+    </h4>
+    <span id=funcnameshort>command void <b>tx</b>(uint8_t data)
+    </span><p><div id=heading>Events - Details</div>
+    <a name="rxDone"></a>
+    <h4>rxDone
+    </h4>
+    <span id=funcnameshort>event void <b>rxDone</b>(uint8_t data)
+    </span><hr>
+    <a name="txDone"></a>
+    <h4>txDone
+    </h4>
+    <span id=funcnameshort>event void <b>txDone</b>()
+    </span>
+  </body>
+</html>

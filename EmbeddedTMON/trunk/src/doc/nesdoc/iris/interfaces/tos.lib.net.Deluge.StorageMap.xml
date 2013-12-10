@@ -1,0 +1,42 @@
+<?xml version="1.0" ?><interfacedef loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/StorageMap.nc" nicename="tos.lib.net.Deluge.StorageMap" qname="StorageMap">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/StorageMap.nc">
+        <short>
+ An abstraction to map volume addresses to physical addresses.</short>
+        <long>
+ An abstraction to map volume addresses to physical addresses.
+
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.1 $ $Date: 2008-01-25 00:50:15 $
+</long>
+      </documentation>
+      <function command="" loc="47:/opt/tinyos-2.1.2/tos/lib/net/Deluge/StorageMap.nc" name="getPhysicalAddress" provided="0" ref="0x2ace83996290">
+        <documentation loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/StorageMap.nc">
+          <short>
+ Get the physical address of a volume address.</short>
+          <long>
+ Get the physical address of a volume address.
+
+ @param addr the volume addres.
+ @return the physical address.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.StorageMap" qname="StorageMap"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+            <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="47:/opt/tinyos-2.1.2/tos/lib/net/Deluge/StorageMap.nc" name="addr" ref="0x2ace83996020">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="storage_addr_t" ref="0x2ace8381d798"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+    </interfacedef>

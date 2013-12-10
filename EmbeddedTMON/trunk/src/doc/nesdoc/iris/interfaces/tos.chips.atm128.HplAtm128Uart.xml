@@ -1,0 +1,141 @@
+<?xml version="1.0" ?><interfacedef loc="38:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc">
+        <short>
+ </short>
+        <long>
+ @author Alec Woo &lt;awoo@archrock.com&gt;
+ @author Jonathan Hui &lt;jhui@archrock.com&gt;
+ @version $Revision: 1.4 $ $Date: 2006-12-12 18:23:03 $
+</long>
+      </documentation>
+      <function command="" loc="44:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="isTxEmpty" provided="0" ref="0x2ace832d8578">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2ace819b29b8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="42:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="enableRxIntr" provided="0" ref="0x2ace832d9738">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function event="" loc="49:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="rxDone" provided="0" ref="0x2ace832d5c08">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="49:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="data" ref="0x2ace832d5998">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="47:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="txDone" provided="0" ref="0x2ace832d6c08">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="40:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="enableTxIntr" provided="0" ref="0x2ace832dc7f8">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="41:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="disableTxIntr" provided="0" ref="0x2ace832d9020">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="43:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="disableRxIntr" provided="0" ref="0x2ace832d9e58">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="45:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="isRxEmpty" provided="0" ref="0x2ace832d8c58">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="bool" ref="0x2ace819b29b8"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+      <function command="" loc="46:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="tx" provided="0" ref="0x2ace832d6578">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="46:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="data" ref="0x2ace832d6308">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="48:/opt/tinyos-2.1.2/tos/chips/atm128/HplAtm128Uart.nc" name="rx" provided="0" ref="0x2ace832d5328">
+        <interfacedef-ref nicename="tos.chips.atm128.HplAtm128Uart" qname="HplAtm128Uart"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

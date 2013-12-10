@@ -1,0 +1,21 @@
+<?xml version="1.0" ?><component loc="44:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/avr/InternalFlashC.nc" nicename="tos.lib.net.Deluge.extra.avr.InternalFlashC" qname="InternalFlashC">
+      <documentation loc="519:/usr/bin/../lib/gcc/avr/4.1.2/../../../../avr/include/avr/eeprom.h">
+        <short> \def __EEGET
+\ingroup avr_eeprom
+Read a byte from EEPROM.</short>
+        <long> \def __EEGET
+\ingroup avr_eeprom
+Read a byte from EEPROM. Compatibility define for IAR C.	*</long>
+      </documentation>
+      <module/>
+    <specification><interface loc="45:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/avr/InternalFlashC.nc" name="InternalFlash" provided="1" ref="0x2ace83cce558">
+      <component-ref nicename="tos.lib.net.Deluge.extra.avr.InternalFlashC" qname="InternalFlashC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="InternalFlash" ref="0x2ace83cce558" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.InternalFlash" qname="InternalFlash"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace83cce8a8" scoped=""/>
+        <function-ref name="write" ref="0x2ace83ccea30" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced/></component>

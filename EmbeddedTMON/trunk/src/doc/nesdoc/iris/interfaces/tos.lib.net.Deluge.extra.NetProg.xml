@@ -1,0 +1,67 @@
+<?xml version="1.0" ?><interfacedef loc="45:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc" nicename="tos.lib.net.Deluge.extra.NetProg" qname="NetProg">
+      <documentation loc="38:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc">
+        <short>
+ Top level interface for network programming integration with
+ applications.</short>
+        <long>
+ Top level interface for network programming integration with
+ applications.
+
+ @author Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+</long>
+      </documentation>
+      <function command="" loc="64:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc" name="programImageAndReboot" provided="0" ref="0x2ace83c54b08">
+        <documentation loc="55:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc">
+          <short>
+ Reboot into the image specified by &lt;code&gt;imageAddr&lt;/code&gt;.</short>
+          <long>
+ Reboot into the image specified by &lt;code&gt;imageAddr&lt;/code&gt;. This
+ assumes that an image is present into the external flash
+ at the &lt;code&gt;imageAddr&lt;/code&gt; address.
+
+ @param imageAddr  Address in external flash
+ @return        &lt;code&gt;FAIL&lt;/code&gt; if the reboot command fails to 
+                complete, does not return, otherwise.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.extra.NetProg" qname="NetProg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="64:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc" name="imageAddr" ref="0x2ace83c54898">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="uint32_t" ref="0x2ace810e1608"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="53:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc" name="reboot" provided="0" ref="0x2ace83c540d8">
+        <documentation loc="48:/opt/tinyos-2.1.2/tos/lib/net/Deluge/extra/NetProg.nc">
+          <short>
+ Reboot the node.</short>
+          <long>
+ Reboot the node.
+
+ @return  Does not return.
+</long>
+        </documentation>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.extra.NetProg" qname="NetProg"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

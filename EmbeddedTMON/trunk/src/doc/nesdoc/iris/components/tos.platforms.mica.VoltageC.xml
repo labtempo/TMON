@@ -1,0 +1,109 @@
+<?xml version="1.0" ?><component abstract="" loc="39:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageC.nc" nicename="tos.platforms.mica.VoltageC" qname="VoltageC">
+      <documentation loc="31:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageC.nc">
+        <short>
+ Battery Voltage.</short>
+        <long>
+ Battery Voltage. The returned value represents the difference
+ between the battery voltage and V_BG (1.23V). The formula to convert
+ it to mV is: 1223 * 1024 / value.
+
+ @author Razvan Musaloiu-E.
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="48:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageC.nc">
+          <from><interface-ref name="Read" ref="0x2ace837dba10" scoped=""/></from>
+          <to><interface-ref name="Read" ref="0x2ace837d5a40" scoped=""/></to>
+        </wire>
+        <wire loc="50:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageC.nc">
+          <from><interface-ref name="Atm128AdcConfig" ref="0x2ace837cc060" scoped=""/></from>
+          <to><interface-ref name="Atm128AdcConfig" ref="0x2ace837c8020" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="41:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageC.nc" name="Read" provided="1" ref="0x2ace837dba10">
+      <component-ref nicename="tos.platforms.mica.VoltageC" qname="VoltageC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace837dba10" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace837d85a0" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace837d89f0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="40:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc" name="Atm128AdcConfig" provided="1" ref="0x2ace837c8020">
+      <component-ref nicename="tos.platforms.mica.VoltageP" qname="VoltageP"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace837c8020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace837c8370" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace837c84f8" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace837c8680" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="22:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadClientC.nc" name="Read" provided="1" ref="0x2ace837d5a40">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="VoltageC.AdcReadClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Read" ref="0x2ace837d5a40" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Read" qname="Read"/>
+        <arguments>
+          <type-int alignment="I:1" cname="unsigned short" size="I:2" unsigned="">
+            <typename><typedef-ref name="uint16_t" ref="0x2ace810e0b98"/></typename>
+          </type-int>
+        </arguments>
+      </instance>
+      <interface-functions>
+        <function-ref name="read" ref="0x2ace837cd620" scoped=""/>
+        <function-ref name="readDone" ref="0x2ace837cda70" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="24:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadClientC.nc" name="Atm128AdcConfig" provided="0" ref="0x2ace837cc060">
+      <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="VoltageC.AdcReadClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Atm128AdcConfig" ref="0x2ace837cc060" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.chips.atm128.adc.Atm128AdcConfig" qname="Atm128AdcConfig"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="getRefVoltage" ref="0x2ace837cc3b0" scoped=""/>
+        <function-ref name="getChannel" ref="0x2ace837cc538" scoped=""/>
+        <function-ref name="getPrescaler" ref="0x2ace837cc6c0" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="21(VoltageC.AdcReadClientC):/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadClientC.nc" nicename="tos.chips.atm128.adc.AdcReadClientC" qname="VoltageC.AdcReadClientC">
+      <documentation loc="10:/opt/tinyos-2.1.2/tos/chips/atm128/adc/AdcReadClientC.nc">
+        <short>
+ Provide, as per TEP101, arbitrated access via a Read interface to the
+ Atmega128 ADC.</short>
+        <long>
+ Provide, as per TEP101, arbitrated access via a Read interface to the
+ Atmega128 ADC.  Users of this component must link it to an
+ implementation of Atm128AdcConfig which provides the ADC parameters
+ (channel, etc).
+ 
+ @author David Gay
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.chips.atm128.adc.AdcReadClientC" qname="AdcReadClientC"/>
+      </instance>
+      <configuration/>
+    </component><component loc="38:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc" nicename="tos.platforms.mica.VoltageP" qname="VoltageP">
+      <documentation loc="31:/opt/tinyos-2.1.2/tos/platforms/mica/VoltageP.nc">
+        <short>
+ Battery Voltage.</short>
+        <long>
+ Battery Voltage. The returned value represents the difference
+ between the battery voltage and V_BG (1.23V). The formula to convert
+ it to mV is: 1223 * 1024 / value.
+
+ @author Razvan Musaloiu-E.
+</long>
+      </documentation>
+      <module/>
+    </component></referenced></component>

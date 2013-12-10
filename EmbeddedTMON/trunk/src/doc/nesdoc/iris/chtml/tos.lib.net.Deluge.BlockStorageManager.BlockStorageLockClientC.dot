@@ -1,0 +1,5 @@
+digraph "tos.lib.net.Deluge.BlockStorageManager.BlockStorageLockClientC" {
+  n0x2ace83c02978 [shape=ellipse, style=filled, label="Resource", fontsize=12];
+  "BlockStorageLockC" [fontsize=12, shape=box,peripheries=2, URL="../chtml/tos.lib.net.Deluge.BlockStorageManager.BlockStorageLockC.html"];
+  "n0x2ace83c02978" -> "BlockStorageLockC" [label="Resource", URL="../ihtml/tos.interfaces.Resource.html", fontsize=10];
+}

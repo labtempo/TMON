@@ -1,0 +1,383 @@
+<?xml version="1.0" ?><component abstract="" loc="89:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC">
+      <documentation loc="69:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ArbiterInfo, and ResourceDefaultOwner
+ interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource in
+ a Round Robin fashion.  An array is used to keep track of which users have 
+ put in requests for the resource.  Upon the release of the resource by one
+ of these users, the array is checked and the next user (in Round Robin order)
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the resource is granted to the default 
+ user.  If a new request is made, the default user will release the resource, 
+ and it will be granted to the requesting cleint.
+
+ @param &lt;b&gt;resourceName&lt;/b&gt; -- The name of the Resource being shared
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+</long>
+      </documentation>
+      <parameters>
+        <constant loc="89:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="resourceName" ref="0x2ace835087a0">
+          <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+          <type-pointer alignment="I:1" size="I:2">
+            <type-int alignment="I:1" cname="char" size="I:1"/>
+          </type-pointer>
+        </constant>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="106:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceRequested" ref="0x2ace83505348" scoped=""/></from>
+          <to><interface-ref name="ResourceRequested" ref="0x2ace8351ad18" scoped=""/></to>
+        </wire>
+        <wire loc="107:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceDefaultOwner" ref="0x2ace83500bb0" scoped=""/></from>
+          <to><interface-ref name="ResourceDefaultOwner" ref="0x2ace835194a8" scoped=""/></to>
+        </wire>
+        <wire loc="105:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace835071c8" scoped=""/></from>
+          <to><interface-ref name="Resource" ref="0x2ace8351a020" scoped=""/></to>
+        </wire>
+        <wire loc="108:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ArbiterInfo" ref="0x2ace835048f8" scoped=""/></from>
+          <to><interface-ref name="ArbiterInfo" ref="0x2ace835180e0" scoped=""/></to>
+        </wire>
+        <wire loc="103:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ace81c784c8" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ace834fd6b8" scoped=""/></to>
+        </wire>
+        <wire loc="109:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="ResourceConfigure" ref="0x2ace83518980" scoped=""/></from>
+          <to><interface-ref name="ResourceConfigure" ref="0x2ace834ff660" scoped=""/></to>
+        </wire>
+        <wire loc="111:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc">
+          <from><interface-ref name="Queue" ref="0x2ace83517130" scoped=""/></from>
+          <to><interface-ref name="RoundRobinQueue" ref="0x2ace834fdc90" scoped=""/></to>
+        </wire>
+      </wiring>
+    <specification><interface loc="92:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ResourceRequested" provided="1" ref="0x2ace83505348">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ace83505348" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ace83505698" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace83505820" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="96:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ResourceConfigure" provided="0" ref="0x2ace834ff660">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ace834ff660" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ace834ff9b0" scoped=""/>
+        <function-ref name="configure" ref="0x2ace834ffb38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="93:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ace83500bb0">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ace83500bb0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83504020" scoped=""/>
+        <function-ref name="requested" ref="0x2ace835041a8" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83504330" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace835044b8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace83504640" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="91:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="Resource" provided="1" ref="0x2ace835071c8">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace835071c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace83507518" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace835076a0" scoped=""/>
+        <function-ref name="request" ref="0x2ace83507828" scoped=""/>
+        <function-ref name="granted" ref="0x2ace835079b0" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83507b38" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="94:/opt/tinyos-2.1.2/tos/system/RoundRobinArbiterC.nc" name="ArbiterInfo" provided="1" ref="0x2ace835048f8">
+      <component-ref nicename="tos.system.RoundRobinArbiterC" qname="RoundRobinArbiterC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ace835048f8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ace83504c48" scoped=""/>
+        <function-ref name="userId" ref="0x2ace83504dd0" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="55:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="ResourceRequested" provided="1" ref="0x2ace8351ad18">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceRequested" ref="0x2ace8351ad18" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceRequested" qname="ResourceRequested"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="requested" ref="0x2ace835190d8" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace83519260" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="56:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="ResourceDefaultOwner" provided="1" ref="0x2ace835194a8">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceDefaultOwner" ref="0x2ace835194a8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceDefaultOwner" qname="ResourceDefaultOwner"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace835197f8" scoped=""/>
+        <function-ref name="requested" ref="0x2ace83519980" scoped=""/>
+        <function-ref name="granted" ref="0x2ace83519b08" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace83519c90" scoped=""/>
+        <function-ref name="immediateRequested" ref="0x2ace83519e18" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="44:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" name="Init" provided="1" ref="0x2ace834fd6b8">
+      <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinArbiterC.Queue"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Init" ref="0x2ace834fd6b8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ace834fda08" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="58:/opt/tinyos-2.1.2/tos/system/MainC.nc" name="SoftwareInit" provided="0" ref="0x2ace81c784c8">
+      <component-ref nicename="tos.system.MainC" qname="MainC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="SoftwareInit" ref="0x2ace81c784c8" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Init" qname="Init"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="init" ref="0x2ace81c78818" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="45:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" name="RoundRobinQueue" provided="1" ref="0x2ace834fdc90">
+      <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinArbiterC.Queue"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="RoundRobinQueue" ref="0x2ace834fdc90" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x2ace834fc020" scoped=""/>
+        <function-ref name="isEmpty" ref="0x2ace834fc1a8" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x2ace834fc330" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ace834fc4b8" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="61:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="Queue" provided="0" ref="0x2ace83517130">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Queue" ref="0x2ace83517130" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceQueue" qname="ResourceQueue"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="enqueue" ref="0x2ace83517480" scoped=""/>
+        <function-ref name="isEmpty" ref="0x2ace83517608" scoped=""/>
+        <function-ref name="isEnqueued" ref="0x2ace83517790" scoped=""/>
+        <function-ref name="dequeue" ref="0x2ace83517918" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="54:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="Resource" provided="1" ref="0x2ace8351a020">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="Resource" ref="0x2ace8351a020" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.Resource" qname="Resource"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="release" ref="0x2ace8351a390" scoped=""/>
+        <function-ref name="immediateRequest" ref="0x2ace8351a518" scoped=""/>
+        <function-ref name="request" ref="0x2ace8351a6a0" scoped=""/>
+        <function-ref name="granted" ref="0x2ace8351a828" scoped=""/>
+        <function-ref name="isOwner" ref="0x2ace8351a9b0" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="60:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="ResourceConfigure" provided="0" ref="0x2ace83518980">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ResourceConfigure" ref="0x2ace83518980" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ResourceConfigure" qname="ResourceConfigure"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="unconfigure" ref="0x2ace83518cf0" scoped=""/>
+        <function-ref name="configure" ref="0x2ace83518e78" scoped=""/>
+      </interface-functions>
+    </interface><interface loc="57:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" name="ArbiterInfo" provided="1" ref="0x2ace835180e0">
+      <component-ref nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="ArbiterInfo" ref="0x2ace835180e0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.interfaces.ArbiterInfo" qname="ArbiterInfo"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="inUse" ref="0x2ace83518430" scoped=""/>
+        <function-ref name="userId" ref="0x2ace835185b8" scoped=""/>
+      </interface-functions>
+    </interface><component abstract="" loc="52(RoundRobinArbiterC.Arbiter):/opt/tinyos-2.1.2/tos/system/ArbiterP.nc" nicename="tos.system.ArbiterP" qname="RoundRobinArbiterC.Arbiter">
+      <documentation loc="30:/opt/tinyos-2.1.2/tos/system/ArbiterP.nc">
+        <short>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ResourceRequested, ArbiterInfo, 
+ and ResourceDefaultOwner interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.</short>
+        <long>
+ Please refer to TEP 108 for more information about this component and its
+ intended use.&lt;br&gt;&lt;br&gt;
+
+ This component provides the Resource, ResourceRequested, ArbiterInfo, 
+ and ResourceDefaultOwner interfaces and uses the ResourceConfigure interface as
+ described in TEP 108.  It provides arbitration to a shared resource.
+ A Queue is used to keep track of which users have put
+ in requests for the resource.  Upon the release of the resource by one
+ of these users, the queue is checked and the next user
+ that has a pending request will ge granted control of the resource.  If
+ there are no pending requests, then the user of the ResourceDefaultOwner
+ interface gains access to the resource, and holds onto it until
+ another user makes a request.
+
+ @param &lt;b&gt;default_owner_id&lt;/b&gt; -- The id of the default owner of this 
+        resource
+ 
+ @author Kevin Klues (klues@tkn.tu-berlin.de)
+ @author Philip Levis
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.ArbiterP" qname="ArbiterP"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component><component loc="56:/opt/tinyos-2.1.2/tos/system/MainC.nc" nicename="tos.system.MainC" qname="MainC">
+      <documentation loc="1:/opt/tinyos-2.1.2/tos/platforms/micaz/hardware.h">
+        <short>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.</short>
+        <long>                                                                     
+  IMPORTANT: READ BEFORE DOWNLOADING, COPYING, INSTALLING OR USING.  By
+  downloading, copying, installing or using the software you agree to
+  this license.  If you do not agree to this license, do not download,
+  install, copy or use the software.
+
+  Copyright (c) 2004-2005 Crossbow Technology, Inc.
+  Copyright (c) 2002-2003 Intel Corporation.
+  Copyright (c) 2000-2003 The Regents of the University  of California.    
+  All rights reserved.
+
+ Redistribution and use in source and binary forms, with or without
+ modification, are permitted provided that the following conditions
+ are met:
+
+ - Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+ - Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+ - Neither the name of the copyright holder nor the names of
+   its contributors may be used to endorse or promote products derived
+   from this software without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+ &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+ LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+ FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL
+ THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+ STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+ OF THE POSSIBILITY OF SUCH DAMAGE.
+
+  @author Jason Hill, Philip Levis, Nelson Lee, David Gay
+  @author Alan Broad &lt;abroad@xbow.com&gt;
+  @author Matt Miller &lt;mmiller@xbow.com&gt;
+  @author Martin Turon &lt;mturon@xbow.com&gt;
+
+  $Id: hardware.h,v 1.8 2010-06-29 22:07:54 scipio Exp $
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="72:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Boot" ref="0x2ace81c7b020" scoped=""/></from>
+          <to><interface-ref name="Boot" ref="0x2ace81e24080" scoped=""/></to>
+        </wire>
+        <wire loc="67:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="Scheduler" ref="0x2ace81e246b8" scoped=""/></from>
+          <to><interface-ref name="Scheduler" ref="0x2ace819db5c8" scoped=""/></to>
+        </wire>
+        <wire loc="68:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="PlatformInit" ref="0x2ace81e230e0" scoped=""/></from>
+          <to><interface-ref name="Init" ref="0x2ace81c7abe8" scoped=""/></to>
+        </wire>
+        <wire loc="71:/opt/tinyos-2.1.2/tos/system/MainC.nc">
+          <from><interface-ref name="SoftwareInit" ref="0x2ace81e237a8" scoped=""/></from>
+          <to><interface-ref name="SoftwareInit" ref="0x2ace81c784c8" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component><component abstract="" loc="42(RoundRobinArbiterC.Queue):/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc" nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinArbiterC.Queue">
+      <documentation loc="33:/opt/tinyos-2.1.2/tos/system/RoundRobinResourceQueueC.nc">
+        <short>
+
+ </short>
+        <long>
+
+ @author Kevin Klues (klueska@cs.wustl.edu)
+ @version $Revision: 1.7 $
+ @date $Date: 2010-06-29 22:07:56 $
+</long>
+      </documentation>
+      <instance>
+        <component-ref nicename="tos.system.RoundRobinResourceQueueC" qname="RoundRobinResourceQueueC"/>
+        <arguments>
+          <value cst="U:">
+            <type-int alignment="I:1" cname="unsigned int" size="I:2" unsigned=""/>
+          </value>
+        </arguments>
+      </instance>
+      <module/>
+    </component></referenced></component>

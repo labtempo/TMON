@@ -1,0 +1,126 @@
+<?xml version="1.0" ?><component abstract="" loc="37:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerClientC.nc" nicename="tos.lib.net.Deluge.DelugeVolumeManagerClientC" qname="DelugeVolumeManagerClientC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerClientC.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <parameters>
+      </parameters>
+      <configuration/>
+      <wiring>
+        <wire loc="49:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerClientC.nc">
+          <from><interface-ref name="DelugeVolumeManager" ref="0x2ace83d2f388" scoped=""/></from>
+          <to><interface-ref name="DelugeVolumeManager" ref="0x2ace83dc34c0" scoped=""/>
+          <arguments>
+            <value cst="U:">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </to>
+        </wire>
+      </wiring>
+    <specification><interface loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerClientC.nc" name="DelugeVolumeManager" provided="1" ref="0x2ace83d2f388">
+      <component-ref nicename="tos.lib.net.Deluge.DelugeVolumeManagerClientC" qname="DelugeVolumeManagerClientC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DelugeVolumeManager" ref="0x2ace83d2f388" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.DelugeVolumeManager" qname="DelugeVolumeManager"/>
+      </instance>
+      <interface-functions>
+        <function-ref name="erase" ref="0x2ace83d2f6d8" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83d2f860" scoped=""/>
+      </interface-functions>
+    </interface></specification><referenced><interface loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc" name="DelugeVolumeManager" provided="1" ref="0x2ace83dc34c0">
+      <component-ref nicename="tos.lib.net.Deluge.DelugeVolumeManagerC" qname="DelugeVolumeManagerC"/>
+      <type-interface alignment="I:1" size="I:2"><interface-ref name="DelugeVolumeManager" ref="0x2ace83dc34c0" scoped=""/></type-interface>
+      <instance>
+        <interfacedef-ref nicename="tos.lib.net.Deluge.DelugeVolumeManager" qname="DelugeVolumeManager"/>
+      </instance>
+      <interface-parameters>
+        <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+          <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+        </type-int>
+      </interface-parameters>
+      <interface-functions>
+        <function-ref name="erase" ref="0x2ace83dc3810" scoped=""/>
+        <function-ref name="eraseDone" ref="0x2ace83dc3998" scoped=""/>
+      </interface-functions>
+    </interface><component loc="37:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc" nicename="tos.lib.net.Deluge.DelugeVolumeManagerC" qname="DelugeVolumeManagerC">
+      <documentation loc="32:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+        <short>
+ </short>
+        <long>
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <configuration/>
+      <wiring>
+        <wire loc="46:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="DelugeVolumeManager" ref="0x2ace83dc34c0" scoped=""/></from>
+          <to><interface-ref name="DelugeVolumeManager" ref="0x2ace83dc2b80" scoped=""/></to>
+        </wire>
+        <wire loc="52:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83dbf9e8" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83dc0d18" scoped=""/></to>
+        </wire>
+        <wire loc="53:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83dbf9e8" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83da2020" scoped=""/></to>
+        </wire>
+        <wire loc="54:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="BlockWrite" ref="0x2ace83dbf9e8" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="BlockWrite" ref="0x2ace83d9f390" scoped=""/></to>
+        </wire>
+        <wire loc="56:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83dbee10" scoped=""/>
+          <arguments>
+            <value cst="I:2">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83da5a90" scoped=""/></to>
+        </wire>
+        <wire loc="57:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83dbee10" scoped=""/>
+          <arguments>
+            <value cst="I:3">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83da2d60" scoped=""/></to>
+        </wire>
+        <wire loc="58:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugeVolumeManagerC.nc">
+          <from><interface-ref name="Resource" ref="0x2ace83dbee10" scoped=""/>
+          <arguments>
+            <value cst="I:1">
+              <type-int alignment="I:1" cname="int" size="I:2"/>
+            </value>
+          </arguments>
+          </from>
+          <to><interface-ref name="Resource" ref="0x2ace83d9e268" scoped=""/></to>
+        </wire>
+      </wiring>
+    </component></referenced></component>

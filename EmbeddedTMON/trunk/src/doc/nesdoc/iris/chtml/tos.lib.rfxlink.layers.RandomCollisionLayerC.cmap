@@ -1,0 +1,16 @@
+<area shape="rect" id="node2" href="../chtml/tos.lib.rfxlink.layers.RandomCollisionLayerP.html" title="RandomCollisionLayerP" alt="" coords="268,120,471,168">
+<area shape="poly" id="edge2" href="../ihtml/tos.lib.rfxlink.util.RadioReceive.html" title="RadioReceive" alt="" coords="304,52 346,108 341,111 300,55">
+<area shape="rect" id="edge2" href="../ihtml/tos.lib.rfxlink.util.RadioReceive.html" title="RadioReceive" alt="" coords="332,78,416,95">
+<area shape="poly" id="edge6" href="../ihtml/tos.lib.rfxlink.util.RadioSend.html" title="RadioSend" alt="" coords="268,160 185,175 150,184 125,194 104,211 87,231 83,228 101,207 123,190 148,179 183,170 267,154">
+<area shape="rect" id="edge6" href="../ihtml/tos.lib.rfxlink.util.RadioSend.html" title="RadioSend" alt="" coords="124,193,193,210">
+<area shape="poly" id="edge8" href="../ihtml/tos.lib.rfxlink.layers.RandomCollisionConfig.html" title="RandomCollisionConfig" alt="" coords="269,168 233,180 211,194 202,209 197,227 192,226 197,207 207,190 231,176 267,163">
+<area shape="rect" id="edge8" href="../ihtml/tos.lib.rfxlink.layers.RandomCollisionConfig.html" title="RandomCollisionConfig" alt="" coords="209,193,355,210">
+<area shape="poly" id="edge10" href="../ihtml/tos.lib.rfxlink.util.RadioReceive.html" title="RadioReceive" alt="" coords="368,169 360,226 355,226 363,168">
+<area shape="rect" id="edge10" href="../ihtml/tos.lib.rfxlink.util.RadioReceive.html" title="RadioReceive" alt="" coords="361,193,445,210">
+<area shape="poly" id="edge12" href="../ihtml/tos.lib.rfxlink.util.RadioAlarm.html" title="RadioAlarm" alt="" coords="417,166 452,190 493,229 490,233 449,194 414,170">
+<area shape="rect" id="edge12" href="../ihtml/tos.lib.rfxlink.util.RadioAlarm.html" title="RadioAlarm" alt="" coords="471,193,544,210">
+<area shape="rect" id="node8" href="../chtml/tos.system.RandomC.html" title="RandomC" alt="" coords="616,235,725,293">
+<area shape="poly" id="edge14" href="../ihtml/tos.interfaces.Random.html" title="Random" alt="" coords="472,163 550,190 618,225 615,230 548,194 470,168">
+<area shape="rect" id="edge14" href="../ihtml/tos.interfaces.Random.html" title="Random" alt="" coords="584,193,637,210">
+<area shape="poly" id="edge4" href="../ihtml/tos.lib.rfxlink.util.RadioSend.html" title="RadioSend" alt="" coords="448,55 424,98 411,112 407,108 419,94 443,52">
+<area shape="rect" id="edge4" href="../ihtml/tos.lib.rfxlink.util.RadioSend.html" title="RadioSend" alt="" coords="432,78,501,95">

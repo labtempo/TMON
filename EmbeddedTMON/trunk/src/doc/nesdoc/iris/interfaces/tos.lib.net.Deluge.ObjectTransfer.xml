@@ -1,0 +1,113 @@
+<?xml version="1.0" ?><interfacedef loc="39:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer">
+      <documentation loc="36:/opt/tinyos-2.1.2/tos/lib/net/Deluge/DelugePageTransfer.h">
+        <short>
+ </short>
+        <long>
+ @author Jonathan Hui &lt;jwhui@cs.berkeley.edu&gt;
+ @author Chieh-Jan Mike Liang &lt;cliang4@cs.jhu.edu&gt;
+ @author Razvan Musaloiu-E. &lt;razvanm@cs.jhu.edu&gt;
+</long>
+      </documentation>
+      <function command="" loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="receive" provided="0" ref="0x2ace83820020">
+        <interfacedef-ref nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="object_id_t" ref="0x2ace83835cf8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="object_size_t" ref="0x2ace83834538"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="new_objid" ref="0x2ace83821578">
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="object_id_t" ref="0x2ace83835cf8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="new_size" ref="0x2ace83821900">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="object_size_t" ref="0x2ace83834538"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="42:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="img_num" ref="0x2ace83821c38">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function event="" loc="43:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="receiveDone" provided="0" ref="0x2ace83820900">
+        <interfacedef-ref nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-void alignment="I:1" size="I:1"/>
+          <function-parameters>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="43:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="error" ref="0x2ace83820690">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="publish" provided="0" ref="0x2ace83822e68">
+        <interfacedef-ref nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="object_id_t" ref="0x2ace83835cf8"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="object_size_t" ref="0x2ace83834538"/></typename>
+            </type-int>
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </function-parameters>
+        </type-function>
+        <parameters>
+          <variable loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="new_objid" ref="0x2ace83822518">
+            <type-int alignment="I:1" cname="long" size="I:4">
+              <typename><typedef-ref name="object_id_t" ref="0x2ace83835cf8"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="new_size" ref="0x2ace838228a0">
+            <type-int alignment="I:1" cname="unsigned long" size="I:4" unsigned="">
+              <typename><typedef-ref name="object_size_t" ref="0x2ace83834538"/></typename>
+            </type-int>
+          </variable>
+          <variable loc="41:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="img_num" ref="0x2ace83822bd8">
+            <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+              <typename><typedef-ref name="uint8_t" ref="0x2ace810e0160"/></typename>
+            </type-int>
+          </variable>
+        </parameters>
+      </function>
+      <function command="" loc="45:/opt/tinyos-2.1.2/tos/lib/net/Deluge/ObjectTransfer.nc" name="stop" provided="0" ref="0x2ace8381e020">
+        <interfacedef-ref nicename="tos.lib.net.Deluge.ObjectTransfer" qname="ObjectTransfer"/>
+        <type-function alignment="I:1" size="I:1">
+          <type-int alignment="I:1" cname="unsigned char" size="I:1" unsigned="">
+            <typename><typedef-ref name="error_t" ref="0x2ace819d7ae0"/></typename>
+          </type-int>
+          <function-parameters>
+          </function-parameters>
+        </type-function>
+        <parameters>
+        </parameters>
+      </function>
+    </interfacedef>

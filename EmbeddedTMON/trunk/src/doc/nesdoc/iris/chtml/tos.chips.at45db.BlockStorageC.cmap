@@ -1,0 +1,11 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.at45db.BlockStorageP.html" title="BlockStorageP" alt="" coords="140,120,273,168">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="146,52 185,107 180,110 142,55">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.BlockWrite.html" title="BlockWrite" alt="" coords="173,78,239,95">
+<area shape="rect" id="node4" href="../chtml/tos.chips.at45db.At45dbStorageManagerC.html" title="At45dbStorageManagerC" alt="" coords="5,240,224,288">
+<area shape="poly" id="edge6" href="../ihtml/tos.chips.at45db.At45dbVolume.html" title="At45dbVolume[uint8_t]" alt="" coords="146,170 122,194 116,209 113,226 108,226 111,208 118,190 143,166">
+<area shape="rect" id="edge6" href="../ihtml/tos.chips.at45db.At45dbVolume.html" title="At45dbVolume[uint8_t]" alt="" coords="120,193,269,210">
+<area shape="rect" id="node5" href="../chtml/tos.chips.at45db.At45dbC.html" title="At45dbC" alt="" coords="248,235,349,293">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="247,166 271,190 288,220 283,223 267,194 243,170">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="280,193,393,210">
+<area shape="poly" id="edge4" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="274,55 246,98 236,111 232,108 242,94 270,52">
+<area shape="rect" id="edge4" href="../ihtml/tos.interfaces.BlockRead.html" title="BlockRead" alt="" coords="256,78,321,95">

@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <LINK rel="stylesheet" href="nesdoc.css" type="text/css" media="screen"><title>Interface: tos.chips.atm128.adc.Atm128AdcMultiple</title>
+  </head>
+  <body>
+    <h2>Interface: tos.chips.atm128.adc.Atm128AdcMultiple</h2>
+    <b>interface Atm128AdcMultiple</b><p>
+ Hardware Abstraction Layer interface of Atmega128 for acquiring data
+ from multiple channels using the ATmega128's free-running mode.
+ <p>
+ Because of the possibility that samples may be imprecise after 
+ switching channels and/or reference voltages, and because there
+ is a one sample delay on swithcing channels and reference voltages,
+ Atm128ADCMultiple is complex. Two straightforward uses are:
+ <ol type="A">
+ <li>Acquire N samples from channel C:
+    <ol>
+    <li>call getData to start sampling on channel C at the desired rate
+       (note that the choice of prescalers is very limited, so you
+       don't have many choices for sampling rate)
+    <li>ignore the first dataReady event
+    <li>use the results of the next N dataReady() events, return FALSE
+       on the last one
+    </ol>
+ <li>Acquire one sample each from channels C1, ..., Cn (this pseudocode
+    assumes that none of these channels are differential)
+    <ol>
+    <li>call getData to start sampling on channel C1
+    <li>on the ith dataReady event switch to channel Ci+1 by changing
+       *newChannel
+    <li>the data passed to the ith dataReady event is for channel Ci-1
+       (the data from the first dataReady event is ignored)
+    </ol>
+ </ol>
+
+ 
+    <p>
+    <dl>
+      <dt><b>Author:</b>
+      <dd>
+        Hu Siquan &lt;husq@xbow.com&gt;
+ 
+      </dd>
+      <dd>
+        David Gay
+
+      </dd>
+    </dl>
+    <p><p><div id=heading>Commands</div><div id=funcsig><span id=funcnameshort>command bool <a href="#getData">getData</a>(uint8_t channel, uint8_t refVoltage, bool leftJustify, uint8_t prescaler)
+      </span><menu>
+ Initiates free-running ADC conversions, with the ability to switch 
+ channels and reference-voltage with a one sample delay.
+      </menu>
+    </div><p><div id=heading>Events</div><div id=funcsig><span id=funcnameshort>event bool <a href="#dataReady">dataReady</a>(uint16_t data, bool precise, uint8_t channel, uint8_t *newChannel, uint8_t *newRefVoltage)
+      </span><menu>
+ Returns the next sample in a free-running conversion.
+      </menu>
+    </div><p><div id=heading>Commands - Details</div>
+    <a name="getData"></a>
+    <h4>getData
+    </h4>
+    <span id=funcnameshort>command bool <b>getData</b>(uint8_t channel, uint8_t refVoltage, bool leftJustify, uint8_t prescaler)
+    </span>
+    <p>
+    <menu>
+      
+ Initiates free-running ADC conversions, with the ability to switch 
+ channels and reference-voltage with a one sample delay.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>channel</code> -  Initial A/D conversion channel. The channel can 
+   be changed in the dataReady event, though these changes happen
+   with a one-sample delay (this is a hardware restriction).
+ 
+        </dd>
+        <dd>
+          <code>refVoltage</code> -  Initial A/D reference voltage. See the
+   ATM128_ADC_VREF_xxx constants in Atm128ADC.h. Like the channel,
+   the reference voltage can be changed in the dataReady event with
+   a one-sample delay.
+ 
+        </dd>
+        <dd>
+          <code>leftJustify</code> -  TRUE to place A/D result in high-order bits 
+   (i.e., shifted left by 6 bits), low to place it in the low-order bits
+ 
+        </dd>
+        <dd>
+          <code>prescaler</code> -  Prescaler value for the A/D conversion clock. If you 
+  specify ATM128_ADC_PRESCALE, a prescaler will be chosen that guarantees
+  full precision. Other prescalers can be used to get faster conversions. 
+  See the ATmega128 manual for details.
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE if the conversion will be precise, FALSE if it will be 
+   imprecise (due to a change in reference voltage, or switching to a
+   differential input channel)
+
+        </dd>
+      </dl>
+    </menu>
+    <p><div id=heading>Events - Details</div>
+    <a name="dataReady"></a>
+    <h4>dataReady
+    </h4>
+    <span id=funcnameshort>event bool <b>dataReady</b>(uint16_t data, bool precise, uint8_t channel, uint8_t *newChannel, uint8_t *newRefVoltage)
+    </span>
+    <p>
+    <menu>
+      
+ Returns the next sample in a free-running conversion. Allow the user
+ to switch channels and/or reference voltages with a one sample delay.
+
+ 
+      <p>
+      <dl>
+        <dt><b>Parameters:</b>
+        <dd>
+          <code>data</code> -  a 2 byte unsigned data value sampled by the ADC.
+ 
+        </dd>
+        <dd>
+          <code>precise</code> -  if this conversion was precise, FALSE if it wasn't 
+   (we assume that the second conversion after a change of reference
+   voltage or after switching to a differential channel is precise)
+ 
+        </dd>
+        <dd>
+          <code>channel</code> -  Channel this sample was from.
+ 
+        </dd>
+        <dd>
+          <code>newChannel</code> -  Change this parameter to switch to a new channel
+   for the second next sample.
+ 
+        </dd>
+        <dd>
+          <code>newRefVoltage</code> -  Change this parameter to change the reference 
+   voltage for the second next sample.
+
+ 
+        </dd>
+        <dt><b>Returns:</b>
+        <dd>
+          TRUE to continue sampling, FALSE to stop.
+
+        </dd>
+      </dl>
+    </menu>
+  </body>
+</html>

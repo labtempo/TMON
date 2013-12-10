@@ -1,0 +1,10 @@
+<area shape="rect" id="node2" href="../chtml/tos.chips.atm1281.adc.WireAdcP.html" title="WireAdcP" alt="" coords="157,120,267,179">
+<area shape="poly" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="215,54 215,106 209,106 209,54">
+<area shape="rect" id="edge2" href="../ihtml/tos.interfaces.Read.html" title="Read&lt;uint16_t&gt;" alt="" coords="212,78,317,95">
+<area shape="poly" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig[uint8_t]" alt="" coords="158,169 134,184 116,204 110,220 108,238 103,237 104,219 111,201 131,180 156,164">
+<area shape="rect" id="edge4" href="../ihtml/tos.chips.atm128.adc.Atm128AdcConfig.html" title="Atm128AdcConfig[uint8_t]" alt="" coords="113,203,283,221">
+<area shape="rect" id="node4" href="../chtml/tos.chips.atm128.adc.Atm128AdcC.html" title="Atm128AdcC" alt="" coords="244,245,380,304">
+<area shape="poly" id="edge6" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="260,177 285,201 301,231 297,234 281,204 257,181">
+<area shape="rect" id="edge6" href="../ihtml/tos.interfaces.Resource.html" title="Resource[uint8_t]" alt="" coords="293,203,407,221">
+<area shape="poly" id="edge8" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="315,304 315,357 309,357 309,304">
+<area shape="rect" id="edge8" href="../ihtml/tos.interfaces.ResourceConfigure.html" title="ResourceConfigure[uint8_t]" alt="" coords="312,329,485,346">
