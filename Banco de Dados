@@ -1,7 +1,827 @@
-O Backup do banco de dados encontra-se em :
+SET statement_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
 
->>>> FORMATO PLANO 
-https://drive.google.com/file/d/0B7Y5gMX5JJ_QaG5uMW1jUjdvNlU/view?usp=sharing  
+--
+-- TOC entry 193 (class 3079 OID 11681)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
 
->>>> FORMATO TAR
-https://drive.google.com/open?id=0B7Y5gMX5JJ_QV2JFQ2tQRVNBbk0&authuser=0   
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2114 (class 0 OID 0)
+-- Dependencies: 193
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 190 (class 1259 OID 41662)
+-- Dependencies: 5
+-- Name: AlertSystem_alert; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "AlertSystem_alert" (
+    id integer NOT NULL,
+    type character varying(10) NOT NULL,
+    "timeStamp" timestamp with time zone NOT NULL,
+    event character varying(100) NOT NULL,
+    channel character varying(20) NOT NULL
+);
+
+
+ALTER TABLE public."AlertSystem_alert" OWNER TO postgres;
+
+--
+-- TOC entry 189 (class 1259 OID 41660)
+-- Dependencies: 190 5
+-- Name: AlertSystem_alert_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE "AlertSystem_alert_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."AlertSystem_alert_id_seq" OWNER TO postgres;
+
+--
+-- TOC entry 2115 (class 0 OID 0)
+-- Dependencies: 189
+-- Name: AlertSystem_alert_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE "AlertSystem_alert_id_seq" OWNED BY "AlertSystem_alert".id;
+
+
+--
+-- TOC entry 192 (class 1259 OID 41731)
+-- Dependencies: 5
+-- Name: SensornetMonitor_averagetemperature; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "SensornetMonitor_averagetemperature" (
+    id integer NOT NULL,
+    "timeStamp" timestamp with time zone NOT NULL,
+    temperature double precision NOT NULL
+);
+
+
+ALTER TABLE public."SensornetMonitor_averagetemperature" OWNER TO postgres;
+
+--
+-- TOC entry 191 (class 1259 OID 41729)
+-- Dependencies: 192 5
+-- Name: SensornetMonitor_averagetemperature_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE "SensornetMonitor_averagetemperature_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."SensornetMonitor_averagetemperature_id_seq" OWNER TO postgres;
+
+--
+-- TOC entry 2116 (class 0 OID 0)
+-- Dependencies: 191
+-- Name: SensornetMonitor_averagetemperature_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE "SensornetMonitor_averagetemperature_id_seq" OWNED BY "SensornetMonitor_averagetemperature".id;
+
+
+--
+-- TOC entry 182 (class 1259 OID 41614)
+-- Dependencies: 5
+-- Name: SensornetMonitor_mote; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "SensornetMonitor_mote" (
+    id integer NOT NULL,
+    status boolean NOT NULL,
+    "moteModel" character varying(5) NOT NULL,
+    "moteLocalization" character varying(6),
+    "localizationDescription" character varying(100)
+);
+
+
+ALTER TABLE public."SensornetMonitor_mote" OWNER TO postgres;
+
+--
+-- TOC entry 188 (class 1259 OID 41642)
+-- Dependencies: 5
+-- Name: SensornetMonitor_objectdatacenter; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "SensornetMonitor_objectdatacenter" (
+    id integer NOT NULL,
+    label character varying(50) NOT NULL,
+    parent_id integer,
+    type character varying(10) NOT NULL,
+    mote_id integer,
+    width integer NOT NULL,
+    length integer NOT NULL,
+    height integer NOT NULL,
+    "localizationX" integer NOT NULL,
+    "localizationY" integer NOT NULL,
+    "localizationZ" integer NOT NULL,
+    "limitThermal" integer NOT NULL
+);
+
+
+ALTER TABLE public."SensornetMonitor_objectdatacenter" OWNER TO postgres;
+
+--
+-- TOC entry 187 (class 1259 OID 41640)
+-- Dependencies: 188 5
+-- Name: SensornetMonitor_objectdatacenter_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE "SensornetMonitor_objectdatacenter_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."SensornetMonitor_objectdatacenter_id_seq" OWNER TO postgres;
+
+--
+-- TOC entry 2117 (class 0 OID 0)
+-- Dependencies: 187
+-- Name: SensornetMonitor_objectdatacenter_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE "SensornetMonitor_objectdatacenter_id_seq" OWNED BY "SensornetMonitor_objectdatacenter".id;
+
+
+--
+-- TOC entry 184 (class 1259 OID 41621)
+-- Dependencies: 5
+-- Name: SensornetMonitor_sample; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "SensornetMonitor_sample" (
+    id integer NOT NULL,
+    "timeStamp" timestamp with time zone NOT NULL,
+    mote_id integer NOT NULL,
+    "sendCount" integer NOT NULL,
+    "readingTemperature" double precision NOT NULL,
+    "readingLight" integer NOT NULL,
+    "readingVoltage" double precision NOT NULL,
+    parent integer NOT NULL,
+    metric integer NOT NULL
+);
+
+
+ALTER TABLE public."SensornetMonitor_sample" OWNER TO postgres;
+
+--
+-- TOC entry 183 (class 1259 OID 41619)
+-- Dependencies: 5 184
+-- Name: SensornetMonitor_sample_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE "SensornetMonitor_sample_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."SensornetMonitor_sample_id_seq" OWNER TO postgres;
+
+--
+-- TOC entry 2118 (class 0 OID 0)
+-- Dependencies: 183
+-- Name: SensornetMonitor_sample_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE "SensornetMonitor_sample_id_seq" OWNED BY "SensornetMonitor_sample".id;
+
+
+--
+-- TOC entry 186 (class 1259 OID 41634)
+-- Dependencies: 5
+-- Name: SensornetMonitor_systemstatus; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE "SensornetMonitor_systemstatus" (
+    id integer NOT NULL,
+    status boolean NOT NULL,
+    "timeStatusChanged" timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public."SensornetMonitor_systemstatus" OWNER TO postgres;
+
+--
+-- TOC entry 185 (class 1259 OID 41632)
+-- Dependencies: 186 5
+-- Name: SensornetMonitor_systemstatus_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE "SensornetMonitor_systemstatus_id_seq"
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public."SensornetMonitor_systemstatus_id_seq" OWNER TO postgres;
+
+--
+-- TOC entry 2119 (class 0 OID 0)
+-- Dependencies: 185
+-- Name: SensornetMonitor_systemstatus_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE "SensornetMonitor_systemstatus_id_seq" OWNED BY "SensornetMonitor_systemstatus".id;
+
+
+--
+-- TOC entry 166 (class 1259 OID 41482)
+-- Dependencies: 5
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_group (
+    id integer NOT NULL,
+    name character varying(80) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO postgres;
+
+--
+-- TOC entry 165 (class 1259 OID 41480)
+-- Dependencies: 5 166
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2120 (class 0 OID 0)
+-- Dependencies: 165
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_group_id_seq OWNED BY auth_group.id;
+
+
+--
+-- TOC entry 164 (class 1259 OID 41467)
+-- Dependencies: 5
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO postgres;
+
+--
+-- TOC entry 163 (class 1259 OID 41465)
+-- Dependencies: 5 164
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_group_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2121 (class 0 OID 0)
+-- Dependencies: 163
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_group_permissions_id_seq OWNED BY auth_group_permissions.id;
+
+
+--
+-- TOC entry 174 (class 1259 OID 41547)
+-- Dependencies: 5
+-- Name: auth_message; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_message (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    message text NOT NULL
+);
+
+
+ALTER TABLE public.auth_message OWNER TO postgres;
+
+--
+-- TOC entry 173 (class 1259 OID 41545)
+-- Dependencies: 174 5
+-- Name: auth_message_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_message_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_message_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2122 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: auth_message_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_message_id_seq OWNED BY auth_message.id;
+
+
+--
+-- TOC entry 162 (class 1259 OID 41457)
+-- Dependencies: 5
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_permission (
+    id integer NOT NULL,
+    name character varying(50) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO postgres;
+
+--
+-- TOC entry 161 (class 1259 OID 41455)
+-- Dependencies: 162 5
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_permission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2123 (class 0 OID 0)
+-- Dependencies: 161
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_permission_id_seq OWNED BY auth_permission.id;
+
+
+--
+-- TOC entry 172 (class 1259 OID 41527)
+-- Dependencies: 5
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user (
+    id integer NOT NULL,
+    username character varying(30) NOT NULL,
+    first_name character varying(30) NOT NULL,
+    last_name character varying(30) NOT NULL,
+    email character varying(75) NOT NULL,
+    password character varying(128) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    is_superuser boolean NOT NULL,
+    last_login timestamp with time zone NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO postgres;
+
+--
+-- TOC entry 170 (class 1259 OID 41512)
+-- Dependencies: 5
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO postgres;
+
+--
+-- TOC entry 169 (class 1259 OID 41510)
+-- Dependencies: 5 170
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_groups_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2124 (class 0 OID 0)
+-- Dependencies: 169
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_groups_id_seq OWNED BY auth_user_groups.id;
+
+
+--
+-- TOC entry 171 (class 1259 OID 41525)
+-- Dependencies: 5 172
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2125 (class 0 OID 0)
+-- Dependencies: 171
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_id_seq OWNED BY auth_user.id;
+
+
+--
+-- TOC entry 168 (class 1259 OID 41497)
+-- Dependencies: 5
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO postgres;
+
+--
+-- TOC entry 167 (class 1259 OID 41495)
+-- Dependencies: 168 5
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE auth_user_user_permissions_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2126 (class 0 OID 0)
+-- Dependencies: 167
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE auth_user_user_permissions_id_seq OWNED BY auth_user_user_permissions.id;
+
+
+--
+-- TOC entry 181 (class 1259 OID 41594)
+-- Dependencies: 1892 5
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    user_id integer NOT NULL,
+    content_type_id integer,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO postgres;
+
+--
+-- TOC entry 180 (class 1259 OID 41592)
+-- Dependencies: 181 5
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_admin_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2127 (class 0 OID 0)
+-- Dependencies: 180
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_admin_log_id_seq OWNED BY django_admin_log.id;
+
+
+--
+-- TOC entry 176 (class 1259 OID 41563)
+-- Dependencies: 5
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_content_type (
+    id integer NOT NULL,
+    name character varying(100) NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO postgres;
+
+--
+-- TOC entry 175 (class 1259 OID 41561)
+-- Dependencies: 5 176
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_content_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2128 (class 0 OID 0)
+-- Dependencies: 175
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_content_type_id_seq OWNED BY django_content_type.id;
+
+
+--
+-- TOC entry 177 (class 1259 OID 41576)
+-- Dependencies: 5
+-- Name: django_session; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO postgres;
+
+--
+-- TOC entry 179 (class 1259 OID 41586)
+-- Dependencies: 5
+-- Name: django_site; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+--
+
+CREATE TABLE django_site (
+    id integer NOT NULL,
+    domain character varying(100) NOT NULL,
+    name character varying(50) NOT NULL
+);
+
+
+ALTER TABLE public.django_site OWNER TO postgres;
+
+--
+-- TOC entry 178 (class 1259 OID 41584)
+-- Dependencies: 5 179
+-- Name: django_site_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
+--
+
+CREATE SEQUENCE django_site_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_site_id_seq OWNER TO postgres;
+
+--
+-- TOC entry 2129 (class 0 OID 0)
+-- Dependencies: 178
+-- Name: django_site_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
+--
+
+ALTER SEQUENCE django_site_id_seq OWNED BY django_site.id;
+
+
+--
+-- TOC entry 1896 (class 2604 OID 41665)
+-- Dependencies: 189 190 190
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY "AlertSystem_alert" ALTER COLUMN id SET DEFAULT nextval('"AlertSystem_alert_id_seq"'::regclass);
+
+
+--
+-- TOC entry 1897 (class 2604 OID 41734)
+-- Dependencies: 191 192 192
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY "SensornetMonitor_averagetemperature" ALTER COLUMN id SET DEFAULT nextval('"SensornetMonitor_averagetemperature_id_seq"'::regclass);
+
+
+--
+-- TOC entry 1895 (class 2604 OID 41645)
+-- Dependencies: 188 187 188
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY "SensornetMonitor_objectdatacenter" ALTER COLUMN id SET DEFAULT nextval('"SensornetMonitor_objectdatacenter_id_seq"'::regclass);
+
+
+--
+-- TOC entry 1893 (class 2604 OID 41624)
+-- Dependencies: 183 184 184
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY "SensornetMonitor_sample" ALTER COLUMN id SET DEFAULT nextval('"SensornetMonitor_sample_id_seq"'::regclass);
+
+
+--
+-- TOC entry 1894 (class 2604 OID 41637)
+-- Dependencies: 186 185 186
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY "SensornetMonitor_systemstatus" ALTER COLUMN id SET DEFAULT nextval('"SensornetMonitor_systemstatus_id_seq"'::regclass);
+
+
+--
+-- TOC entry 1884 (class 2604 OID 41485)
+-- Dependencies: 165 166 166
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group ALTER COLUMN id SET DEFAULT nextval('auth_group_id_seq'::regclass);
+
+
+--
+-- TOC entry 1883 (class 2604 OID 41470)
+-- Dependencies: 164 163 164
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- TOC entry 1888 (class 2604 OID 41550)
+-- Dependencies: 174 173 174
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_message ALTER COLUMN id SET DEFAULT nextval('auth_message_id_seq'::regclass);
+
+
+--
+-- TOC entry 1882 (class 2604 OID 41460)
+-- Dependencies: 162 161 162
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_permission ALTER COLUMN id SET DEFAULT nextval('auth_permission_id_seq'::regclass);
+
+
+--
+-- TOC entry 1887 (class 2604 OID 41530)
+-- Dependencies: 171 172 172
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user ALTER COLUMN id SET DEFAULT nextval('auth_user_id_seq'::regclass);
+
+
+--
+-- TOC entry 1886 (class 2604 OID 41515)
+-- Dependencies: 170 169 170
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_groups ALTER COLUMN id SET DEFAULT nextval('auth_user_groups_id_seq'::regclass);
+
+
+--
+-- TOC entry 1885 (class 2604 OID 41500)
+-- Dependencies: 168 167 168
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- TOC entry 1891 (class 2604 OID 41597)
+-- Dependencies: 181 180 181
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_admin_log ALTER COLUMN id SET DEFAULT nextval('django_admin_log_id_seq'::regclass);
+
+
+--
+-- TOC entry 1889 (class 2604 OID 41566)
+-- Dependencies: 176 175 176
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_content_type ALTER COLUMN id SET DEFAULT nextval('django_content_type_id_seq'::regclass);
+
+
+--
+-- TOC entry 1890 (class 2604 OID 41589)
+-- Dependencies: 178 179 179
+-- Name: id; Type: DEFAULT; Schema: public; Owner: postgres
+--
+
+ALTER TABLE ONLY django_site ALTER COLUMN id SET DEFAULT nextval('django_site_id_seq'::regclass);
+
